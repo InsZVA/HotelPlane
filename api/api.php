@@ -13,9 +13,10 @@ header("Content-Type: application/json");
 require_once ('../Token/TokenManager.php');
 require_once ('../Hotel/HotelManager.php');
 require_once ('../Hotel/Hotel.php');
-require_once ('../Address/China.php');
-require_once ('../Address/Province.php');
-require_once('../Address/City.php');
+require_once ('../Address/Country.php');
+require_once ('../Address/World.php');
+require_once ('../Address/City.php');
+
 
 function PermissionDenied() {
     echo '{"code": -2, "msg": "permission denied"}';
@@ -61,12 +62,23 @@ switch ($postData->requestMethod) {
             exit(0);
         }
         break;
-    case "findHotels":
+    case "findHotelsByCity":
         if (!isset($postData->offset)) $postData->offset = 0;
         if (!isset($postData->num)) $postData->num = 30;
-        if (isset($postData->regionCode) && isset($postData->range) && isset($postData->num) && isset($postData->offset)) {
+        if (isset($postData->cityId) && isset($postData->range) && isset($postData->num) && isset($postData->offset)) {
             $hm = new HotelManager();
-            $data = $hm->findHotelsByRegionCode($postData->regionCode, $postData->range, $postData->offset, $postData->num);
+            $data = $hm->findHotelsByCityId($postData->cityId, $postData->offset, $postData->num);
+            if ($data == false) break;
+            echo json_encode($data);
+            exit(0);
+        }
+        break;
+    case "findHotelsByCounty":
+        if (!isset($postData->offset)) $postData->offset = 0;
+        if (!isset($postData->num)) $postData->num = 30;
+        if (isset($postData->countyId) && isset($postData->range) && isset($postData->num) && isset($postData->offset)) {
+            $hm = new HotelManager();
+            $data = $hm->findHotelsByCityId($postData->countyId, $postData->offset, $postData->num);
             if ($data == false) break;
             echo json_encode($data);
             exit(0);
@@ -109,35 +121,35 @@ switch ($postData->requestMethod) {
         OKResponse();
         break;
     //Address
-    case "getProvinces":
-        $china = new China();
-        $result = $china->getProvinces();
+    case "getCountries":
+        $china = new World();
+        $result = $china->getCountries();
         if (!$result) break;
         echo json_encode($result);
         exit(0);
         break;
     case "getCities":
-        if (!isset($postData->regionId)) break;
-        $province = new Province($postData->regionId);
-        $result = $province->getCities();
+        if (!isset($postData->countryCode)) break;
+        $country = new Country($postData->countryCode);
+        $result = $country->getCities();
         if (!$result) break;
         echo json_encode($result);
         exit(0);
         break;
     case "getCounties":
-        if (!isset($postData->regionId)) break;
-        $city = new City($postData->regionId);
+        if (!isset($postData->cityId)) break;
+        $city = new City($postData->cityId);
         $result = $city->getCounties();
         if (!$result) break;
         echo json_encode($result);
         exit(0);
         break;
-    case "getHotCities":
-        if (!isset($postData->num)) $postData->num = 30;
-        $china = new China();
-        $result = $china->getHotCities($postData->num);
+    case "newCounty":
+        if (!isset($postData->cityId) || !isset($postData->data)) break;
+        $city = new City($postData->cityId);
+        $result = $city->newCounty($postData->data);
         if (!$result) break;
-        echo json_encode($result);
+        echo "{\"inserted_id\": $result}";
         exit(0);
         break;
 }

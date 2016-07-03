@@ -21,16 +21,17 @@
 | 方法名 | 参数列表 | 备注 | 测试状态 |
 |---|---|---|---|
 | 宾馆相关 | | | |
-| newHotel | data | data中子参数有：name, address, [star], [remarks], images, [country], regionCode, [type], [description], images为图片url数组，json字符串 | OK |
+| newHotel | data | data中子参数有：name, address, [star], [remarks], images, city_id, county_id, [type], [description], images为图片url数组，json字符串 | TEST |
 | listHotels | [offset] [num] [orderBy] [order] | order = asc \| desc | OK |
-| findHotels | [offset] [num] regionCode range | range为范围，10000为同省，100为同市，1为同区 | OK |
+| findHotelsByCity | [offset] [num] cityId | | TEST |
+| findHotelsByCounty | [offset] [num] countyId | | TEST |
 | editHotel | hotelId, data | data中子参数与创建时相同 | OK |
 | deleteHotel | hotelId | 会同时删掉所有房型 | OK |
 | getRooms | hotelId | | OK |
 | newRoom | hotelId data | data中子参数有：name, image, description, price | OK |
 | deleteRoom | hotelId roomId | | OK |
 | 地址相关 | | | |
-| getProvinces | | 得到全国省份列表 | OK |
-| getCities | regionId | regionId必须是省级 | OK |
-| getCounties | regionId | regionId必须是市级 | OK |
-| getHotCities | | 得到热门城市列表 | OK |
+| getCountries | | 得到国家列表 | OK |
+| getCities | countryCode | | OK |
+| getCounties | cityId |  | OK |
+| getHotCities | cityId data | data只有一个子项name | OK |
