@@ -65,9 +65,11 @@ switch ($postData->requestMethod) {
     case "findHotelsByCity":
         if (!isset($postData->offset)) $postData->offset = 0;
         if (!isset($postData->num)) $postData->num = 30;
-        if (isset($postData->cityId) && isset($postData->range) && isset($postData->num) && isset($postData->offset)) {
+        if (!isset($postData->orderBy)) $postData->orderBy = "hotel_id";
+        if (!isset($postData->order)) $postData->order = "asc";
+        if (isset($postData->cityId) && isset($postData->num) && isset($postData->offset)) {
             $hm = new HotelManager();
-            $data = $hm->findHotelsByCityId($postData->cityId, $postData->offset, $postData->num);
+            $data = $hm->findHotelsByCityId($postData->cityId, $postData->orderBy, $postData->order, $postData->offset, $postData->num);
             if ($data == false) break;
             echo json_encode($data);
             exit(0);
@@ -76,9 +78,11 @@ switch ($postData->requestMethod) {
     case "findHotelsByCounty":
         if (!isset($postData->offset)) $postData->offset = 0;
         if (!isset($postData->num)) $postData->num = 30;
-        if (isset($postData->countyId) && isset($postData->range) && isset($postData->num) && isset($postData->offset)) {
+        if (!isset($postData->orderBy)) $postData->orderBy = "hotel_id";
+        if (!isset($postData->order)) $postData->order = "asc";
+        if (isset($postData->countyId) && isset($postData->num) && isset($postData->offset)) {
             $hm = new HotelManager();
-            $data = $hm->findHotelsByCityId($postData->countyId, $postData->offset, $postData->num);
+            $data = $hm->findHotelsByCountyId($postData->countyId, $postData->orderBy, $postData->order, $postData->offset, $postData->num);
             if ($data == false) break;
             echo json_encode($data);
             exit(0);

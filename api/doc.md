@@ -21,10 +21,10 @@
 | 方法名 | 参数列表 | 备注 | 测试状态 |
 |---|---|---|---|
 | 宾馆相关 | | | |
-| newHotel | data | data中子参数有：name, address, [star], [remarks], images, city_id, county_id, [type], [description], images为图片url数组，json字符串 | TEST |
+| newHotel | data | data中子参数有：name, address, [star], [remarks], images, cityId, countyId, [type], [description], images为图片url数组，json字符串 | OK |
 | listHotels | [offset] [num] [orderBy] [order] | order = asc \| desc | OK |
-| findHotelsByCity | [offset] [num] cityId | | TEST |
-| findHotelsByCounty | [offset] [num] countyId | | TEST |
+| findHotelsByCity | [offset] [num] cityId [orderBy] [order] | | OK |
+| findHotelsByCounty | [offset] [num] countyId [orderBy] [order] | | OK |
 | editHotel | hotelId, data | data中子参数与创建时相同 | OK |
 | deleteHotel | hotelId | 会同时删掉所有房型 | OK |
 | getRooms | hotelId | | OK |
