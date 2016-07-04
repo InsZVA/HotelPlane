@@ -35,3 +35,6 @@
 | getCities | countryCode | | OK |
 | getCounties | cityId |  | OK |
 | getHotCities | cityId data | data只有一个子项name | OK |
+| 用户相关 | | | |
+| newUser | data | data中子参数有：username, password, level, [inviterId] | |
+| login | data | data中子参数有：username, password | |

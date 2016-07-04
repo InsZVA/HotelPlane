@@ -16,6 +16,8 @@ require_once ('../Hotel/Hotel.php');
 require_once ('../Address/Country.php');
 require_once ('../Address/World.php');
 require_once ('../Address/City.php');
+require_once ('../User/UserManager.php');
+require_once ('../User/User.php');
 
 
 function PermissionDenied() {
@@ -154,6 +156,22 @@ switch ($postData->requestMethod) {
         $result = $city->newCounty($postData->data);
         if (!$result) break;
         echo "{\"inserted_id\": $result}";
+        exit(0);
+        break;
+    case "newUser":
+        if (!isset($postData->data)) break;
+        $um = new UserManager();
+        $id = $um->newUser($postData->data);
+        if (!$id) break;
+        echo "{\"inserted_id\": $id}";
+        exit(0);
+        break;
+    case "login":
+        if (!isset($postData->data)) break;
+        $um = new UserManager();
+        $token = $um->login($postData->data);
+        if (!$token) break;
+        echo "{\"token\": $token}";
         exit(0);
         break;
 }
