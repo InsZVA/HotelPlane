@@ -49,6 +49,17 @@ class UserManager
         if (!$result) return false;
         $row = $result->fetch_assoc();
         $tm = new TokenManager();
-        return $tm->newToken($row['user_id'], $row['level']);
+        return ['token'=> $tm->newToken($row['user_id'], $row['level']), 'level'=> $row['level']];
+    }
+
+    public function autoLogin($openId) {
+        $stmt = $this->mysqli->prepare("select `user_id`, `level` from `user` where `open_id`=?");
+        $stmt->bind_param('s', $openId);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        if (!$result) return false;
+        $row = $result->fetch_assoc();
+        $tm = new TokenManager();
+        return ['token'=> $tm->newToken($row['user_id'], $row['level']), 'level'=> $row['level']];
     }
 }

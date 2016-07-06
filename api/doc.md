@@ -36,5 +36,14 @@
 | getCounties | cityId |  | OK |
 | getHotCities | cityId data | data只有一个子项name | OK |
 | 用户相关 | | | |
-| newUser | data | data中子参数有：username, password, level, [inviterId] | |
-| login | data | data中子参数有：username, password | |
+| newUser | data | data中子参数有：username, password, level, [inviterId] | OK |
+| login | data | data中子参数有：username, password | OK |
+| getAvatar | | | OK |
+| setAvatar | avatar | | OK |
+| getAddress | | | OK |
+| setAddress | data | data中子参数为: cityId, countyId | OK |
+| isVerified | | | OK |
+| verify | data | data中子参数为：realname, phone | OK |
+| getID | | id_type: 0为身份证 1为护照 | OK |
+| setID | data | data中子参数为：idType, idCode | OK |
+| bindOpenId | openId | | OK |

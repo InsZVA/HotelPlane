@@ -17,6 +17,7 @@ class User
         $id = intval($id);
         $result = $this->mysqli->query("select `user_id` from `user` where `user_id`=$id");
         if (!$result) throw new Exception("user id illegal");
+        $this->id = $id;
     }
 
     public function getAddress() {
@@ -29,8 +30,9 @@ class User
 
     public function setAddress($data) {
         if (!isset($data->countyId) || !isset($data->cityId)) return false;
-        $stmt = $this->mysqli->prepare("update `county_id`=?, `city_id`=? where `user_id`=$this->id");
-        $stmt->bind_param($data->countyId, $data->cityId);
+        $stmt = $this->mysqli->prepare("update `user` set `county_id`=?, `city_id`=? where `user_id`=$this->id");
+        $stmt->bind_param('ii', $data->countyId, $data->cityId);
+        $stmt->execute();
         $stmt->get_result();
         return $stmt->affected_rows;
     }
@@ -44,16 +46,18 @@ class User
     }
 
     public function setAvatar($avatar) {
-        $stmt = $this->mysqli->prepare("update `avatar`=? where `user_id`=$this->id");
-        $stmt->bind_param($avatar);
+        $stmt = $this->mysqli->prepare("update `user` set `avatar`=? where `user_id`=$this->id");
+        $stmt->bind_param('s', $avatar);
+        $stmt->execute();
         $stmt->get_result();
         return $stmt->affected_rows;
     }
 
     public function verify($data) {
         if (!isset($data->realname) || !isset($data->phone)) return false;
-        $stmt = $this->mysqli->prepare("update `realname`=?, `phone=? where `user_id`=$this->id");
-        $stmt->bind_param($data->realname, $data->phone);
+        $stmt = $this->mysqli->prepare("update `user` set `realname`=?, `phone`=?, `verified`=1 where `user_id`=$this->id");
+        $stmt->bind_param('ss', $data->realname, $data->phone);
+        $stmt->execute();
         $stmt->get_result();
         return $stmt->affected_rows;
     }
@@ -64,5 +68,29 @@ class User
         if (!$result) return false;
         $row = $result->fetch_assoc();
         return $row['verified'];
+    }
+    
+    public function bindOpenId($openId) {
+        $stmt = $this->mysqli->prepare("update `user` set `open_id`=? where `user_id`=$this->id");
+        $stmt->bind_param('s', $openId);
+        $stmt->execute();
+        return $stmt->affected_rows;
+    }
+
+    public function getID() {
+        $sql = "select `id_type`, `id_code` from `user` where `user_id` = $this->id";
+        $result = $this->mysqli->query($sql);
+        if (!$result) return false;
+        $row = $result->fetch_assoc();
+        return $row;
+    }
+
+    public function setID($data) {
+        if (!isset($data->idType) || !isset($data->idCode)) return false;
+        $stmt = $this->mysqli->prepare("update `user` set `id_type`=?, `id_code`=? where `user_id`=$this->id");
+        $stmt->bind_param('is', $data->idType, $data->idCode);
+        $stmt->execute();
+        $stmt->get_result();
+        return $stmt->affected_rows;
     }
 }

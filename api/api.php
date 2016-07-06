@@ -169,10 +169,72 @@ switch ($postData->requestMethod) {
     case "login":
         if (!isset($postData->data)) break;
         $um = new UserManager();
-        $token = $um->login($postData->data);
-        if (!$token) break;
-        echo "{\"token\": $token}";
+        $result = $um->login($postData->data);
+        if (!$result) break;
+        echo json_encode($result);
         exit(0);
+        break;
+    case "getAvatar":
+        $user = new User($postData->userId);
+        $result = $user->getAvatar();
+        if (!$result) break;
+        echo json_encode(['avatar' => $result]);
+        exit(0);
+        break;
+    case "setAvatar":
+        if (!isset($postData->avatar)) break;
+        $user = new User($postData->userId);
+        $result = $user->setAvatar($postData->avatar);
+        if (!$result) break;
+        OKResponse();
+        break;
+    case "getAddress":
+        $user = new User($postData->userId);
+        $result = $user->getAddress();
+        if (!$result) break;
+        echo json_encode($result);
+        exit(0);
+        break;
+    case "setAddress":
+        if (!isset($postData->data)) break;
+        $user = new User($postData->userId);
+        $result = $user->setAddress($postData->data);
+        if (!$result) break;
+        OKResponse();
+        break;
+    case "isVerified":
+        $user = new User($postData->userId);
+        $result = $user->isVerified();
+        if (!$result) break;
+        echo json_encode(['verified' => $result]);
+        exit(0);
+    case "verify":
+        if (!isset($postData->data)) break;
+        $user = new User($postData->userId);
+        $result = $user->verify($postData->data);
+        if (!$result) break;
+        OKResponse();
+        break;
+    case "getID":
+        $user = new User($postData->userId);
+        $result = $user->getID();
+        if (!$result) break;
+        echo json_encode($result);
+        exit(0);
+        break;
+    case "setID":
+        if (!isset($postData->data)) break;
+        $user = new User($postData->userId);
+        $result = $user->setID($postData->data);
+        if (!$result) break;
+        OKResponse();
+        break;
+    case "bindOpenId":
+        if (!isset($postData->openId)) break;
+        $user = new User($postData->userId);
+        $result = $user->bindOpenId($postData->openId);
+        if (!$result) break;
+        OKResponse();
         break;
 }
 
