@@ -46,7 +46,7 @@ class UserManager
         $stmt->bind_param("ss", $data->username, $data->password);
         $stmt->execute();
         $result = $stmt->get_result();
-        if (!$result) return false;
+        if (!$result || $result->num_rows == 0) return false;
         $row = $result->fetch_assoc();
         $tm = new TokenManager();
         return ['token'=> $tm->newToken($row['user_id'], $row['level']), 'level'=> $row['level']];
@@ -57,7 +57,7 @@ class UserManager
         $stmt->bind_param('s', $openId);
         $stmt->execute();
         $result = $stmt->get_result();
-        if (!$result) return false;
+        if (!$result || $result->num_rows == 0) return false;
         $row = $result->fetch_assoc();
         $tm = new TokenManager();
         return ['token'=> $tm->newToken($row['user_id'], $row['level']), 'level'=> $row['level']];

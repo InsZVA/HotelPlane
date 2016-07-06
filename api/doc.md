@@ -47,3 +47,4 @@
 | getID | | id_type: 0为身份证 1为护照 | OK |
 | setID | data | data中子参数为：idType, idCode | OK |
 | bindOpenId | openId | | OK |
+| changePassword | data | data中子参数为：oldPassword, newPassword | OK |

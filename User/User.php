@@ -23,7 +23,7 @@ class User
     public function getAddress() {
         $sql = "select `county_id`, `city_id` from `user` where `user_id` = $this->id";
         $result = $this->mysqli->query($sql);
-        if (!$result) return false;
+        if (!$result || $result->num_rows == 0) return false;
         $row = $result->fetch_assoc();
         return $row;
     }
@@ -40,7 +40,7 @@ class User
     public function getAvatar() {
         $sql = "select `avatar` from `user` where `user_id` = $this->id";
         $result = $this->mysqli->query($sql);
-        if (!$result) return false;
+        if (!$result || $result->num_rows == 0) return false;
         $row = $result->fetch_assoc();
         return $row['avatar'];
     }
@@ -65,7 +65,7 @@ class User
     public function isVerified() {
         $sql = "select `verified` from `user` where `user_id` = $this->id";
         $result = $this->mysqli->query($sql);
-        if (!$result) return false;
+        if (!$result || $result->num_rows == 0) return false;
         $row = $result->fetch_assoc();
         return $row['verified'];
     }
@@ -80,7 +80,7 @@ class User
     public function getID() {
         $sql = "select `id_type`, `id_code` from `user` where `user_id` = $this->id";
         $result = $this->mysqli->query($sql);
-        if (!$result) return false;
+        if (!$result || $result->num_rows == 0) return false;
         $row = $result->fetch_assoc();
         return $row;
     }
@@ -91,6 +91,21 @@ class User
         $stmt->bind_param('is', $data->idType, $data->idCode);
         $stmt->execute();
         $stmt->get_result();
+        return $stmt->affected_rows;
+    }
+
+    public function changePassword($data) {
+        if (!isset($data->oldPassword) || !isset($data->newPassword)) return false;
+        $stmt = $this->mysqli->prepare("select `user_id` from `user` where `user_id`=$this->id and `password`=?");
+        $data->oldPassword = md5($data->oldPassword . "a978shbv:s91[a");
+        $data->newPassword = md5($data->newPassword . "a978shbv:s91[a");
+        $stmt->bind_param("s", $data->oldPassword);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        if (!$result || $result->num_rows == 0) return false;
+        $stmt = $this->mysqli->prepare("update `user` set `password`=? where `user_id`=$this->id");
+        $stmt->bind_param('s', $data->newPassword);
+        $stmt->execute();
         return $stmt->affected_rows;
     }
 }

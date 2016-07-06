@@ -236,6 +236,13 @@ switch ($postData->requestMethod) {
         if (!$result) break;
         OKResponse();
         break;
+    case "changePassword":
+        if (!isset($postData->data)) break;
+        $user = new User($postData->userId);
+        $result = $user->changePassword($postData->data);
+        if (!$result) break;
+        OKResponse();
+        break;
 }
 
 

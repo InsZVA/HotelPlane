@@ -32,7 +32,7 @@ class TokenManager
         $stmt->bind_param('s', $token);
         $stmt->execute();
         $result = $stmt->get_result();
-        if (!$result) return -1;
+        if (!$result || $result->num_rows == 0) return -1;
         $row = $result->fetch_array();
         $t = time();
         if (($t - $row['update_time']) > $this->TIME_EXCEED) return -1;
