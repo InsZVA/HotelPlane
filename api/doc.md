@@ -5,7 +5,7 @@
 全部采用POST请求，请发送JSON字符串(application/json),请勿发送(x-www-form-urlencoded)，json中请带上`userId`
 和`token`字段用于访问控制，`requestMethod`方法用于表示所请求的api方法名。
 
-## 响应
+## 响应XX
 
 有请求内容的成功时直接直接响应内容，失败返回
 ```
@@ -31,10 +31,12 @@
 | newRoom | hotelId data | data中子参数有：name, image, description, price | OK |
 | deleteRoom | hotelId roomId | | OK |
 | 地址相关 | | | |
-| getCountries | | 得到国家列表 | OK |
-| getCities | countryCode | | OK |
-| getCounties | cityId |  | OK |
-| getHotCities | cityId data | data只有一个子项name | OK |
+| getCities | chinese | 0表示国际 1表示国内 | OK |
+| newCity | data | data中子参数有：name, chinese, letter(首字母) | OK |
+| deleteCity | cityId | 必须先删除该城市下所有旅馆机票和区才能删除该城市 | OK |
+| getCounties | cityId | | OK |
+| newCounty | data, cityId | data中子参数有：name, letter | OK |
+| deleteCounty | cityId countyId | | OK |
 | 用户相关 | | | |
 | newUser | data | data中子参数有：username, password, level, [inviterId] | OK |
 | login | data | data中子参数有：username, password | OK |

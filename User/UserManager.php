@@ -9,6 +9,7 @@
 
 require_once ("../Config/MySQL.php");
 require_once ("../Token/TokenManager.php");
+require_once ("../Coupon/CouponManager.php");
 
 class UserManager
 {
@@ -24,18 +25,18 @@ class UserManager
         $data->password = md5($data->password . "a978shbv:s91[a");
         $data->create_time = time();
         $data->last_login_time = time();
+        $cm = new CouponManager();
         if (isset($data->inviterId)) {
             $stmt = $this->mysqli->prepare("insert into `user`(`username`, `level`, `password`, `inviter_id`, `create_time`, `last_login_time`) values(?,?,?,?,?,?)");
             $stmt->bind_param("sisiii", $data->username, $data->level, $data->password, $data->inviterId, $data->create_time, $data->last_login_time);
             $stmt->execute();
-            //TODO: User Get Coupon
-            //TODO: Inviter Increase Account
+            $cm->pushToNewUser($stmt->insert_id, $data->inviterId);
             return $stmt->insert_id;
         }
         $stmt = $this->mysqli->prepare("insert into `user`(`username`, `level`, `password`, `create_time`, `last_login_time`) values(?,?,?,?,?)");
         $stmt->bind_param("sisii", $data->username, $data->level, $data->password, $data->create_time, $data->last_login_time);
         $stmt->execute();
-        //TODO: User Get Coupon
+        $cm->pushToNewUser($stmt->insert_id, 0);
         return $stmt->insert_id;
     }
 
@@ -49,7 +50,7 @@ class UserManager
         if (!$result || $result->num_rows == 0) return false;
         $row = $result->fetch_assoc();
         $tm = new TokenManager();
-        return ['token'=> $tm->newToken($row['user_id'], $row['level']), 'level'=> $row['level']];
+        return ['user_id'=> $row['user_id'], 'token'=> $tm->newToken($row['user_id'], $row['level']), 'level'=> $row['level']];
     }
 
     public function autoLogin($openId) {

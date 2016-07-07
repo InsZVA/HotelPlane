@@ -13,8 +13,7 @@ header("Content-Type: application/json");
 require_once ('../Token/TokenManager.php');
 require_once ('../Hotel/HotelManager.php');
 require_once ('../Hotel/Hotel.php');
-require_once ('../Address/Country.php');
-require_once ('../Address/World.php');
+require_once ('../Address/CityManager.php');
 require_once ('../Address/City.php');
 require_once ('../User/UserManager.php');
 require_once ('../User/User.php');
@@ -32,12 +31,14 @@ function OKResponse() {
 
 $postRaw = file_get_contents("php://input");
 $postData = json_decode($postRaw);
+if (!isset($postData->userId) && !isset($postData->token) && $postData->requestMethod != "login") PermissionDenied();
+$level = -1;
+if ($postData->requestMethod != "login") {
+    $tm = new TokenManager();
+    $level = $tm->verifyToken($postData->userId, $postData->token);
+    if ($level == -1) PermissionDenied();
+}
 
-if (!isset($postData->userId) && !isset($postData->token)) PermissionDenied();
-
-$tm = new TokenManager();
-$level = $tm->verifyToken($postData->userId, $postData->token);
-if ($level == -1) PermissionDenied();
 
 switch ($postData->requestMethod) {
     //Hotel
@@ -127,6 +128,7 @@ switch ($postData->requestMethod) {
         OKResponse();
         break;
     //Address
+    /*
     case "getCountries":
         $china = new World();
         $result = $china->getCountries();
@@ -157,6 +159,54 @@ switch ($postData->requestMethod) {
         if (!$result) break;
         echo "{\"inserted_id\": $result}";
         exit(0);
+        break;*/
+    case "getCities":
+        if (!isset($postData->chinese)) break;
+        $cm = new CityManager();
+        $result = $cm->getCities($postData->chinese);
+        if (!$result) break;
+        echo json_encode($result);
+        exit(0);
+        break;
+    case "newCity":
+        if ($level != 3) PermissionDenied();
+        if (!isset($postData->data)) break;
+        $cm = new CityManager();
+        $result = $cm->newCity($postData->data);
+        if (!$result) break;
+        OKResponse();
+        break;
+    case "deleteCity":
+        if ($level != 3) PermissionDenied();
+        if (!isset($postData->cityId)) break;
+        $cm = new CityManager();
+        $result = $cm->deleteCity($postData->cityId);
+        if (!$result) break;
+        OKResponse();
+        break;
+    case "getCounties":
+        if (!isset($postData->cityId)) break;
+        $cm = new City($postData->cityId);
+        $result = $cm->getCounties();
+        if (!$result) break;
+        echo json_encode($result);
+        exit(0);
+        break;
+    case "newCounty":
+        if ($level != 3) PermissionDenied();
+        if (!isset($postData->data)) break;
+        $cm = new City($postData->cityId);
+        $result = $cm->newCounty($postData->data);
+        if (!$result) break;
+        OKResponse();
+        break;
+    case "deleteCounty":
+        if ($level != 3) PermissionDenied();
+        if (!isset($postData->cityId) || !isset($postData->countyId)) break;
+        $city = new City($postData->cityId);
+        $result = $city->deleteCounty($postData->countyId);
+        if (!$result) break;
+        OKResponse();
         break;
     case "newUser":
         if (!isset($postData->data)) break;

@@ -14,17 +14,17 @@ class City
     {
         $cityId = intval($cityId);
         $this->cityId = $cityId;
-        $this->mysqli = new mysqli(MySQLConfig::$db_address, MySQLConfig::$db_user, MySQLConfig::$db_password, "world");
-        $stmt = $this->mysqli->prepare("select `ID` from `City` where `ID`=?");
+        $this->mysqli = new mysqli(MySQLConfig::$db_address, MySQLConfig::$db_user, MySQLConfig::$db_password, "address");
+        $stmt = $this->mysqli->prepare("select `city_id` from `city` where `city_id`=?");
         $stmt->bind_param('i', $cityId);
         $stmt->execute();
         $result = $stmt->get_result();
-        if (!$result) throw new Exception("city id illegal");
+        if (!$result || $result->num_rows == 0) throw new Exception("city id illegal");
     }
 
     public function getCounties() {
-        $result = $this->mysqli->query("select * from `County` where `CityID`=$this->cityId");
-        if (!$result) return false;
+        $result = $this->mysqli->query("select * from `county` where `city_id`=$this->cityId");
+        if (!$result || $result->num_rows == 0) return false;
         $rows = [];
         while ($row = $result->fetch_assoc()) {
             $rows[] = $row;
@@ -33,10 +33,16 @@ class City
     }
 
     public function newCounty($data) {
-        if (!isset($data->name)) return false;
-        $stmt = $this->mysqli->prepare("insert into `County`(`Name`, `CityID`) values(?, $this->cityId)");
-        $stmt->bind_param('s', $data->name);
+        if (!isset($data->name) || !isset($data->letter)) return false;
+        $stmt = $this->mysqli->prepare("insert into `county`(`name`, `letter`, `city_id`) values(?, ?, $this->cityId)");
+        $stmt->bind_param('ss', $data->name, $data->letter);
         $stmt->execute();
         return $stmt->insert_id;
+    }
+
+    public function deleteCounty($countyId) {
+        $countyId = intval($countyId);
+        $this->mysqli->query("delete from `county` where `countyId`=$countyId and `city_id`=$this->cityId");
+        return $this->mysqli->affected_rows;
     }
 }
