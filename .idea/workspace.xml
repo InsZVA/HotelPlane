@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c7f020c-5222-4964-8d09-ca49080e56ac" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Address/CityManager.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Coupon/CouponManager.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Address/Country.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Address/World.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Address/City.php" afterPath="$PROJECT_DIR$/Address/City.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/User/UserManager.php" afterPath="$PROJECT_DIR$/User/UserManager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/api.php" afterPath="$PROJECT_DIR$/api/api.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/doc.md" afterPath="$PROJECT_DIR$/api/doc.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Address/CityManager.php" afterPath="$PROJECT_DIR$/Address/CityManager.php" />
     </list>
     <ignored path="PhpstormProjects.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -97,7 +90,7 @@
       <file leaf-file-name="api.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="711">
+            <state relative-caret-position="855">
               <caret line="207" column="28" selection-start-line="207" selection-start-column="28" selection-end-line="207" selection-end-column="28" />
               <folding>
                 <element signature="e#6#87#0#PHP" expanded="true" />
@@ -106,7 +99,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="doc.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="doc.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/doc.md">
           <provider editor-type-id="MarkdownFxPreviewEditor">
             <state />
@@ -125,14 +118,14 @@
       <file leaf-file-name="City.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Address/City.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="927">
-              <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="45" selection-end-column="44" />
+            <state relative-caret-position="951">
+              <caret line="44" column="73" selection-start-line="44" selection-start-column="73" selection-end-line="44" selection-end-column="73" />
               <folding>
-                <marker date="1467881801474" expanded="true" signature="421:467" ph="select `ID` City" />
-                <marker date="1467881801474" expanded="true" signature="748:787" ph="select * fro... region" />
-                <marker date="1467881801474" expanded="true" signature="1152:1229" ph="insert into `County`... " />
-                <marker date="1467881801474" expanded="true" signature="1475:1513" ph="delete from " />
-                <marker date="1467881801474" expanded="true" signature="1475:1537" ph="delete from " />
+                <marker date="1467882361839" expanded="true" signature="421:467" ph="select `ID` City" />
+                <marker date="1467882361839" expanded="true" signature="748:787" ph="select * fro... region" />
+                <marker date="1467882361839" expanded="true" signature="1152:1229" ph="insert into `County`... " />
+                <marker date="1467882361839" expanded="true" signature="1482:1521" ph="delete from " />
+                <marker date="1467882361839" expanded="true" signature="1482:1545" ph="delete from " />
               </folding>
             </state>
           </provider>
@@ -158,16 +151,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CityManager.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CityManager.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Address/CityManager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="912">
-              <caret line="38" column="10" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
+            <state relative-caret-position="903">
+              <caret line="39" column="72" selection-start-line="39" selection-start-column="72" selection-end-line="39" selection-end-column="72" />
               <folding>
-                <marker date="1467881851815" expanded="true" signature="394:431" ph="select * fro... city" />
-                <marker date="1467881851815" expanded="true" signature="833:892" ph="insert into city... " />
-                <marker date="1467881851815" expanded="true" signature="1184:1218" ph="delete from " />
-                <marker date="1467881851815" expanded="true" signature="1184:1219" ph="delete from " />
+                <marker date="1467882407641" expanded="true" signature="394:431" ph="select * fro... city" />
+                <marker date="1467882407641" expanded="true" signature="833:892" ph="insert into city... " />
+                <marker date="1467882407641" expanded="true" signature="1194:1229" ph="delete from " />
+                <marker date="1467882407641" expanded="true" signature="1194:1230" ph="delete from " />
               </folding>
             </state>
           </provider>
@@ -221,10 +214,10 @@
         <option value="$PROJECT_DIR$/Address/Country.php" />
         <option value="$PROJECT_DIR$/User/UserManager.php" />
         <option value="$PROJECT_DIR$/Coupon/CouponManager.php" />
-        <option value="$PROJECT_DIR$/Address/City.php" />
-        <option value="$PROJECT_DIR$/Address/CityManager.php" />
         <option value="$PROJECT_DIR$/api/api.php" />
         <option value="$PROJECT_DIR$/api/doc.md" />
+        <option value="$PROJECT_DIR$/Address/City.php" />
+        <option value="$PROJECT_DIR$/Address/CityManager.php" />
       </list>
     </option>
   </component>
@@ -481,12 +474,12 @@
       <workItem from="1467701306101" duration="3335000" />
       <workItem from="1467783911550" duration="6755000" />
       <workItem from="1467801912457" duration="9887000" />
-      <workItem from="1467868211567" duration="3524000" />
+      <workItem from="1467868211567" duration="3785000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70088000" />
+    <option name="totallyTimeSpent" value="70349000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="2418" height="1318" extended-state="6" />
@@ -991,43 +984,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Address/City.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="927">
-          <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="45" selection-end-column="44" />
-          <folding>
-            <marker date="1467881801474" expanded="true" signature="421:467" ph="select `ID` City" />
-            <marker date="1467881801474" expanded="true" signature="748:787" ph="select * fro... region" />
-            <marker date="1467881801474" expanded="true" signature="1152:1229" ph="insert into `County`... " />
-            <marker date="1467881801474" expanded="true" signature="1475:1513" ph="delete from " />
-            <marker date="1467881801474" expanded="true" signature="1475:1537" ph="delete from " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Address/CityManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="912">
-          <caret line="38" column="10" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
-          <folding>
-            <marker date="1467881851815" expanded="true" signature="394:431" ph="select * fro... city" />
-            <marker date="1467881851815" expanded="true" signature="833:892" ph="insert into city... " />
-            <marker date="1467881851815" expanded="true" signature="1184:1218" ph="delete from " />
-            <marker date="1467881851815" expanded="true" signature="1184:1219" ph="delete from " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="711">
-          <caret line="207" column="28" selection-start-line="207" selection-start-column="28" selection-end-line="207" selection-end-column="28" />
-          <folding>
-            <element signature="e#6#87#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/doc.md">
       <provider editor-type-id="MarkdownFxPreviewEditor">
         <state />
@@ -1045,6 +1001,43 @@
         <state relative-caret-position="480">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="207" column="28" selection-start-line="207" selection-start-column="28" selection-end-line="207" selection-end-column="28" />
+          <folding>
+            <element signature="e#6#87#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Address/City.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="951">
+          <caret line="44" column="73" selection-start-line="44" selection-start-column="73" selection-end-line="44" selection-end-column="73" />
+          <folding>
+            <marker date="1467882361839" expanded="true" signature="421:467" ph="select `ID` City" />
+            <marker date="1467882361839" expanded="true" signature="748:787" ph="select * fro... region" />
+            <marker date="1467882361839" expanded="true" signature="1152:1229" ph="insert into `County`... " />
+            <marker date="1467882361839" expanded="true" signature="1482:1521" ph="delete from " />
+            <marker date="1467882361839" expanded="true" signature="1482:1545" ph="delete from " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Address/CityManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="903">
+          <caret line="39" column="72" selection-start-line="39" selection-start-column="72" selection-end-line="39" selection-end-column="72" />
+          <folding>
+            <marker date="1467882407641" expanded="true" signature="394:431" ph="select * fro... city" />
+            <marker date="1467882407641" expanded="true" signature="833:892" ph="insert into city... " />
+            <marker date="1467882407641" expanded="true" signature="1194:1229" ph="delete from " />
+            <marker date="1467882407641" expanded="true" signature="1194:1230" ph="delete from " />
+          </folding>
         </state>
       </provider>
     </entry>

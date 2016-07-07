@@ -37,7 +37,7 @@ class CityManager
 
     public function deleteCity($cityId) {
         $cityId = intval($cityId);
-        $this->mysqli->query("delete from `city` where `cityId`=$cityId");
-        return $this->mysqli->affected_rows;
+        $result = $this->mysqli->query("delete from `city` where `city_id`=$cityId");
+        return $result;
     }
 }

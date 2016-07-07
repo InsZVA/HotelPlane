@@ -42,7 +42,6 @@ class City
 
     public function deleteCounty($countyId) {
         $countyId = intval($countyId);
-        $this->mysqli->query("delete from `county` where `countyId`=$countyId and `city_id`=$this->cityId");
-        return $this->mysqli->affected_rows;
+        return $this->mysqli->query("delete from `county` where `county_id`=$countyId and `city_id`=$this->cityId");
     }
 }
