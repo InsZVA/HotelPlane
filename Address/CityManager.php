@@ -40,4 +40,12 @@ class CityManager
         $result = $this->mysqli->query("delete from `city` where `city_id`=$cityId");
         return $result;
     }
+
+    public function getCity($countyId) {
+        $countyId = intval($countyId);
+        $result = $this->mysqli->query("select `city_id` from `county` where `county_id`=$countyId");
+        if (!$result) return false;
+        $row = $result->fetch_assoc();
+        return $row;
+    }
 }

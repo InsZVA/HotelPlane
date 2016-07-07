@@ -108,4 +108,12 @@ class User
         $stmt->execute();
         return $stmt->affected_rows;
     }
+
+    public function getData() {
+        $result = $this->mysqli->query("select * from `user` where `user_id`=$this->id");
+        if (!$result) return false;
+        $row = $result->fetch_assoc();
+        unset($row['password']);
+        return $row;
+    }
 }

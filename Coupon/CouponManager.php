@@ -19,8 +19,8 @@ class CouponManager
     public function newCoupon($data) {
         if (!isset($data->discount) || !isset($data->minPrice) || !isset($data->endTime) || !isset($data->type)) return false;
         if (!isset($data->startTime)) $data->startTime = time();
-        $stmt = $this->mysqli->prepare("insert into `coupon` values(?,?,?,?,?)");
-        $stmt->bind_param('ffiii', $data->discount, $data->minPrice, $data->startTime, $data->endTime, $data->type);
+        $stmt = $this->mysqli->prepare("insert into `coupon` values(NULL, ?,?,?,?,?)");
+        $stmt->bind_param('ddiii', $data->discount, $data->minPrice, $data->startTime, $data->endTime, $data->type);
         $stmt->execute();
         return $stmt->affected_rows;
     }
@@ -30,8 +30,10 @@ class CouponManager
         $sql = "select * from `coupon`";
         $result = $this->mysqli->query($sql);
         while ($row = $result->fetch_assoc()) {
-            if ($row['type'] == 0)
+            if ($row['type'] == 0){
                 $this->mysqli->query("insert into `user_coupon` values($userId, $row[coupon_id])");
+                //echo "insert into `user_coupon` values($userId, $row[coupon_id])";
+            }
             if ($row['type'] == 1 && $inviterId != 0)
                 $this->mysqli->query("insert into `user_coupon` values($inviterId, $row[coupon_id])");
         }
@@ -52,11 +54,18 @@ class CouponManager
 
     public function offCoupon($couponId) {
         $couponId = intval($couponId);
-        $this->mysqli->query("update `coupon` set `type`=-1 where `couponId`=$couponId");
-        return $this->mysqli->affected_rows;
+        return $this->mysqli->query("update `coupon` set `type`=-1 where `couponId`=$couponId");
     }
 
     public function getCoupons($type) {
-
+        $type = intval($type);
+        $result = $this->mysqli->query("select * from `coupon` where `type`=$type");
+        $rows = [];
+        if ($result) {
+            while ($row = $result->fetch_assoc()) {
+                $rows[] = $row;
+            }
+        }
+        return $rows;
     }
 }

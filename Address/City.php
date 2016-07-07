@@ -44,4 +44,10 @@ class City
         $countyId = intval($countyId);
         return $this->mysqli->query("delete from `county` where `county_id`=$countyId and `city_id`=$this->cityId");
     }
+
+    public function getData() {
+        $result = $this->mysqli->query("select * from `city` where `city_id`=$this->cityId");
+        if (!$result) return false;
+        return $result->fetch_assoc();
+    }
 }

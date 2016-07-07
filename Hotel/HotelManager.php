@@ -72,6 +72,7 @@ class HotelManager
     }
 
     public function listHotels($offset, $num, $orderBy, $order) {
+        if ($order != 'asc' && $order != 'desc') return false;
         if (!in_array($orderBy, ORDER_LIST)) return false;
         $sql = "select `hotel`.*, MIN(`room`.`price`) as price from `hotel` join `room` on `room`.`hotel_id` = `hotel`.`hotel_id` group by `hotel`.`hotel_id` order by `$orderBy` $order limit ?,?";
         $stmt = $this->mysqli->prepare($sql);

@@ -11,6 +11,9 @@ require_once ("../Config/MySQL.php");
 require_once ("../Token/TokenManager.php");
 require_once ("../Coupon/CouponManager.php");
 
+const USER_ORDER_LIST = ['user_id', 'phone', 'account', 'awardAccount', 'idCode', 'paymentNum'];
+const COLUMN = ['user_id'=>'user_id', 'phone'=>'phone', 'account'=>'account', 'awardAccount'=>'award_account', 'idCode'=>'id_code', 'paymentNum'=>'payment_num'];
+
 class UserManager
 {
     private $mysqli;
@@ -62,5 +65,61 @@ class UserManager
         $row = $result->fetch_assoc();
         $tm = new TokenManager();
         return ['token'=> $tm->newToken($row['user_id'], $row['level']), 'level'=> $row['level']];
+    }
+
+    public function listUsers($offset, $num, $orderBy, $order) {
+        if ($order != 'asc' && $order != 'desc') return false;
+        if (!in_array($orderBy, USER_ORDER_LIST)) return false;
+        $orderBy = COLUMN[$orderBy];
+        $offset = intval($offset);
+        $num = intval($num);
+        $sql = "select `user`.* from `user` order by `$orderBy` $order limit $offset,$num";
+        $result = $this->mysqli->query($sql);
+        if ($result) {
+            $rows = [];
+            while($row = $result->fetch_assoc()) {
+                unset($row['password']);
+                $rows[] = $row;
+            }
+            return $rows;
+        }
+        return false;
+    }
+
+    public function findUserByPhone($phone) {
+        $sql = "select * from `user` where `phone` like ?";
+        $phone = '%' . $phone . '%';
+        $stmt = $this->mysqli->prepare($sql);
+        $stmt->bind_param('s', $phone);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        if ($result) {
+            $rows = [];
+            while($row = $result->fetch_assoc()) {
+                unset($row['password']);
+                $rows[] = $row;
+            }
+            return $rows;
+        }
+        return false;
+    }
+
+    public function findUserByIdCode($idType, $idCode) {
+        $idType = intval($idType);
+        $sql = "select * from `user` where `id_type`=$idType and `id_code` like ?";
+        $idCode = '%' . $idCode . '%';
+        $stmt = $this->mysqli->prepare($sql);
+        $stmt->bind_param('s', $idCode);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        if ($result) {
+            $rows = [];
+            while($row = $result->fetch_assoc()) {
+                unset($row['password']);
+                $rows[] = $row;
+            }
+            return $rows;
+        }
+        return false;
     }
 }

@@ -17,6 +17,7 @@ require_once ('../Address/CityManager.php');
 require_once ('../Address/City.php');
 require_once ('../User/UserManager.php');
 require_once ('../User/User.php');
+require_once ('../Coupon/CouponManager.php');
 
 
 function PermissionDenied() {
@@ -127,39 +128,14 @@ switch ($postData->requestMethod) {
         $hotel->deleteRoom($postData->roomId);
         OKResponse();
         break;
+    case "getHotelData":
+        if (!isset($postData->hotelId)) break;
+        $data = (new Hotel($postData->hotelId))->getData();
+        if (!$data) break;
+        echo json_encode($data);
+        exit(0);
+        break;
     //Address
-    /*
-    case "getCountries":
-        $china = new World();
-        $result = $china->getCountries();
-        if (!$result) break;
-        echo json_encode($result);
-        exit(0);
-        break;
-    case "getCities":
-        if (!isset($postData->countryCode)) break;
-        $country = new Country($postData->countryCode);
-        $result = $country->getCities();
-        if (!$result) break;
-        echo json_encode($result);
-        exit(0);
-        break;
-    case "getCounties":
-        if (!isset($postData->cityId)) break;
-        $city = new City($postData->cityId);
-        $result = $city->getCounties();
-        if (!$result) break;
-        echo json_encode($result);
-        exit(0);
-        break;
-    case "newCounty":
-        if (!isset($postData->cityId) || !isset($postData->data)) break;
-        $city = new City($postData->cityId);
-        $result = $city->newCounty($postData->data);
-        if (!$result) break;
-        echo "{\"inserted_id\": $result}";
-        exit(0);
-        break;*/
     case "getCities":
         if (!isset($postData->chinese)) break;
         $cm = new CityManager();
@@ -208,6 +184,21 @@ switch ($postData->requestMethod) {
         if (!$result) break;
         OKResponse();
         break;
+    case "getCityData":
+        if (!isset($postData->cityId)) break;
+        $city = new City($postData->cityId);
+        $data = $city->getData();
+        if (!$data) break;
+        echo json_encode($data);
+        exit(0);
+    case "getCity":
+        if (!isset($postData->countyId)) break;
+        $cm = new CityManager();
+        $data = $cm->getCity($postData->countyId);
+        if (!$data) break;
+        echo json_encode($data);
+        exit(0);
+    //User
     case "newUser":
         if (!isset($postData->data)) break;
         $um = new UserManager();
@@ -292,6 +283,75 @@ switch ($postData->requestMethod) {
         $result = $user->changePassword($postData->data);
         if (!$result) break;
         OKResponse();
+        break;
+    case "listUsers":
+        if (!isset($postData->offset)) $postData->offset = 0;
+        if (!isset($postData->num)) $postData->num = 30;
+        if (!isset($postData->orderBy)) $postData->orderBy = "user_id";
+        if (!isset($postData->order)) $postData->order = "asc";
+        if (isset($postData->orderBy) && isset($postData->num) && isset($postData->offset) && isset($postData->order)) {
+            $um = new UserManager();
+            $data = $um->listUsers($postData->offset, $postData->num, $postData->orderBy, $postData->order);
+            if ($data == false) break;
+            echo json_encode($data);
+            exit(0);
+        }
+        break;
+    case "findUserByPhone":
+        if (isset($postData->phone)) {
+            $um = new UserManager();
+            $data = $um->findUserByPhone($postData->phone);
+            if ($data == false) break;
+            echo json_encode($data);
+            exit(0);
+        }
+        break;
+    case "findUserByIdCode":
+        if (isset($postData->idCode) && isset($postData->idType)) {
+            $um = new UserManager();
+            $data = $um->findUserByIdCode($postData->idType, $postData->idCode);
+            if ($data == false) break;
+            echo json_encode($data);
+            exit(0);
+        }
+        break;
+    case "getUserData":
+        $user = new User($postData->userId);
+        $data = $user->getData();
+        if ($data == false) break;
+        echo json_encode($data);
+        exit(0);
+        break;
+    //Coupon
+    case "newCoupon":
+        if ($level != 3) PermissionDenied();
+        if (!isset($postData->data)) break;
+        $cm = new CouponManager();
+        if (!$cm->newCoupon($postData->data)) break;
+        OKResponse();
+        break;
+    case "getUserCoupons":
+        if (!isset($postData->userId)) break;
+        $cm = new CouponManager();
+        $result = $cm->getUserCoupons($postData->userId);
+        echo json_encode($result);
+        exit(0);
+        break;
+    case "offCoupon":
+        if ($level != 3) PermissionDenied();
+        if (!isset($postData->couponId)) break;
+        $cm = new CouponManager();
+        $result = $cm->offCoupon($postData->couponId);
+        if (!$result) break;
+        OKResponse();
+        break;
+    case "getCoupons":
+        if ($level != 3) PermissionDenied();
+        if (!isset($postData->type)) break;
+        $cm = new CouponManager();
+        $result = $cm->getCoupons($postData->type);
+        echo json_encode($result);
+        exit(0);
         break;
 }
 

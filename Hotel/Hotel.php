@@ -75,4 +75,11 @@ class Hotel
         $roomId = intval($roomId);
         $this->mysqli->query("delete from `room` where `room_id` = $roomId");
     }
+
+    public function getData() {
+        $result = $this->mysqli->query("select * from `hotel` where `hotel_id`=$this->id");
+        if (!$result) return false;
+        $row = $result->fetch_assoc();
+        return $row;
+    }
 }
