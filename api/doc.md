@@ -66,3 +66,9 @@
 | getUserCoupons | userId | | OK |
 | offCoupon | couponId | | OK |
 | getCoupons | | | OK |
+| 活动相关 | | | |
+| newActivity | data | data中子参数为：name, description, image, oldPrice, price | OK |
+| editActivity | activityId data | | OK |
+| offActivity | activityId | | OK |
+| setActivityWeight | activityId weight | | OK |
+| listAvailableActivity | | | OK |

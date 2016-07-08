@@ -18,6 +18,8 @@ require_once ('../Address/City.php');
 require_once ('../User/UserManager.php');
 require_once ('../User/User.php');
 require_once ('../Coupon/CouponManager.php');
+require_once ('../Activity/ActivityManager.php');
+require_once ('../Activity/Activity.php');
 
 
 function PermissionDenied() {
@@ -350,6 +352,57 @@ switch ($postData->requestMethod) {
         if (!isset($postData->type)) break;
         $cm = new CouponManager();
         $result = $cm->getCoupons($postData->type);
+        echo json_encode($result);
+        exit(0);
+        break;
+    //Activity
+    case "newActivity":
+        if ($level != 3) PermissionDenied();
+        if (!isset($postData->data)) break;
+        $am = new ActivityManager();
+        $id = $am->newActivity($postData->data);
+        if (!$id) break;
+        echo json_encode(['inserted_id' => $id]);
+        exit(0);
+        break;
+    case "listAvailableActivity":
+        if (!isset($postData->offset)) $postData->offset = 0;
+        if (!isset($postData->num)) $postData->num = 4;
+        $am = new ActivityManager();
+        $result = $am->listAvailableActivity($postData->offset, $postData->num);
+        if (!$result) break;
+        echo json_encode($result);
+        exit(0);
+        break;
+    case "editActivity":
+        if ($level != 3) PermissionDenied();
+        if (!isset($postData->data)) break;
+        if (!isset($postData->activityId)) break;
+        $activity = new Activity($postData->activityId);
+        $result = $activity->edit($postData->data);
+        if (!$result) break;
+        OKResponse();
+        break;
+    case "offActivity":
+        if ($level != 3) PermissionDenied();
+        if (!isset($postData->activityId)) break;
+        $activity = new Activity($postData->activityId);
+        $activity->off();
+        OKResponse();
+        break;
+    case "setActivityWeight":
+        if ($level != 3) PermissionDenied();
+        if (!isset($postData->activityId)) break;
+        if (!isset($postData->weight)) break;
+        $activity = new Activity($postData->activityId);
+        $activity->setWeight($postData->weight);
+        OKResponse();
+        break;
+    case "getActivityData":
+        if (!isset($postData->activityId)) break;
+        $activity = new Activity($postData->activityId);
+        $result = $activity->getData();
+        if (!$result) break;
         echo json_encode($result);
         exit(0);
         break;
