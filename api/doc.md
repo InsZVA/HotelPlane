@@ -72,3 +72,10 @@
 | offActivity | activityId | | OK |
 | setActivityWeight | activityId weight | | OK |
 | listAvailableActivity | | | OK |
+| 机票相关 | | | |
+| newPlane | data | data中子参数为：flight_number(航班号),start_city_id,start_airport,end_city_id,end_airport,start_time,end_time,remarks,standard(1为非标,0为标准),type(该字段代表舱型),price | OK |
+| deletePlane | planeId | | OK |
+| editPlane | data | data子参数比newPlane多一个plane_id | OK |
+| listPlanes | offset,num,orderBy,order,standard | orderBy可选参数为start_city_id,start_time,order(asc或者desc),standard(0或1)| OK |
+| search | keyword, offset,num | | OK |
+| findPlanes | data | data子参数为start_city_id,end_city_id,start_date,offset,num| OK |
