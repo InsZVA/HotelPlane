@@ -406,6 +406,47 @@ switch ($postData->requestMethod) {
         echo json_encode($result);
         exit(0);
         break;
+    case "newPlane":
+        $plane=new Plane();
+        $result=$plane->newPlane($postData);
+        if (!$result) break;
+        echo json_encode($result);
+        exit(0);
+        break;
+    case "deletePlane":
+        $plane=new Plane();
+        if(!isset($postData['planeId']))
+            break;
+        if($plane->deletePlane($postData['planeId'])) 
+            OKResponse();
+        break;
+    case "editPlane":
+        $plane=new Plane();
+        $result=$plane->newPlane($postData);
+        if ($result) OKResponse();
+        break;
+    case "listPlanes":
+        $plane=new Plane();
+        $result=$plane->listPlanes($postData->offset,$postData->num,$postData->orderBy,
+            $postData->standard);
+        if (!$result) break;
+        echo json_encode($result);
+        exit(0);
+        break;
+    case "search":
+        $plane=new Plane();
+        $result=$plane->search($postData->keyword,$postData->offset,$postData->num);
+        if (!$result) break;
+        echo json_encode($result);
+        exit(0);
+        break;
+    case "findPlanes":
+        $plane=new Plane();
+        $result=$plane->findPlanes($postData);
+        if (!$result) break;
+        echo json_encode($result);
+        exit(0);
+        break;
 }
 
 
