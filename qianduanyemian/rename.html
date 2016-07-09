@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta content="charset=">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=0.96,initial-scale=0.96" />
+		<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+		<title>修改名字</title>
+		<style type="text/css">
+			body {
+				background: #efeff4;
+				width: 375px;
+				height: 667px;
+			}
+			
+			#container {
+				background: #efeff4;
+				width: 375px;
+			}
+			
+			#bar {
+				background: rgba(247, 247, 247, 0.82);
+				box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.30);
+				width: 375px;
+				height: 40px;
+				text-align: center;
+				line-height: 40px;
+			}
+			
+			#lable {
+				font-family: PingFangSC-Regular;
+				font-size: 15px;
+				color: #adadad;
+				letter-spacing: -0.37px;
+				text-align: center;
+				line-height: 17px;
+				width: 205px;
+				height: 17px;
+				margin-top: 15px;
+				margin-left: 15px;
+			}
+			
+			.form-control {
+				background: #ffffff;
+				width: 375px;
+				height: 44px;
+				font-family: PingFangSC-Regular;
+				font-size: 17px;
+				color: #030303;
+				letter-spacing: -0.41px;
+				border-radius: 0;
+				border-left: 0;
+				border-right: 0;
+			}
+			
+			#fixed2 {
+				position: fixed;
+				bottom: 69px;
+				width: 100%;
+				height: 57px;
+			}
+			
+			#Rectangle {
+				background: #009ce5;
+				border-radius: 12.5px;
+				width: 355px;
+				height: 57px;
+				margin: 0 auto;
+				display: block!important;
+				font-family: PingFangSC-Medium;
+				font-size: 20px;
+				color: #ffffff;
+				letter-spacing: 0px;
+				text-align: center;
+				line-height: 43px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="container">
+			<div id="bar">修改名字</div>
+
+			<form role="form">
+				<div class="form-group">
+					<input type="text" class="form-control" id="name" placeholder="默认微信名">
+					<label id="lable" for="name">输入名字，能更好地为您服务！</label>
+
+				</div>
+
+			</form>
+		</div>
+		<div id="fixed2">
+			<div id="Rectangle" class="btn">
+				确定修改
+			</div>
+		</div>
+	</body>
+
+</html>

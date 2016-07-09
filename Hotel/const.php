@@ -13,6 +13,6 @@ const REGION_PROVINCE = 10000;
 const REGION_CITY = 100;
 const REGION_COUNTY = 1;
 
-const ORDER_LIST = ['price', 'name', 'address', 'star', 'remarks', 'country', 'region_code', 'type', 'hot', 'hotel_id'];
-const COLUMN_LIST = ['name', 'address', 'star', 'remarks', 'images', 'country', 'region_code', 'type', 'description'];
-const COLUMN_TYPE_LIST = ['s', 's', 'i', 's', 's', 'i', 'i', 'i', 's'];
+const ORDER_LIST = ['price', 'name', 'address', 'star', 'remarks', 'country', 'region_code', 'type', 'hot', 'hotel_id', 'phone'];
+const COLUMN_LIST = ['name', 'address', 'star', 'remarks', 'images', 'country', 'region_code', 'type', 'description', 'phone'];
+const COLUMN_TYPE_LIST = ['s', 's', 'i', 's', 's', 'i', 'i', 'i', 's', 'phone'];
