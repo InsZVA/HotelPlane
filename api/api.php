@@ -1,11 +1,10 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: InsZVA
- * Date: 2016/6/29
- * Time: 22:43
+ * User: Welkin Ni
+ * Date: 2016/7/9
+ * Time: 17:50
  */
-
 header("Access-Control-Allow-Origin: *");
 header('Access-Control-Allow-Headers: X-Requested-With,X_Requested_With');
 header("Content-Type: application/json");
@@ -20,6 +19,7 @@ require_once ('../User/User.php');
 require_once ('../Coupon/CouponManager.php');
 require_once ('../Activity/ActivityManager.php');
 require_once ('../Activity/Activity.php');
+require_once ('../Plane/Plane.php');
 
 
 function PermissionDenied() {
@@ -416,26 +416,35 @@ switch ($postData->requestMethod) {
         break;
     case "deletePlane":
         $plane=new Plane();
-        if(!isset($postData['planeId']))
+        if(!isset($postData->planeId))
             break;
-        if($plane->deletePlane($postData['planeId'])) 
+        if($plane->deletePlane($postData->planeId))
             OKResponse();
         break;
     case "editPlane":
         $plane=new Plane();
-        $result=$plane->newPlane($postData->data);
+        if(!isset($postData->data)) break;
+        $result=$plane->editPlane($postData->data);
         if ($result) OKResponse();
         break;
     case "listPlanes":
         $plane=new Plane();
+        if(!isset($postData->offset)) $postData->offset=0;
+        if(!isset($postData->num)) $postData->num=10;
+        if(!isset($postData->orderBy)) $postData->orderBy='start_time';
+        if(!isset($postData->order)) $postData->order='asc';
+        if(!isset($postData->standard)) break;
         $result=$plane->listPlanes($postData->offset,$postData->num,$postData->orderBy,
-            $postData->standard);
+            $postData->order,$postData->standard);
         if (!$result) break;
         echo json_encode($result);
         exit(0);
         break;
     case "search":
         $plane=new Plane();
+        if(!isset($postData->keyword)) break;
+        if(!isset($postData->offset)) $postData->offset=0;
+        if(!isset($postData->num)) $postData->num=10;
         $result=$plane->search($postData->keyword,$postData->offset,$postData->num);
         if (!$result) break;
         echo json_encode($result);
@@ -443,7 +452,8 @@ switch ($postData->requestMethod) {
         break;
     case "findPlanes":
         $plane=new Plane();
-        $result=$plane->findPlanes($postData);
+        if(!isset($postData->data)) break;
+        $result=$plane->findPlanes($postData->data);
         if (!$result) break;
         echo json_encode($result);
         exit(0);
@@ -453,4 +463,3 @@ switch ($postData->requestMethod) {
 
 echo '{"code": -1, "msg": "fail"}';
 exit(0);
-
