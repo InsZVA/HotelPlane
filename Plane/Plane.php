@@ -12,6 +12,7 @@ class Plane
     {
         $this->mysqli = new mysqli(MySQLConfig::$db_address, MySQLConfig::$db_user,
             MySQLConfig::$db_password, MySQLConfig::$db_name);
+        $this->updatePlanes();
     }
     
     public function newPlane($data) {
@@ -35,7 +36,15 @@ class Plane
             $data->end_time, $data->remarks, $data->standard, $data->type, $data->price);
         $stmt->execute();
         $stmt->get_result();
+
         return $this->mysqli->insert_id;
+    }
+
+    private function updatePlanes()
+    {
+        $datetime=date('Y-m-d H:i:s');
+        $this->mysqli->query("delete from `plane` where unix_timestamp(`start_time`)
+ < unix_timestamp('$datetime')");
     }
 
     public function deletePlane($planeId) {
@@ -58,39 +67,36 @@ class Plane
         if(!isset($data->type)) return false;
         if(!isset($data->price)) return false;
 
-        $plane_id=$data->plane_id;
-        $sql="update plane set ?=? where `plane_id`=$plane_id";
-        $stmt = $this->mysqli->prepare($sql);
+        $sql="update `plane` set ";
+
         foreach($data as $k=>$v)
         {
             if($k=='plane_id')
                 continue;
-            if($k=='start_city_id'||$k=='end_city_id'||$k=='standard')
-                $stmt->bind_param('si', $k, $v);
-            else if($k=='price')
-                $stmt->bind_param('sd', $k, $v);
+            if($sql=="update `plane` set ")
+                $sql=$sql."`$k`='$v'";
             else
-                $stmt->bind_param('ss', $k, $v);
-            $stmt->execute();
+                $sql=$sql.",`$k`='$v'";
         }
-        return true;
+        $plane_id=intval($data->plane_id);
+        $sql=$sql." where `plane_id`=$plane_id";
+        
+        return $this->mysqli->query($sql);
     }
 
-    public function listPlanes($offset, $num, $orderBy, $standard) {
-        if(!isset($offset)) return false;
-        if(!isset($num)) return false;
-        if(!isset($orderBy)) $orderBy='start_time';
-        if(!isset($standard)) return false;
+    public function listPlanes($offset, $num, $orderBy, $order, $standard) {
+        if ($order != 'asc' && $order != 'desc') return false;
         $orderList=array("start_time","start_city_id");
         if(!in_array($orderBy,$orderList)) return false;
-        $sql = "select * from `plane` where `standard`=? order by $orderBy limit ?,?";
+        $sql = "select * from `plane` where `standard`=? order by $orderBy $order limit ?,?";
         $stmt = $this->mysqli->prepare($sql);
         $stmt->bind_param('iii', $standard, $offset, $num);
         $stmt->execute();
         $result = $stmt->get_result();
+        $this->mysqli->query("select * from `plane` where `standard`='$standard'");
         if ($result) {
             $rows = [];
-            $rows['amount']=mysqli_affected_rows();
+            $rows['amount']=mysqli_affected_rows($this->mysqli);
             while($row = $result->fetch_assoc()) {
                 $rows[] = $row;
             }
@@ -113,21 +119,20 @@ class Plane
         {
             $sql=$sql."concat(`start_airport`,`end_airport`)";
         }
+        $count=$sql." like '%$keyword%'";
+        $sql = $sql." like '%$keyword%' limit $offset,$num";
 
-        $sql = $sql."like %$keyword% limit ?,?";
-        $stmt = $this->mysqli->prepare($sql);
-        $stmt->bind_param('sii', $keyword, $offset, $num);
-        $stmt->execute();
-        
-        $result = $stmt->get_result();
+        $result = $this->mysqli->query($sql);
+        $this->mysqli->query($count);
         if ($result) {
             $rows = [];
-            $rows['amount']=mysqli_affected_rows();
+            $rows['amount']=mysqli_affected_rows($this->mysqli);
             while($row = $result->fetch_assoc()) {
                 $rows[] = $row;
             }
             return $rows;
         }
+
         return false;
     }
 
@@ -135,19 +140,25 @@ class Plane
         if(!isset($data->start_city_id)) return false;
         if(!isset($data->end_city_id)) return false;
         if(!isset($data->start_date)) return false;
-        if(!isset($data->offset)) return false;
-        if(!isset($data->num)) return false;
-        $sql = "select * from `plane` where `start_city_id`=? and `end_city_id`=? 
-and start_time between ? and ? limit ?,?";
+        if(!isset($data->offset)) $data->offset=0;
+        if(!isset($data->num)) $data->num=10;
+        $time1=$data->start_date.' 00:00:00';
+        $time2=$data->start_date.' 23:59:59';
+
+        $sql = "select * from `plane` where `start_city_id`=? and `end_city_id`=?
+and `start_time` between ? and ? limit ?,?";
         $stmt = $this->mysqli->prepare($sql);
         $stmt->bind_param('iissii', $data->start_city_id, $data->end_city_id,
-            $data->start_date, $data->start_date.' 00:00:00', $data->start_date.' 23:59:59',
-            $data->offset, $data->num);
+            $time1, $time2, $data->offset, $data->num);
         $stmt->execute();
         $result = $stmt->get_result();
+
+        $this->mysqli->query("select * from `plane` where `start_city_id`=
+$data->start_city_id and `end_city_id`=$data->end_city_id
+and `start_time` between '$time1' and '$time2'");
         if ($result) {
             $rows = [];
-            $rows['amount']=mysqli_affected_rows();
+            $rows['amount']=mysqli_affected_rows($this->mysqli);
             while($row = $result->fetch_assoc()) {
                 $rows[] = $row;
             }
