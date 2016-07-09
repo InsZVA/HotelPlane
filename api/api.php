@@ -409,7 +409,8 @@ switch ($postData->requestMethod) {
     //Plane
     case "newPlane":
         $plane=new Plane();
-        $result=$plane->newPlane($postData);
+        if(!isset($postData->data)) break;
+        $result=$plane->newPlane($postData->data);
         if (!$result) break;
         echo json_encode($result);
         exit(0);
