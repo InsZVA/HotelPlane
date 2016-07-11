@@ -32,9 +32,8 @@ class HotelManager
         if(!isset($data->description)) $data->description = "";
         if(!isset($data->phone)) return false;
         $stmt = $this->mysqli->prepare("insert into hotel(`name`, `address`, `star`, `remarks`, `images`, `city_id`, `county_id`, `type`, `description`, `phone`) values(?,?,?,?,?,?,?,?,?,?)");
-        $stmt->bind_param('ssissiiis', $data->name, $data->address, $data->star, $data->remarks, $data->images, $data->cityId, $data->countyId, $data->type, $data->description, $data->phone);
+        $stmt->bind_param('ssissiiiss', $data->name, $data->address, $data->star, $data->remarks, $data->images, $data->cityId, $data->countyId, $data->type, $data->description, $data->phone);
         $stmt->execute();
-        $stmt->get_result();
         return $this->mysqli->insert_id;
     }
 

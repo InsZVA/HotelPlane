@@ -111,9 +111,20 @@ class User
 
     public function getData() {
         $result = $this->mysqli->query("select * from `user` where `user_id`=$this->id");
-        if (!$result) return false;
+        if (!$result || $result->num_rows == 0) return false;
         $row = $result->fetch_assoc();
         unset($row['password']);
         return $row;
+    }
+
+    public function isVIP() {
+        $result = $this->mysqli->query("select `vip` from `user` where `user_id`=$this->id");
+        if (!$result || $result->num_rows == 0) return false;
+        $row = $result->fetch_assoc();
+        return $row;
+    }
+
+    public function setVIP() {
+        $this->mysqli->query("update `user` set `vip`=1 where `user_id`=$this->id");
     }
 }

@@ -20,6 +20,8 @@ require_once ('../Coupon/CouponManager.php');
 require_once ('../Activity/ActivityManager.php');
 require_once ('../Activity/Activity.php');
 require_once ('../Plane/Plane.php');
+require_once ('../Payment/PaymentManager.php');
+require_once ('../Payment/Payment.php');
 
 
 function PermissionDenied() {
@@ -324,6 +326,19 @@ switch ($postData->requestMethod) {
         echo json_encode($data);
         exit(0);
         break;
+    case "isVIP":
+        $user = new User($postData->userId);
+        $data = $user->isVIP();
+        if ($data == false) break;
+        echo json_encode($data);
+        exit(0);
+        break;
+    case "setVIP":
+        $user = new User($postData->userId);
+        $user->setVIP();
+        OKResponse();
+        exit(0);
+        break;
     //Coupon
     case "newCoupon":
         if ($level != 3) PermissionDenied();
@@ -455,6 +470,50 @@ switch ($postData->requestMethod) {
         $plane=new Plane();
         if(!isset($postData->data)) break;
         $result=$plane->findPlanes($postData->data);
+        if (!$result) break;
+        echo json_encode($result);
+        exit(0);
+        break;
+    //Payment
+    case "createPayment":
+        if (!isset($postData->data)) break;
+        if ($level < 2 && $postData->userId != $postData->data->userId) PermissionDenied();
+        $id = (new PaymentManager())->createPayment($postData->data->userId, $postData->data);
+        if (!$id) break;
+        //TODO: Send Template Message
+        echo json_encode(['insert_id' => $id]);
+        exit(0);
+        break;
+    case "listUserPayments":
+        if (!isset($postData->offset)) $postData->offset = 0;
+        if (!isset($postData->num)) $postData->num = 30;
+        $result = (new PaymentManager())->listUserPayments($postData->userId, $postData->offset, $postData->num);
+        if (!$result) break;
+        echo json_encode($result);
+        exit(0);
+        break;
+    case "confirmPayment":
+        if (!isset($postData->waiterId)) break;
+        if (!isset($postData->paymentId)) break;
+        $payment = new Payment($postData->paymentId);
+        $result = $payment->confirm($postData->waiterId);
+        if (!$result) break;
+        OKResponse();
+        exit(0);
+        break;
+    case "finishPayment":
+        if (!isset($postData->waiterId)) break;
+        if (!isset($postData->paymentId)) break;
+        $payment = new Payment($postData->paymentId);
+        $result = $payment->finish($postData->waiterId);
+        if (!$result) break;
+        OKResponse();
+        exit(0);
+        break;
+    case "getPaymentData":
+        if (!isset($postData->paymentId)) break;
+        $payment = new Payment($postData->paymentId);
+        $result = $payment->getData();
         if (!$result) break;
         echo json_encode($result);
         exit(0);

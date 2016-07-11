@@ -5,6 +5,7 @@
 		<meta content="charset=">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=0.96,initial-scale=0.96" />
+		<link rel="stylesheet" type="text/css" href="css/shutu.css" />
 		<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
 		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 		<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
@@ -132,7 +133,66 @@
 				width: 21px;
 				height: 12px;
 				line-height: 12px;
-				margin-left: 54px;
+				float: left;
+				margin-left: 57px;
+				margin-top: 3px;
+			}
+			
+			#sharePart1 {
+				background: rgba(248, 248, 248, 0.82);
+				border-radius: 13px;
+				width: 355px;
+				height: 130px;
+				position: fixed;
+				left: 10px;
+				bottom: 75px;
+			}
+			
+			#icons {
+				width: 100%;
+				height: 60px;
+				margin-top: 21px;
+			}
+			
+			.icons {
+				width: 60px;
+				height: 60px;
+				float: left;
+				margin-left: 20px;
+			}
+			
+			#iconInfo {
+				width: 100%;
+				height: 13px;
+				margin-top: 11px;
+			}
+			
+			.iconInfo {
+				width: 60px;
+				height: 13px;
+				float: left;
+				margin-left: 20px;
+				font-family: PingFangSC-Regular;
+				font-size: 11px;
+				color: #000000;
+				letter-spacing: 0.06px;
+				text-align: center;
+			}
+			
+			#sharePart2 {
+				background: #ffffff;
+				border-radius: 13px;
+				width: 355px;
+				height: 57px;
+				position: fixed;
+				left: 10px;
+				bottom: 10px;
+				font-family: PingFangSC-Medium;
+				font-size: 20px;
+				color: #007aff;
+				letter-spacing: 0.37px;
+				text-align: center;
+				line-height: 57px;
 			}
 		</style>
 	</head>
@@ -143,6 +203,7 @@
 				<div id="bar">普通会员</div>
 				<div id="portrait">
 					<img src="./img/Person@1x.png" />
+					<!--此处插入VIP图片效果-->
 				</div>
 				<div id="namebar">
 					<span id="name">	Mr. A</span>
@@ -174,16 +235,44 @@
 				<div class="project">邀请好友</div>
 			</div>
 		</div>
+		<!--分享效果弹窗部分-->
+		<div id="sharePart">
+			<div id="sharePart1">
+				<div id="icons">
+					<div class="icons">
+						<img src="./img/wechat.png" />
+					</div>
+					<div class="icons">
+						<img src="./img/wechatmoment.png" />
+					</div>
+				</div>
+				<div id="iconInfo">
+					<div class="iconInfo">
+						微信好友
+					</div>
+					<div class="iconInfo">
+						朋友圈
+					</div>
+				</div>
+			</div>
+			<div id="sharePart2">
+				取消
+			</div>
+		</div>
 		<div class="fixedBottom">
 			<img class="pic" src="./img/index.png" style="margin-left: 22px;" />
 			<img class="pic" src="./img/plane.png" />
+			<!--此处更换VIP管家标识-->
 			<img class="pic" src="./img/manager.png" />
 			<img class="pic" src="./img/hotelGrey.png" />
 			<img class="pic" src="./img/meBlue.png" />
 			<div id="info">
-				<div class="info">
-
-				</div>
+				<div class="info" style="margin-left: 24px;">首页</div>
+				<div class="info">机票</div>
+				<div class="info">管家</div>
+				<!--此处更换VIP管家标识-->
+				<div class="info">酒店</div>
+				<div class="info">我</div>
 			</div>
 
 		</div>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta content="charset=">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=0.96,initial-scale=0.96" />
+		<title>支付完成</title>
+		<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+		<style type="text/css">
+			body {
+				background: #efeff4;
+				margin: 0 auto;
+			}
+			
+			#container {
+				background: #ffffff;
+				width: 375px;
+				height: 667px;
+				margin: 0 auto;
+			}
+			
+			#bar {
+				background: rgba(247, 247, 247, 0.82);
+				box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.30);
+				width: 375px;
+				height: 40px;
+				line-height: 40px;
+				font-family: PingFangSC-Regular;
+				font-size: 15px;
+				color: #030303;
+				letter-spacing: 0px;
+				text-align: center;
+			}
+			
+			#oval {
+				background: #d8d8d8;
+				width: 128px;
+				height: 128px;
+				border-radius: 100%;
+				margin: 50px auto;
+				text-align: center;
+			}
+			
+			#oval img {
+				margin-top: 28px;
+			}
+			
+			#wishes {
+				font-family: PingFangSC-Regular;
+				font-size: 20px;
+				color: #000000;
+				letter-spacing: 0px;
+				text-align: center;
+				margin: 25px auto;
+			}
+			
+			#btns {
+				width: 100%;
+				height: 40px;
+				margin-top: 31px;
+			}
+			
+			#btn1 {
+				background: #009ce5;
+				border: 2px solid #009ce5;
+				border-radius: 10px;
+				width: 127px;
+				height: 40px;
+				line-height: 36px;
+				float: left;
+				margin-left: 40px;
+				font-family: PingFangSC-Medium;
+				font-size: 17px;
+				color: #ffffff;
+				letter-spacing: 0px;
+				text-align: center;
+			}
+			
+			#btn2 {
+				border: 2px solid #009ce5;
+				border-radius: 10px;
+				width: 127px;
+				height: 40px;
+				line-height: 36px;
+				font-family: PingFangSC-Medium;
+				font-size: 17px;
+				color: #009ce5;
+				letter-spacing: 0px;
+				text-align: center;
+				float: right;
+				margin-right: 40px;
+			}
+			
+			#recommendation {
+				width: 100%;
+				height: 230px;
+				position: relative;
+				border-top: 1px solid #C8C7CC;
+				margin-top: 25px;
+			}
+			
+			#hotelCMD {
+				font-family: PingFangSC-Regular;
+				font-size: 14px;
+				color: #030303;
+				letter-spacing: 0px;
+				text-align: center;
+				width: 56px;
+				height: 16px;
+				position: absolute;
+				left: 10px;
+				bottom: 205px;
+			}
+			
+			.hotelPic {
+				width: 112px;
+				height: 80px;
+				position: absolute;
+				left: 11px;
+				bottom: 112px;
+			}
+			
+			.hotelInfo {
+				font-family: PingFangSC-Regular;
+				font-size: 13px;
+				color: #030303;
+				letter-spacing: 0px;
+				text-align: left;
+				width: 99px;
+				height: 36px;
+				position: absolute;
+				left: 10px;
+				bottom: 71px;
+			}
+			
+			.price1 {
+				font-family: PingFangSC-Regular;
+				font-size: 10px;
+				color: #ff001f;
+				letter-spacing: 0px;
+				line-height: 14px;
+				text-align: left;
+				position: absolute;
+				left: 10px;
+				bottom: 52px;
+			}
+			
+			.price2 {
+				font-family: PingFangSC-Regular;
+				font-size: 10px;
+				color: #030303;
+				letter-spacing: 0px;
+				line-height: 14px;
+				text-align: left;
+				position: absolute;
+				right: 254px;
+				bottom: 52px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="container">
+			<div id="bar">
+				支付完成
+			</div>
+			<div id="oval">
+				<img src="./img/payFinished.png" />
+			</div>
+			<div id="wishes">
+				机票已经订好，祝您旅途愉快！
+			</div>
+			<div id="btns">
+				<div id="btn1">
+					返回首页
+				</div>
+				<div id="btn2">
+					分享
+				</div>
+			</div>
+			<div id="recommendation">
+				<div id="hotelCMD">
+					酒店推荐
+				</div>
+				<div class="hotelPic">
+					<img src="./img/picGrey.png" />
+				</div>
+				<div class="hotelPic" style="left: 132px;">
+					<img src="./img/picGrey.png" />
+				</div>
+				<div class="hotelPic" style="left: 252px;">
+					<img src="./img/picGrey.png" />
+				</div>
+				<div class="hotelInfo">
+					7天酒店连锁酒店 武汉XXX路店
+				</div>
+				<div class="hotelInfo" style="left: 132px;">
+					7天酒店连锁酒店 武汉XXX路店
+				</div>
+				<div class="hotelInfo" style="left: 252px;">
+					7天酒店连锁酒店 武汉XXX路店
+				</div>
+				<div class="price1">
+					￥707
+				</div>
+				<div class="price1" style="left: 132px;">
+					￥707
+				</div>
+				<div class="price1" style="left: 252px;">
+					￥707
+				</div>
+				<div class="price2"> 市场价￥707</div>
+				<div class="price2" style="right: 132px;">
+					市场价￥707
+				</div>
+				<div class="price2" style="right: 12px;">
+					市场价￥707
+				</div>
+
+			</div>
+		</div>
+	</body>
+
+</html>

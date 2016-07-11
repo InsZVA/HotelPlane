@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta content="charset=">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=0.96,initial-scale=0.96" />
+		<title>选择证件弹窗</title>
+		<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+		<style type="text/css">
+			#container {
+				background: rgba(0, 0, 0, 0.40);
+				width: 375px;
+				height: 667px;
+				/*页面高度待定*/
+				text-align: center;
+			}
+			
+			#popup {
+				background: rgba(255, 255, 255, 0.50);
+				border-radius: 13px;
+				width: 270px;
+				height: 214px;
+				position: fixed;
+				left: 53px;
+				bottom: 201px;
+			}
+			
+			#selectID {
+				font-family: PingFangSC-Medium;
+				font-size: 17px;
+				color: #030303;
+				letter-spacing: -0.41px;
+				text-align: center;
+				width: 67px;
+				height: 19px;
+				margin-left: 101px;
+				margin-top: 16px;
+			}
+			
+			.selectItems {
+				width: 270px;
+				height: 56px;
+				border: 1px solid #C8C7CC;
+			}
+			
+			.idCard {
+				font-family: PingFangSC-Regular;
+				font-size: 17px;
+				color: #030303;
+				letter-spacing: 0.1px;
+				text-align: left;
+				float: left;
+				margin-left: 16px;
+				margin-top: 16px;
+			}
+			
+			.selected {
+				float: right;
+				margin-top: 17px;
+				margin-right: 17px;
+			}
+			#btns {
+				width: 270px;
+				height: 44px;
+				border-bottom-left-radius: 13px;
+				border-bottom-right-radius: 13px;
+			}
+			
+			.btns {
+				width: 50%;
+				height: 100%;
+				float: left;
+				border-right:solid 1px #C8C7CC ;
+				border-top: solid 1px #C8C7CC;
+				font-family:PingFangSC-Regular;
+font-size:17px;
+color:#0076ff;
+letter-spacing:-0.41px;
+text-align:center;
+line-height: 44px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="container">
+			<div id="popup">
+				<div id="selectID">
+					选择证件
+				</div>
+				<div class="selectItems" style="margin-top: 21px;">
+					<div class="idCard">
+						身份证
+					</div>
+					<div class="selected">
+						<img src="./img/selectedBlue.png" />
+					</div>
+				</div>
+				<div class="selectItems" style="margin-top: -1px;">
+					<div class="idCard">
+						护照
+					</div>
+					<div class="selected">
+						<img src="./img/selectedGrey.png" />
+					</div>
+				</div>
+				<div id="btns">
+					<div class="btns">
+						取消
+					</div>
+					<div class="btns" style="border-right: none;">
+						确认
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

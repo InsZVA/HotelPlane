@@ -61,6 +61,8 @@
 | findUserByPhone | phone | | OK |
 | findUserByIdCode | idCode idType | | OK |
 | getUserData | | | OK |
+| setVIP | | | OK |
+| isVIP | | | OK |
 | 优惠券相关 | | | |
 | newCoupon | data | data中子参数为：discount, minPrice, [startTime], endTime, type(0 新用户注册获得 1 老用户分享获得 -1 已下架) | OK |
 | getUserCoupons | userId | | OK |
@@ -79,3 +81,9 @@
 | listPlanes | offset,num,orderBy,order,standard | orderBy可选参数为start_city_id,start_time,order(asc或者desc),standard(0或1)| OK |
 | search | keyword, offset,num | | OK |
 | findPlanes | data | data子参数为start_city_id,end_city_id,start_date,offset,num| OK |
+| 订单相关 | | | |
+| createPayment | data | data子参数为：userId, standard(0-半标 1-非标), type(0-机票 1-酒店), idType(0-身份证 1-护照), idCode, sex, contact, phone, name, planeId(飞机)/hotelId(酒店)+roomId(酒店）+startDate(酒店)+endData(酒店) | OK |
+| listUserPayments | | | OK |
+| confirmPayment | waiterId paymentId | | TEST |
+| finishPayment | waiterId paymentId | | TEST |
+| getPaymentData | paymentId | | TEST |

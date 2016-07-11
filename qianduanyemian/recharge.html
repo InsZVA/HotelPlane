@@ -51,6 +51,89 @@
 				border-left: 0;
 				border-right: 0;
 			}
+			
+			#lableP {
+				font-family: PingFangSC-Regular;
+				font-size: 13px;
+				color: #666666;
+				letter-spacing: -0.06px;
+				width: 68px;
+				height: 15px;
+				margin-left: 15px;
+				margin-top: 50px;
+				margin-bottom: 13px;
+			}
+			
+			.paymentMethod {
+				background: #ffffff;
+				width: 375px;
+				height: 44px;
+				border-bottom: 1px solid #C8C7CC;
+			}
+			
+			.paymentMethods {
+				font-family: PingFangSC-Regular;
+				font-size: 17px;
+				color: #009ce5;
+				letter-spacing: -0.41px;
+				width: 67px;
+				height: 19px;
+				float: left;
+				margin-left: 15px;
+				margin-top: 10px;
+			}
+			
+			#selected {
+				float: right;
+				margin-top: 10px;
+				margin-right: 15px;
+				/*background-image: url(./img/selectedBlue.png);*/
+			}
+			
+			#moreMethods {
+				font-family: PingFangSC-Regular;
+				font-size: 17px;
+				color: rgba(77, 77, 77, 0.78);
+				letter-spacing: -0.41px;
+				width: 133px;
+				height: 19px;
+				float: left;
+				margin-left: 15px;
+				margin-top: 10px;
+			}
+			
+			#arrowDown {
+				float: right;
+				margin-top: 16px;
+				margin-right: 20px;
+			}
+			
+			#arrowDown img {
+				display: block;
+				width: 16px;
+				height: 10px;
+			}
+			
+			#fixed {
+				margin-top: 232px;
+				width: 100%;
+				height: 57px;
+			}
+			
+			#Rectangle {
+				background: #009ce5;
+				border-radius: 12.5px;
+				width: 355px;
+				height: 57px;
+				margin: 0 auto;
+				display: block!important;
+				font-family: PingFangSC-Medium;
+				font-size: 20px;
+				color: #ffffff;
+				letter-spacing: 0px;
+				text-align: center;
+				line-height: 57px;
+			}
 		</style>
 	</head>
 
@@ -63,11 +146,45 @@
 					<label id="lable" for="name">充值金额</label>
 					<input type="text" class="form-control" id="name" placeholder="请填写充值金额">
 				</div>
-				
-
 			</form>
-		</div>
+			<div id="lableP">支付方式</div>
+			<div class="paymentMethod">
+				<div class="paymentMethods">支付宝</div>
+				<div id="selected"><img src="./img/selectedBlue.png" /></div>
+			</div>
+			<div class="paymentMethod">
+				<div class="paymentMethods" style="color: rgba(77, 77, 77, 0.78);">
+					微信支付
+				</div>
+				<div id="selected"><img src="./img/selectedGrey.png" /></div>
+			</div>
+			<div class="paymentMethod">
+				<div class="paymentMethods" style="color: rgba(77, 77, 77, 0.78);">
+					账户余额
+				</div>
+				<div id="selected"><img src="./img/selectedGrey.png" /></div>
+			</div>
+			<div class="paymentMethod">
+				<div class="paymentMethods" style="color: rgba(77, 77, 77, 0.78);">
+					奖励余额
+				</div>
+				<div id="selected"><img src="./img/selectedGrey.png" /></div>
+			</div>
+			
+			<!--点击查看更多支付方式按钮行隐藏于此-->
+			<!--<div class="paymentMethod">
+				<div id="moreMethods">查看更多支付方式</div>
+				<div id="arrowDown">
+					<img src="img/arrosDown.png" />
+				</div>
+			</div>-->
 
+			<div id="fixed">
+				<div id="Rectangle">
+					下一步
+				</div>
+			</div>
+		</div>
 	</body>
 
 </html>
