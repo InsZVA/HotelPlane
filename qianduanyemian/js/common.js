@@ -9,6 +9,11 @@ function getToken() {
     return window.localStorage.getItem("token");
 }
 
-function CallAPI(address, data) {
-    if (getToken() == undefined || getToken() == "") 
+function CallAPI(data, callback) {
+    if (getToken() == undefined || getToken() == "") {
+        window.location.href = "";
+        return;
+    }
+    api = "http://121.41.61.101/api/api.php";
+    $.post(api, JSON.stringify(data), callback(data));
 }
