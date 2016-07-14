@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta content="charset=">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=0.96,initial-scale=0.96" />
+		<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+		<title>订单信息</title>
+		<style type="text/css">
+			body {
+				background: #efeff4;
+				margin: 0 auto;
+			}
+			
+			#container {
+				background: #efeff4;
+				width: 375px;
+				height: 592px;
+				margin: 0 auto;
+			}
+			
+			#topBar {
+				background: #ffffff;
+				border: 1px solid rgba(171, 179, 189, 0.60);
+				width: 375px;
+				height: 135px;
+				margin-bottom: 10px;
+			}
+			
+			#part1 {
+				font-family: PingFangSC-Regular;
+				font-size: 12px;
+				color: #000000;
+				letter-spacing: -0.2px;
+				text-align: left;
+				width: 158px;
+				height: 14px;
+				line-height: 14px;
+				margin-left: 11px;
+				margin-top: 18px;
+			}
+			
+			#part2 {
+				height: 32px;
+				margin-top: 3px;
+			}
+			
+			#time1 {
+				float: left;
+				width: 71px;
+				height: 32px;
+				margin-left: 11px;
+				font-family: PingFangSC-Semibold;
+				font-size: 30px;
+				color: #000000;
+				letter-spacing: -0.73px;
+				text-align: left;
+			}
+			
+			#time2 {
+				float: left;
+				margin-left: 44px;
+				width: 126px;
+				height: 32px;
+			}
+			
+			#timeT {
+				width: 100%;
+				height: 14px;
+				font-family: PingFangSC-Regular;
+				font-size: 12px;
+				color: #4a4a4a;
+				letter-spacing: -0.2px;
+				text-align: center;
+				margin-top: 6px;
+				margin-left: ;
+			}
+			
+			#time2 img {
+				display: block;
+				width: 126px;
+				margin-top: 3px;
+			}
+			
+			#time3 {
+				float: right;
+				margin-right: 11px;
+				width: 71px;
+				height: 32px;
+				font-family: PingFangSC-Semibold;
+				font-size: 30px;
+				color: #030303;
+				letter-spacing: -0.73px;
+				text-align: right;
+			}
+			
+			#part3 {
+				width: 100%;
+				height: 14px;
+				margin-top: 6px;
+			}
+			
+			#start {
+				float: left;
+				margin-left: 11px;
+				width: 48px;
+				height: 14px;
+				font-family: PingFangSC-Regular;
+				font-size: 12px;
+				color: #068bd9;
+				letter-spacing: -0.2px;
+				text-align: left;
+			}
+			
+			#end {
+				float: right;
+				margin-right: 11px;
+				width: 48px;
+				height: 14px;
+				font-family: PingFangSC-Regular;
+				font-size: 12px;
+				color: #068bd9;
+				letter-spacing: -0.2px;
+				text-align: right;
+			}
+			
+			#part4 {
+				width: 79px;
+				height: 14px;
+				margin-left: 11px;
+				margin-top: 13px;
+				font-family: PingFangSC-Regular;
+				font-size: 12px;
+				color: #000000;
+				letter-spacing: -0.2px;
+				text-align: left;
+			}
+			
+			#remarks {
+				margin-bottom: 10px;
+				padding: 15px;
+				background: #ffffff;
+				border: 1px solid rgba(171, 179, 189, 0.60);
+				width: 375px;
+			}
+			
+			.infoForm {
+				background: #ffffff;
+				width: 375px;
+				height: 44px;
+				border-bottom: 1px solid #C8C7CC;
+			}
+			
+			.infoItem {
+				float: left;
+				margin-left: 15px;
+				width: 85px;
+				height: 44px;
+				line-height: 44px;
+				font-family: PingFangSC-Regular;
+				font-size: 17px;
+				color: #9b9b9b;
+				letter-spacing: -0.41px;
+			}
+			
+			.name {
+				font-family: PingFangSC-Regular;
+				font-size: 17px;
+				color: #000000;
+				letter-spacing: -0.41px;
+				text-align: right;
+				height: 44px;
+				line-height: 44px;
+				float: right;
+				margin-right: 15px;
+			}
+			
+			#IDcards {
+				width: 50px;
+				height: 44px;
+				line-height: 44px;
+				float: right;
+				margin-right: 10px;
+				font-family: PingFangSC-Regular;
+				font-size: 17px;
+				color: #000000;
+				letter-spacing: -0.41px;
+				text-align: right;
+			}
+			
+			.arrow {
+				width: 8px;
+				height: 13px;
+				float: right;
+				margin-top: 15px;
+				margin-right: 15px;
+				background-image: url(./img/Disclosure.png);
+			}
+			
+			.numbers {
+				font-family: PingFangSC-Regular;
+				font-size: 17px;
+				color: #000000;
+				letter-spacing: -0.41px;
+				text-align: right;
+				height: 44px;
+				line-height: 44px;
+				float: right;
+				margin-right: 15px;
+			}
+			
+			#female {
+				border: 1px solid #009ce5;
+				border-top-right-radius: 6px;
+				border-bottom-right-radius: 6px;
+				width: 33px;
+				height: 25px;
+				line-height: 24px;
+				float: right;
+				margin-right: 15px;
+				margin-top: 9px;
+				text-align: center;
+			}
+			
+			#male {
+				background: #009ce5;
+				border: 1px solid #009ce5;
+				border-radius: 6px 0px 0px 6px;
+				width: 33px;
+				height: 25px;
+				line-height: 24px;
+				float: right;
+				margin-right: -1px;
+				margin-top: 9px;
+				text-align: center;
+			}
+			
+			#birthday {
+				height: 44px;
+				line-height: 44px;
+				font-family: PingFangSC-Regular;
+				font-size: 17px;
+				color: #000000;
+				letter-spacing: -0.41px;
+				text-align: right;
+				float: right;
+				margin-right: 15px;
+			}
+			
+			#contacts {
+				background: #ffffff;
+				width: 375px;
+				margin-top: 10px;
+			}
+			
+			#submitBar {
+				background: #ffffff;
+				border: 1px solid rgba(171, 179, 189, 0.60);
+				width: 375px;
+				height: 44px;
+				margin-top: 50px;
+			}
+			
+			#price {
+				width: 80px;
+				height: 44px;
+				line-height: 44px;
+				float: left;
+				margin-left: 15px;
+				font-family: PingFangSC-Semibold;
+				font-size: 18px;
+				color: #d0021b;
+				letter-spacing: -0.44px;
+				line-height: 44px;
+				text-align: left;
+			}
+			
+			#submitBtn {
+				background: #009ce5;
+				width: 110px;
+				height: 42px;
+				line-height: 42px;
+				float: right;
+				font-family: PingFangSC-Regular;
+				font-size: 17px;
+				color: #ffffff;
+				letter-spacing: -0.41px;
+				text-align: center;
+			}
+			
+			.arrowUp {
+				width: 13px;
+				height: 8px;
+				float: right;
+				margin-top: 19px;
+				margin-right: 15px;
+				background-image: url(./img/arrowUp.png);
+			}
+			
+			#fixed {
+				position: fixed;
+				bottom: 64px;
+				right: 10px;
+				background: #4a4a4a;
+				width: 48px;
+				height: 48px;
+				border-radius: 100%;
+				text-align: center;
+				padding-top: 12px;
+			}
+			#popup {
+				background: rgba(255, 255, 255, 0.50);
+				border-radius: 13px;
+				width: 270px;
+				height: 214px;
+				position: fixed;
+				left: 53px;
+				bottom: 201px;
+			}
+			
+			#selectID {
+				font-family: PingFangSC-Medium;
+				font-size: 17px;
+				color: #030303;
+				letter-spacing: -0.41px;
+				text-align: center;
+				width: 67px;
+				height: 19px;
+				margin-left: 101px;
+				margin-top: 16px;
+			}
+			
+			.selectItems {
+				width: 270px;
+				height: 56px;
+				border: 1px solid #C8C7CC;
+			}
+			
+			.idCard {
+				font-family: PingFangSC-Regular;
+				font-size: 17px;
+				color: #030303;
+				letter-spacing: 0.1px;
+				text-align: left;
+				float: left;
+				margin-left: 16px;
+				margin-top: 16px;
+			}
+			
+			.selected {
+				float: right;
+				margin-top: 17px;
+				margin-right: 17px;
+			}
+			#btns {
+				width: 270px;
+				height: 44px;
+				border-bottom-left-radius: 13px;
+				border-bottom-right-radius: 13px;
+			}
+			
+			.btns {
+				width: 50%;
+				height: 100%;
+				float: left;
+				border-right:solid 1px #C8C7CC ;
+				border-top: solid 1px #C8C7CC;
+				font-family:PingFangSC-Regular;
+font-size:17px;
+color:#0076ff;
+letter-spacing:-0.41px;
+text-align:center;
+line-height: 44px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="container">
+			<div id="topBar">
+				<div id="part1">
+					2016/07/06 周四 北京 - 杭州
+				</div>
+				<div id="part2">
+					<div id="time1">
+						12:40
+					</div>
+					<div id="time2">
+						<div id="timeT">
+							2小时10分钟
+						</div>
+						<img src="./img/longArrow.png" />
+
+					</div>
+					<div id="time3">
+						14:50
+					</div>
+				</div>
+				<div id="part3">
+					<div id="start">
+						首都机场
+					</div>
+					<div id="end">
+						萧山机场
+					</div>
+				</div>
+				<div id="part4">
+					航班号 CA1712
+				</div>
+			</div>
+			<div id="remarks">
+
+			</div>
+			<div class="infoForm">
+				<div class="infoItem">
+					乘机人姓名
+				</div>
+				<div class="name">
+					张三
+				</div>
+			</div>
+			<div class="infoForm">
+				<div class="infoItem">
+					乘机人证件
+				</div>
+				<div class="arrow"></div>
+				<div id="IDcards">
+					身份证
+				</div>
+			</div>
+			<div class="infoForm">
+				<div class="infoItem">
+					证件号码
+				</div>
+				<div class="numbers">
+					3622209900999009909
+				</div>
+			</div>
+			<div class="infoForm">
+				<div class="infoItem">
+					性别
+				</div>
+				<div id="female">
+					女
+				</div>
+				<div id="male">
+					男
+				</div>
+			</div>
+			<div class="infoForm">
+				<div class="infoItem">
+					出生日期
+				</div>
+				<div id="birthday">
+					1980/01/01
+				</div>
+			</div>
+			<div id="contacts">
+				<div class="infoForm">
+					<div class="infoItem">
+						联系人
+					</div>
+					<div class="name">
+						李四
+					</div>
+				</div>
+				<div class="infoForm">
+					<div class="infoItem">
+						证件号码
+					</div>
+					<div class="numbers">
+						13333333333
+					</div>
+				</div>
+
+			</div>
+			<div id="submitBar">
+				<div id="price">
+					¥ 1033
+				</div>
+
+				<div id="submitBtn">
+					提交订单
+				</div>
+				<div class="arrowUp">
+
+				</div>
+			</div>
+		</div>
+		<div id="fixed">
+			<img src="./img/managerWhite.png" />
+		</div>
+		<div id="popup">
+				<div id="selectID">
+					选择证件
+				</div>
+				<div class="selectItems" style="margin-top: 21px;">
+					<div class="idCard">
+						身份证
+					</div>
+					<div class="selected">
+						<img src="./img/selectedBlue.png" />
+					</div>
+				</div>
+				<div class="selectItems" style="margin-top: -1px;">
+					<div class="idCard">
+						护照
+					</div>
+					<div class="selected">
+						<img src="./img/selectedGrey.png" />
+					</div>
+				</div>
+				<div id="btns">
+					<div class="btns">
+						取消
+					</div>
+					<div class="btns" style="border-right: none;">
+						确认
+					</div>
+				</div>
+			</div>
+	</body>
+
+</html>

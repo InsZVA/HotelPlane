@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta content="charset=">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=0.96,initial-scale=0.96" />
+		<title>机票付款</title>
+		<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+		<link href="./css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+		<script src="./js/bootstrap-datetimepicker.min.js"></script>
+		<script type="text/javascript" src="bootstrap-datetimepicker.de.js" charset="UTF-8"></script>
+		<style type="text/css">
+			body {
+				background: #efeff4;
+				margin: 0 auto;
+			}
+			
+			#container {
+				width: 375px;
+				/*height: 1270px;*/
+				margin: 0 auto;
+			}
+			
+			#topBar {
+				background: #ffffff;
+				border: 1px solid rgba(171, 179, 189, 0.60);
+				width: 375px;
+				height: 135px;
+			}
+			
+			#part1 {
+				font-family: PingFangSC-Regular;
+				font-size: 12px;
+				color: #000000;
+				letter-spacing: -0.2px;
+				text-align: left;
+				width: 158px;
+				height: 14px;
+				line-height: 14px;
+				margin-left: 11px;
+				margin-top: 18px;
+			}
+			
+			#part2 {
+				height: 32px;
+				margin-top: 3px;
+			}
+			
+			#time1 {
+				float: left;
+				width: 71px;
+				height: 32px;
+				margin-left: 11px;
+				font-family: PingFangSC-Semibold;
+				font-size: 30px;
+				color: #000000;
+				letter-spacing: -0.73px;
+				text-align: left;
+			}
+			
+			#time2 {
+				float: left;
+				margin-left: 44px;
+				width: 126px;
+				height: 32px;
+			}
+			
+			#timeT {
+				width: 100%;
+				height: 14px;
+				font-family: PingFangSC-Regular;
+				font-size: 12px;
+				color: #4a4a4a;
+				letter-spacing: -0.2px;
+				text-align: center;
+				margin-top: 6px;
+				margin-left: ;
+			}
+			
+			#time2 img {
+				display: block;
+				width: 126px;
+				margin-top: 3px;
+			}
+			
+			#time3 {
+				float: right;
+				margin-right: 11px;
+				width: 71px;
+				height: 32px;
+				font-family: PingFangSC-Semibold;
+				font-size: 30px;
+				color: #030303;
+				letter-spacing: -0.73px;
+				text-align: right;
+			}
+			
+			#part3 {
+				width: 100%;
+				height: 14px;
+				margin-top: 6px;
+			}
+			
+			#start {
+				float: left;
+				margin-left: 11px;
+				width: 48px;
+				height: 14px;
+				font-family: PingFangSC-Regular;
+				font-size: 12px;
+				color: #068bd9;
+				letter-spacing: -0.2px;
+				text-align: left;
+			}
+			
+			#end {
+				float: right;
+				margin-right: 11px;
+				width: 48px;
+				height: 14px;
+				font-family: PingFangSC-Regular;
+				font-size: 12px;
+				color: #068bd9;
+				letter-spacing: -0.2px;
+				text-align: right;
+			}
+			
+			#part4 {
+				width: 79px;
+				height: 14px;
+				margin-left: 11px;
+				margin-top: 13px;
+				font-family: PingFangSC-Regular;
+				font-size: 12px;
+				color: #000000;
+				letter-spacing: -0.2px;
+				text-align: left;
+			}
+			
+			#orderInfo {
+				background: #ffffff;
+				border: 1px solid rgba(171, 179, 189, 0.60);
+				width: 375px;
+				height: 105px;
+				margin-top: 8px;
+				position: relative;
+			}
+			
+			.orderItem {
+				font-family: PingFangSC-Regular;
+				font-size: 12px;
+				color: #9b9b9b;
+				letter-spacing: -0.2px;
+				text-align: left;
+				width: 48px;
+				height: 14px;
+				position: absolute;
+			}
+			
+			#price {
+				font-family: PingFangSC-Regular;
+				font-size: 14px;
+				color: #d0021b;
+				letter-spacing: -0.23px;
+				text-align: left;
+				width: 43px;
+				height: 16px;
+				position: absolute;
+				left: 75px;
+				bottom: 75px;
+			}
+			
+			#orderNum {
+				font-family: PingFangSC-Regular;
+				font-size: 12px;
+				color: #000000;
+				letter-spacing: -0.2px;
+				text-align: left;
+				width: 108px;
+				height: 14px;
+				position: absolute;
+				left: 75px;
+				bottom: 50px;
+			}
+			
+			#orderTime {
+				font-family: PingFangSC-Regular;
+				font-size: 12px;
+				color: #000000;
+				letter-spacing: -0.2px;
+				text-align: left;
+				width: 96px;
+				height: 14px;
+				position: absolute;
+				left: 75px;
+				bottom: 25px;
+			}
+			
+			#fixed2 {
+				position: fixed;
+				bottom: 10px;
+				width: 100%;
+				height: 57px;
+			}
+			
+			#Rectangle {
+				background: #009ce5;
+				border-radius: 12.5px;
+				width: 355px;
+				height: 57px;
+				margin: 0 auto;
+				display: block!important;
+				font-family: PingFangSC-Medium;
+				font-size: 20px;
+				color: #ffffff;
+				letter-spacing: 0px;
+				text-align: center;
+				line-height: 43px;
+			}
+			
+			.part {
+				background: #ffffff;
+				border: 1px solid rgba(171, 179, 189, 0.60);
+				width: 375px;
+				height: 128px;
+				margin-top: 8px;
+			}
+			
+			#partUp {
+				height: 86px;
+				border-bottom: 1px solid #C8C7CC;
+			}
+			
+			#partDown {
+				height: 42px;
+				line-height: 42px;
+			}
+			
+			.part1 {
+				width: 36px;
+				margin-left: 11px;
+				font-family: PingFangSC-Regular;
+				font-size: 12px;
+				color: #9b9b9b;
+				letter-spacing: -0.2px;
+				text-align: left;
+				height: 86px;
+				line-height: 50px;
+				float: left;
+			}
+			
+			.part2 {
+				width: 36px;
+				height: 86px;
+				float: left;
+				margin-left: 28px;
+				font-family: PingFangSC-Regular;
+				font-size: 12px;
+				color: #000000;
+				letter-spacing: -0.2px;
+				text-align: left;
+			}
+			
+			.name {
+				margin-top: 12px;
+			}
+			
+			.IDcard {
+				margin-top: 8px;
+			}
+			
+			.number {
+				margin-top: 8px;
+			}
+			
+			.part3 {
+				float: left;
+				margin-left: 48px;
+				font-family: PingFangSC-Regular;
+				font-size: 12px;
+				color: #000000;
+				letter-spacing: -0.2px;
+				text-align: left;
+			}
+			
+			#contact {
+				float: left;
+				margin-left: 11px;
+				font-family: PingFangSC-Regular;
+				font-size: 12px;
+				color: #9b9b9b;
+				letter-spacing: -0.2px;
+				text-align: left;
+			}
+			
+			#conName {
+				float: left;
+				margin-left: 28px;
+				font-family: PingFangSC-Regular;
+				font-size: 12px;
+				color: #000000;
+				letter-spacing: -0.2px;
+				text-align: left;
+			}
+			
+			#phoneNum {
+				float: left;
+				margin-left: 60px;
+				/* 176****6539:*/
+				;
+				font-family: PingFangSC-Regular;
+				font-size: 12px;
+				color: #000000;
+				letter-spacing: -0.2px;
+				text-align: left;
+			}
+			
+			#recommendation {
+				background:#ffffff;
+border:1px solid rgba(171,179,189,0.60);
+width:375px;
+height:187px;
+				
+				position: relative;
+				border-top: 1px solid #C8C7CC;
+				margin-top: 10px;
+			}
+			
+			#hotelCMD {
+				font-family: PingFangSC-Regular;
+				font-size: 14px;
+				color: #030303;
+				letter-spacing: 0px;
+				text-align: center;
+				width: 56px;
+				height: 16px;
+				position: absolute;
+				left: 10px;
+				bottom: 162px;
+			}
+			
+			.hotelPic {
+				width: 112px;
+				height: 80px;
+				position: absolute;
+				left: 11px;
+				bottom: 70px;
+			}
+			
+			.hotelInfo {
+				font-family: PingFangSC-Regular;
+				font-size: 13px;
+				color: #030303;
+				letter-spacing: 0px;
+				text-align: left;
+				width: 99px;
+				height: 36px;
+				position: absolute;
+				left: 10px;
+				bottom: 29px;
+			}
+			
+			.price1 {
+				font-family: PingFangSC-Regular;
+				font-size: 10px;
+				color: #ff001f;
+				letter-spacing: 0px;
+				line-height: 14px;
+				text-align: left;
+				position: absolute;
+				left: 10px;
+				bottom: 9px;
+			}
+			
+			.price2 {
+				font-family: PingFangSC-Regular;
+				font-size: 10px;
+				color: #030303;
+				letter-spacing: 0px;
+				line-height: 14px;
+				text-align: left;
+				position: absolute;
+				right: 254px;
+				bottom: 9px;
+			}
+			
+		</style>
+
+	</head>
+
+	<body>
+		<div id="container">
+			<div id="topBar">
+				<div id="part1">
+					2016/07/06 周四 北京 - 杭州
+				</div>
+				<div id="part2">
+					<div id="time1">
+						12:40
+					</div>
+					<div id="time2">
+						<div id="timeT">
+							2小时10分钟
+						</div>
+						<img src="./img/longArrow.png" />
+
+					</div>
+					<div id="time3">
+						14:50
+					</div>
+				</div>
+				<div id="part3">
+					<div id="start">
+						首都机场
+					</div>
+					<div id="end">
+						萧山机场
+					</div>
+				</div>
+				<div id="part4">
+					航班号 CA1712
+				</div>
+			</div>
+			<div id="orderInfo">
+				<div class="orderItem" style="bottom: 77px;left:11px;">
+					订单总价
+				</div>
+				<div class="orderItem" style="bottom: 50px;left:11px;">
+					订单号
+				</div>
+				<div class="orderItem" style="bottom: 23px;left:11px;">
+					付款时间
+				</div>
+				<div class="orderItem" style="bottom: 49px;left:231px;">
+					代理商
+				</div>
+				<div class="orderItem" style="bottom: 49px;left:295px;color: #000000;">
+					舒途机票
+				</div>
+				<div id="price">
+					¥&nbsp;707
+				</div>
+				<div id="orderNum">
+					st150707175554357
+				</div>
+				<div id="orderTime">
+					2016/05/04&nbsp;14:12
+				</div>
+			</div>
+			<div class="part">
+				<div id="partUp">
+					<div class="part1">
+						乘机人
+					</div>
+					<div class="part2">
+						<div class="name">
+							张三
+						</div>
+						<div class="IDcard">
+							身份证
+						</div>
+						<div class="number">
+							票号
+						</div>
+					</div>
+					<div class="part3">
+						<div class="name">
+							成人票
+						</div>
+						<div class="IDcard">
+							3622************010
+						</div>
+						<div class="number">
+							999-2367594406
+						</div>
+					</div>
+				</div>
+				<div id="partDown">
+					<div id="contact">
+						联系人
+					</div>
+					<div id="conName">
+						张三
+					</div>
+					<div id="phoneNum">
+						176****6539
+					</div>
+
+				</div>
+
+			</div>
+			<div id="recommendation">
+				<div id="hotelCMD">
+					酒店推荐
+				</div>
+				<div class="hotelPic">
+					<img src="./img/picGrey.png" />
+				</div>
+				<div class="hotelPic" style="left: 132px;">
+					<img src="./img/picGrey.png" />
+				</div>
+				<div class="hotelPic" style="left: 252px;">
+					<img src="./img/picGrey.png" />
+				</div>
+				<div class="hotelInfo">
+					7天酒店连锁酒店 武汉XXX路店
+				</div>
+				<div class="hotelInfo" style="left: 132px;">
+					7天酒店连锁酒店 武汉XXX路店
+				</div>
+				<div class="hotelInfo" style="left: 252px;">
+					7天酒店连锁酒店 武汉XXX路店
+				</div>
+				<div class="price1">
+					￥707
+				</div>
+				<div class="price1" style="left: 132px;">
+					￥707
+				</div>
+				<div class="price1" style="left: 252px;">
+					￥707
+				</div>
+				<div class="price2"> 市场价￥707</div>
+				<div class="price2" style="right: 132px;">
+					市场价￥707
+				</div>
+				<div class="price2" style="right: 12px;">
+					市场价￥707
+				</div>
+
+			</div>
+
+		</div>
+		<div id="fixed2">
+			<div id="Rectangle" class="btn">
+				回到首页
+			</div>
+		</div>
+
+	</body>
+
+</html>

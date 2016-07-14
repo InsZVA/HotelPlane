@@ -8,48 +8,74 @@
 		<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
 		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 		<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-		<title>余额充值</title>
+		<title>付款</title>
 		<style type="text/css">
+			body {
+				background: #efeff4;
+				margin: 0 auto;
+			}
+			
 			#container {
 				background: #efeff4;
 				width: 375px;
 				height: 592px;
+				margin: 0 auto;
 			}
 			
-			#bar {
-				background: rgba(247, 247, 247, 0.82);
-				box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.30);
-				width: 375px;
-				height: 40px;
-				text-align: center;
-				line-height: 40px;
-			}
-			
-			#lable {
-				font-family: PingFangSC-Regular;
-				font-size: 13px;
-				color: #666666;
-				letter-spacing: -0.06px;
-				text-align: center;
-				line-height: 15px;
-				width: 68px;
-				height: 15px;
-				margin-top: 15px;
-				margin-left: 15px;
-				margin-bottom: 13px;
-			}
-			
-			.form-control {
+			#orderPri {
 				background: #ffffff;
+				border: 1px solid rgba(171, 179, 189, 0.60);
 				width: 375px;
-				height: 44px;
+				height: 125px;
+				margin-top: 16px;
+				margin-bottom: 14px;
+			}
+			
+			#leftDiv {
+				width: 55px;
+				height: 125px;
+				float: left;
+				margin-left: 11px;
+				margin-right: 10px;
+			}
+			
+			.leftDiv {
+				width: 55px;
+				height: 14px;
+				margin-top: 13px;
 				font-family: PingFangSC-Regular;
-				font-size: 17px;
-				color: rgba(77, 77, 77, 0.78);
-				letter-spacing: -0.41px;
-				border-radius: 0;
-				border-left: 0;
-				border-right: 0;
+				font-size: 12px;
+				color: #9b9b9b;
+				letter-spacing: -0.2px;
+				text-align: left;
+			}
+			
+			#rightDiv {
+				width: 45px;
+				height: 125px;
+				float: left;
+				margin-left: 10px;
+			}
+			
+			#priceT {
+				height: 16px;
+				margin-top: 11px;
+				font-family:PingFangSC-Regular;
+font-size:14px;
+color:#d0021b;
+letter-spacing:-0.23px;
+text-align:left;
+			}
+			
+			.rightDiv {
+				width: 45px;
+				height: 14px;
+				margin-top: 13px;
+				font-family: PingFangSC-Regular;
+				font-size: 12px;
+				color: #000000;
+				letter-spacing: -0.2px;
+				text-align: right;
 			}
 			
 			#lableP {
@@ -60,7 +86,6 @@
 				width: 68px;
 				height: 15px;
 				margin-left: 15px;
-				margin-top: 50px;
 				margin-bottom: 13px;
 			}
 			
@@ -139,14 +164,36 @@
 
 	<body>
 		<div id="container">
-			<div id="bar">余额充值</div>
-
-			<form role="form">
-				<div class="form-group">
-					<label id="lable" for="name">充值金额</label>
-					<input type="text" class="form-control" id="name" placeholder="请填写充值金额">
+			<div id="orderPri">
+				<div id="leftDiv">
+					<div class="leftDiv">
+						订单总价
+					</div>
+					<div class="leftDiv">
+						票价
+					</div>
+					<div class="leftDiv">
+						机建+燃油
+					</div>
+					<div class="leftDiv">
+						优惠券
+					</div>
 				</div>
-			</form>
+				<div id="rightDiv">
+					<div id="priceT" class="rightDiv">
+						¥ 707元
+					</div>
+					<div class="rightDiv">
+						1400元
+					</div>
+					<div class="rightDiv">
+						600元
+					</div>
+					<div class="rightDiv">
+						1000元
+					</div>
+				</div>
+			</div>
 			<div id="lableP">支付方式</div>
 			<div class="paymentMethod">
 				<div class="paymentMethods">支付宝</div>
@@ -170,7 +217,7 @@
 				</div>
 				<div id="selected"><img src="./img/selectedGrey.png" /></div>
 			</div>
-			
+
 			<!--点击查看更多支付方式按钮行隐藏于此-->
 			<!--<div class="paymentMethod">
 				<div id="moreMethods">查看更多支付方式</div>
@@ -181,7 +228,7 @@
 
 			<div id="fixed">
 				<div id="Rectangle">
-					下一步
+					立即支付
 				</div>
 			</div>
 		</div>

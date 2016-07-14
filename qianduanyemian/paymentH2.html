@@ -5,7 +5,7 @@
 		<meta content="charset=">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=0.96,initial-scale=0.96" />
-		<title>订单信息</title>
+		<title>机票付款</title>
 		<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
 		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 		<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
@@ -31,28 +31,30 @@
 				height: 75px;
 			}
 			
-			#gjfwf {
+			#part1 {
 				font-family: PingFangSC-Semibold;
 				font-size: 20px;
 				color: #000000;
 				letter-spacing: -0.49px;
 				text-align: left;
-				width: 98px;
+				width: 187px;
 				height: 22px;
+				line-height: 14px;
 				margin-left: 11px;
 				margin-top: 16px;
 			}
 			
-			#xbt {
+			#part2 {
 				font-family: PingFangSC-Regular;
 				font-size: 12px;
 				color: #4a4a4a;
 				letter-spacing: -0.2px;
 				text-align: left;
-				width: 107px;
+				width: 250px;
 				height: 14px;
+				line-height: 14px;
 				margin-left: 11px;
-				margin-top: 8px;
+				margin-top: 10px;
 			}
 			
 			#orderInfo {
@@ -114,80 +116,101 @@
 				bottom: 25px;
 			}
 			
-			#voucher {
+			.part {
 				background: #ffffff;
 				border: 1px solid rgba(171, 179, 189, 0.60);
 				width: 375px;
-				height: 42px;
-				margin-top: 9px;
+				height: 128px;
+				margin-top: 8px;
 			}
 			
-			.project {
-				font-family: PingFangSC-Regular;
-				font-size: 17px;
-				color: #000000;
-				letter-spacing: -0.28px;
-				line-height: 44px;
-				text-align: left;
-				width: 84px;
-				height: 42px;
-				float: left;
-				margin-left: 11px;
+			#partUp {
+				height: 86px;
+				border-bottom: 1px solid #C8C7CC;
 			}
 			
-			.voucherPri {
-				font-family: PingFangSC-Regular;
-				font-size: 14px;
-				color: #d0021b;
-				letter-spacing: -0.23px;
+			#partDown {
+				height: 42px;
 				line-height: 42px;
+			}
+			
+			.part1 {
+				width: 36px;
+				margin-left: 11px;
+				font-family: PingFangSC-Regular;
+				font-size: 12px;
+				color: #9b9b9b;
+				letter-spacing: -0.2px;
 				text-align: left;
-				width: 52px;
-				height: 42px;
+				height: 86px;
+				line-height: 50px;
 				float: left;
-				margin-left: 52px;
 			}
 			
-			.arrow {
-				width: 8px;
-				height: 13px;
-				float: right;
-				margin-top: 15px;
-				margin-right: 16px;
-				background-image: url(./img/Disclosure.png);
-			}
-			
-			#selectBar {
-				width: 100%;
-				height: 15px;
-				margin-top: 10px;
-			}
-			
-			#select {
-				background: #d8d8d8;
-				border: 1px solid #ffffff;
-				width: 13px;
-				height: 13px;
+			.part2 {
+				width: 36px;
+				height: 86px;
 				float: left;
-				margin-left: 10px;
-			}
-			
-			#select img {
-				display: block;
-				width: 15px;
-				height: 15px;
-			}
-			
-			#selectItem {
+				margin-left: 28px;
 				font-family: PingFangSC-Regular;
 				font-size: 12px;
 				color: #000000;
 				letter-spacing: -0.2px;
 				text-align: left;
+			}
+			
+			.name {
+				margin-top: 12px;
+			}
+			
+			.IDcard {
+				margin-top: 8px;
+			}
+			
+			.number {
+				margin-top: 8px;
+			}
+			
+			.part3 {
 				float: left;
-				margin-left: 10px;
-				width: 60px;
-				height: 14px;
+				margin-left: 48px;
+				font-family: PingFangSC-Regular;
+				font-size: 12px;
+				color: #000000;
+				letter-spacing: -0.2px;
+				text-align: left;
+			}
+			
+			#contact {
+				float: left;
+				margin-left: 11px;
+				font-family: PingFangSC-Regular;
+				font-size: 12px;
+				color: #9b9b9b;
+				letter-spacing: -0.2px;
+				text-align: left;
+			}
+			
+			#conName {
+				float: left;
+				margin-left: 28px;
+				font-family: PingFangSC-Regular;
+				font-size: 12px;
+				color: #000000;
+				letter-spacing: -0.2px;
+				text-align: left;
+			}
+			
+			#phoneNum {
+				float: left;
+				margin-left: 60px;
+				/* 176****6539:*/
+				;
+				font-family: PingFangSC-Regular;
+				font-size: 12px;
+				color: #000000;
+				letter-spacing: -0.2px;
+				text-align: left;
 			}
 			
 			#fixed2 {
@@ -218,8 +241,12 @@
 	<body>
 		<div id="container">
 			<div id="topBar">
-				<div id="gjfwf">管家服务费</div>
-				<div id="xbt">一次办理，永久服务</div>
+				<div id="part1">
+					7天酒店上海武宁路店
+				</div>
+				<div id="part2">
+					05月04日 - 05月05日 高级大床房 共1晚 1间
+				</div>
 			</div>
 			<div id="orderInfo">
 				<div class="orderItem" style="bottom: 77px;left:11px;">
@@ -247,22 +274,53 @@
 					2016/05/04&nbsp;14:12
 				</div>
 			</div>
-			<div id="voucher">
-				<div class="project">使用代金券</div>
-				<div class="voucherPri">¥&nbsp;1000 </div>
-				<div class="arrow"></div>
-			</div>
-			<div id="selectBar">
-				<div id="select">
-					<img src="./img/duihao.png" />
+			<div class="part">
+				<div id="partUp">
+					<div class="part1">
+						乘机人
+					</div>
+					<div class="part2">
+						<div class="name">
+							张三
+						</div>
+						<div class="IDcard">
+							身份证
+						</div>
+						<div class="number">
+							票号
+						</div>
+					</div>
+					<div class="part3">
+						<div class="name">
+							成人票
+						</div>
+						<div class="IDcard">
+							3622************010
+						</div>
+						<div class="number">
+							999-2367594406
+						</div>
+					</div>
 				</div>
-				<div id="selectItem">使用代金券</div>
+				<div id="partDown">
+					<div id="contact">
+						联系人
+					</div>
+					<div id="conName">
+						张三
+					</div>
+					<div id="phoneNum">
+						176****6539
+					</div>
+
+				</div>
+
 			</div>
 
 		</div>
 		<div id="fixed2">
 			<div id="Rectangle" class="btn">
-				下一步
+				立刻支付
 			</div>
 		</div>
 
