@@ -4,22 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/api/api.php.bal" line="144" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c7f020c-5222-4964-8d09-ca49080e56ac" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Payment/Payment.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Payment/PaymentManager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Hotel/HotelManager.php" afterPath="$PROJECT_DIR$/Hotel/HotelManager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/User/User.php" afterPath="$PROJECT_DIR$/User/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/api.php" afterPath="$PROJECT_DIR$/api/api.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/doc.md" afterPath="$PROJECT_DIR$/api/doc.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/accountRecharge.html" afterPath="$PROJECT_DIR$/qianduanyemian/accountRecharge.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/activityDetails.html" afterPath="$PROJECT_DIR$/qianduanyemian/activityDetails.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/index.html" afterPath="$PROJECT_DIR$/qianduanyemian/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/manager.html" afterPath="$PROJECT_DIR$/qianduanyemian/manager.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/memberInfo.html" afterPath="$PROJECT_DIR$/qianduanyemian/memberInfo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/orders.html" afterPath="$PROJECT_DIR$/qianduanyemian/orders.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/recharge.html" afterPath="$PROJECT_DIR$/qianduanyemian/recharge.html" />
-    </list>
+    <list default="true" id="4c7f020c-5222-4964-8d09-ca49080e56ac" name="Default" comment="" />
     <ignored path="PhpstormProjects.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -461,15 +446,15 @@
       <workItem from="1468051351679" duration="6643000" />
       <workItem from="1468093854884" duration="39000" />
       <workItem from="1468098305306" duration="329000" />
-      <workItem from="1468235273250" duration="15734000" />
+      <workItem from="1468235273250" duration="15989000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109388000" />
+    <option name="totallyTimeSpent" value="109643000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14635417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
