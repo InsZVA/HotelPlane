@@ -44,7 +44,6 @@ if ($postData->requestMethod != "login") {
     if ($level == -1) PermissionDenied();
 }
 
-
 switch ($postData->requestMethod) {
     //Hotel
     case "newHotel":

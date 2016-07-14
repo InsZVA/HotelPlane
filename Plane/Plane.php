@@ -86,17 +86,17 @@ class Plane
 
     public function listPlanes($offset, $num, $orderBy, $order, $standard) {
         if ($order != 'asc' && $order != 'desc') return false;
-        $orderList=array("start_time","start_city_id");
+        $orderList=array("start_time","start_city_id", "price");
         if(!in_array($orderBy,$orderList)) return false;
         $sql = "select * from `plane` where `standard`=? order by $orderBy $order limit ?,?";
         $stmt = $this->mysqli->prepare($sql);
         $stmt->bind_param('iii', $standard, $offset, $num);
         $stmt->execute();
         $result = $stmt->get_result();
-        $this->mysqli->query("select * from `plane` where `standard`='$standard'");
+        //$this->mysqli->query("select * from `plane` where `standard`='$standard'");
         if ($result) {
             $rows = [];
-            $rows['amount']=mysqli_affected_rows($this->mysqli);
+            //$rows['amount']=mysqli_affected_rows($this->mysqli);
             while($row = $result->fetch_assoc()) {
                 $rows[] = $row;
             }
