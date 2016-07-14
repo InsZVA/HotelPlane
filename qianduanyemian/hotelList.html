@@ -33,7 +33,18 @@
 				width: 50%;
 				height: 40px;
 				line-height: 40px;
-				border-right: 1px solid;
+				
+			}
+			
+			.caretup {
+				display: inline-block;
+				width: 0;
+				height: 0;
+				margin-left: 2px;
+				vertical-align: middle;
+				border-bottom: 4px solid;
+				border-right: 4px solid transparent;
+				border-left: 4px solid transparent;
 			}
 			
 			#rightDiv {
@@ -46,6 +57,12 @@
 				width: 50%;
 				height: 40px;
 				line-height: 40px;
+			}
+			
+			#rightDiv img {
+				display: inline-block;
+				width: 13px;
+				height: 16px;
 			}
 			
 			.hotelTuwen {
@@ -159,28 +176,33 @@
 	<body>
 		<div id="container">
 			<div id="bar">
-				<div id="leftDiv">价格 由高到低</div>
-				<div id="rightDiv">杭州市 西湖区</div>
+				<div id="leftDiv">价格 由低到高
+					<span class="caretup"></span>
+				</div>
+				<div id="rightDiv">
+					<img src="img/placeHolderGrey.png"/>
+					&nbsp;杭州市 西湖区
+				</div>
 			</div>
 			<div class="hotelTuwen">
 				<div class="caption">杭州温德至尊豪廷大酒店</div>
-				<div class="region">	下城区 五星级	</div>
-				<div class="price">￥707	</div>
+				<div class="region"> 下城区 五星级 </div>
+				<div class="price">￥707 </div>
 			</div>
 			<div class="hotelTuwen">
 				<div class="caption">杭州温德至尊豪廷大酒店</div>
-				<div class="region">	下城区 五星级	</div>
-				<div class="price">￥707	</div>
+				<div class="region"> 下城区 五星级 </div>
+				<div class="price">￥707 </div>
 			</div>
 			<div class="hotelTuwen">
 				<div class="caption">杭州温德至尊豪廷大酒店</div>
-				<div class="region">	下城区 五星级	</div>
-				<div class="price">￥707	</div>
+				<div class="region"> 下城区 五星级 </div>
+				<div class="price">￥707 </div>
 			</div>
 			<div class="hotelTuwen">
 				<div class="caption">杭州温德至尊豪廷大酒店</div>
-				<div class="region">	下城区 五星级	</div>
-				<div class="price">￥707	</div>
+				<div class="region"> 下城区 五星级 </div>
+				<div class="price">￥707 </div>
 			</div>
 		</div>
 		<div id="fixed">

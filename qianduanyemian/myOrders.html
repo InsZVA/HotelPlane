@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta content="charset=">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=0.96,initial-scale=0.96" />
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<style type="text/css">
+			body {
+				background: #efeff4;
+				width: 375px;
+				margin: 0;
+							}
+			
+			#container {
+				width: 375px;
+				margin: 0 auto;
+			}
+			
+			#bar {
+				background: rgba(247, 247, 247, 0.82);
+/*				box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.30);*/				width: 375px;
+				height: 40px;
+				line-height: 40px;
+				font-family: PingFangSC-Regular;
+				font-size: 15px;
+				color: #030303;
+				letter-spacing: 0px;
+				text-align: center;
+			}
+			
+			.hotel {
+				background: #ffffff;
+				border: 1px solid rgba(171, 179, 189, 0.60);
+				width: 375px;
+				height: 145px;
+			}
+			
+			.jd {
+				font-family: PingFangSC-Regular;
+				font-size: 14px;
+				color: #009ce5;
+				letter-spacing: 0px;
+				text-align: center;
+				width: 28px;
+				height: 16px;
+				line-height: 16px;
+				margin-top: 10px;
+				margin-left: 7px;
+				float: left;
+			}
+			
+			.status {
+				font-family: PingFangSC-Regular;
+				font-size: 14px;
+				color: rgba(77, 77, 77, 0.78);
+				letter-spacing: 0px;
+				text-align: center;
+				width: 56px;
+				height: 16px;
+				float: right;
+				margin-top: 7px;
+				margin-right: 11px;
+			}
+			
+			.bar1 {
+				width: 100%;
+				height: 24px;
+			}
+			
+			.bar2 {
+				width: 100%;
+				height: 22px;
+				margin-top: 25px;
+				clear: both;
+			}
+			
+			.htName {
+				font-family: PingFangSC-Semibold;
+				font-size: 20px;
+				color: #030303;
+				letter-spacing: -0.49px;
+				margin-left: 11px;
+				margin-top: 25px;
+			}
+			
+			.htPrice {
+				font-family: PingFangSC-Regular;
+				font-size: 20px;
+				color: #030303;
+				letter-spacing: -0.49px;
+				margin-right: 11px;
+				float: right;
+			}
+			
+			.bar3 {
+				width: 100%;
+				height: 40px;
+				margin-top: 25px;
+			}
+			
+			.htDetails {
+				font-family: PingFangSC-Regular;
+				font-size: 14px;
+				color: #8c8c8c;
+				letter-spacing: 0px;
+				text-align: left;
+				width: 181px;
+				height: 20px;
+				margin-left: 11px;
+			}
+			
+			.ticket {
+				background: #ffffff;
+				border: 1px solid rgba(171, 179, 189, 0.60);
+				width: 375px;
+				height: 145px;
+				margin-top: 8px;
+			}
+			
+			.jp {
+				font-family: PingFangSC-Regular;
+				font-size: 14px;
+				color: #ff6200;
+				letter-spacing: 0px;
+				text-align: center;
+				width: 28px;
+				height: 16px;
+				line-height: 16px;
+				margin-top: 10px;
+				margin-left: 7px;
+				float: left;
+			}
+			
+			.arrearage {
+				font-family: PingFangSC-Regular;
+				font-size: 14px;
+				color: #ff0000;
+				letter-spacing: 0px;
+				text-align: center;
+				width: 42px;
+				height: 16px;
+				margin-right: 11px;
+				margin-top: 8px;
+				float: right;
+			}
+			
+			.flight {
+				font-family: PingFangSC-Semibold;
+				font-size: 20px;
+				color: #030303;
+				letter-spacing: -0.49px;
+				margin-left: 11px;
+				margin-top: 24px;
+			}
+			.paid {
+				font-family:PingFangSC-Regular;
+font-size:14px;
+color:#030303;
+letter-spacing:0px;
+text-align:center;
+width: 42px;
+				height: 16px;
+				margin-right: 11px;
+				margin-top: 8px;
+				float: right;
+			}
+			.finished {
+				font-family:PingFangSC-Regular;
+font-size:14px;
+color:#030303;
+letter-spacing:0px;
+text-align:center;
+width: 56px;
+height: 16px;
+margin-top: 8px;
+margin-right: 11px;
+float: right;
+			}
+			#fixed {
+				width: 100%;
+				height: 48px;
+				position: fixed;
+				bottom: 10px;
+			}
+			#fixed1 {
+				background:rgba(0,0,0,0.30);
+border-radius:8px;
+width:48px;
+height:48px;
+float: right;
+margin-right: 10px;
+			}
+		</style>
+		<title>我的订单</title>
+	</head>
+
+	<body>
+		<div id="container">
+			<div id="bar">我的订单</div>
+			<div class="hotel">
+				<div class="bar1">
+					<img src="./img/hotel@1x.png" style="margin-left: 11px;margin-top:10px;vertical-align: baseline;float: left;" />
+					<span class="jd">酒店</span>
+					<span class="status">交易完成</span>
+				</div>
+				<div class="bar2">
+					<span class="htName">7天酒店上海武宁路店</span>
+					<span class="htPrice">¥ 707</span>
+				</div>
+				<div class="bar3">
+					<div class="htDetails">2015/05/04 至 2015/05/05</div>
+					<div class="htDetails">1晚 1间</div>
+				</div>
+			</div>
+			<div class="ticket">
+				<div class="bar1">
+					<img src="./img/Capa_1@1x.png" style="margin-left: 11px;margin-top:10px;vertical-align: baseline;float: left;" />
+					<span class="jp">机票</span>
+					<span class="arrearage">未付款</span>
+				</div>
+				<div class="bar2">
+					<span class="flight">杭州 — 广州</span>
+					<span class="htPrice">¥ 707</span>
+				</div>
+				<div class="bar3">
+					<div class="htDetails">2015/07/16 12:40 － 14:50</div>
+					<div class="htDetails">国航CA1712</div>
+				</div>
+			</div>
+			<div class="ticket">
+				<div class="bar1">
+					<img src="./img/Capa_1@1x.png" style="margin-left: 11px;margin-top:10px;vertical-align: baseline;float: left;" />
+					<span class="jp">机票</span>
+					<span class="paid">已付款</span>
+				</div>
+				<div class="bar2">
+					<span class="flight">杭州 — 广州</span>
+					<span class="htPrice">¥ 707</span>
+				</div>
+				<div class="bar3">
+					<div class="htDetails">2015/07/16 12:40 － 14:50</div>
+					<div class="htDetails">国航CA1712</div>
+				</div>
+			</div>
+			<div class="ticket">
+				<div class="bar1">
+					<img src="./img/Capa_1@1x.png" style="margin-left: 11px;margin-top:10px;vertical-align: baseline;float: left;" />
+					<span class="jp">机票</span>
+					<span class="finished">出票完成</span>
+				</div>
+				<div class="bar2">
+					<span class="flight">杭州 — 广州</span>
+					<span class="htPrice">¥ 707</span>
+				</div>
+				<div class="bar3">
+					<div class="htDetails">2015/07/16 12:40 － 14:50</div>
+					<div class="htDetails">国航CA1712</div>
+				</div>
+			</div>
+		</div>
+		<div id="fixed">
+			<div id="fixed1">
+				<img src="./img/Shape@1x.png"/ style="margin-top: 12px;margin-left: 16px;">
+			</div>
+		</div>
+	</body>
+
+</html>
