@@ -30,7 +30,7 @@ class Weixin
             $touser=$touser['open_id'];
 
         $template_id=$data->template_id;
-        $template_id=TEMPLATE_LIST[$template_id];
+        $template_id=TEMPLATE_LIST[$template_id-1];
         $url=$data->url;
         $data=$data->content;
         $info=array(
