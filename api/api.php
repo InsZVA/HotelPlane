@@ -517,6 +517,17 @@ switch ($postData->requestMethod) {
         echo json_encode($result);
         exit(0);
         break;
+    //Weixin
+    case "sendMessage":
+        if(!isset($postData->data))
+            break;
+        $weixin=new Weixin();
+        $result=$weixin->sendMessage($postData);
+        if(!$result)
+            break;
+        echo $result;
+        exit(0);
+        break;
 }
 
 

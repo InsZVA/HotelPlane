@@ -87,3 +87,5 @@
 | confirmPayment | waiterId paymentId | | TEST |
 | finishPayment | waiterId paymentId | | TEST |
 | getPaymentData | paymentId | | TEST |
+| 微信相关 | | | |
+| sendMessage | data | data子参数为：content, url(点击跳转链接), template_id(参见微信后台对应列表，发送编号(1-11)即可) | OK |
