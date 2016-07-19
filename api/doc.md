@@ -74,6 +74,7 @@
 | offActivity | activityId | | OK |
 | setActivityWeight | activityId weight | | OK |
 | listAvailableActivity | | | OK |
+| getActivityData | activityId | | OK |
 | 机票相关 | | | |
 | newPlane | data | data中子参数为：flight_number(航班号),start_city_id,start_airport,end_city_id,end_airport,start_time,end_time,remarks,standard(1为非标,0为标准),type(该字段代表舱型),price | OK |
 | deletePlane | planeId | | OK |
@@ -81,11 +82,12 @@
 | listPlanes | offset,num,orderBy,order,standard | orderBy可选参数为start_city_id,start_time,order(asc或者desc),standard(0或1)| OK |
 | search | keyword, offset,num | | OK |
 | findPlanes | data | data子参数为start_city_id,end_city_id,start_date,offset,num| OK |
+| getPlaneData | planeId | | OK |
 | 订单相关 | | | |
-| createPayment | data | data子参数为：userId, standard(0-半标 1-非标), type(0-机票 1-酒店), idType(0-身份证 1-护照), idCode, sex, contact, phone, name, planeId(飞机)/hotelId(酒店)+roomId(酒店）+startDate(酒店)+endData(酒店) | OK |
+| createPayment | data | data子参数为：userId, standard(0-半标 1-非标), type(0-机票 1-酒店), idType(0-身份证 1-护照), idCode, sex, contact, phone, name, planeId(飞机)/hotelId(酒店)+roomId(酒店）+startDate(酒店)+endDate(酒店) | OK |
 | listUserPayments | | | OK |
-| confirmPayment | waiterId paymentId | | TEST |
-| finishPayment | waiterId paymentId | | TEST |
-| getPaymentData | paymentId | | TEST |
+| confirmPayment | waiterId paymentId | | OK |
+| finishPayment | waiterId paymentId | | OK |
+| getPaymentData | paymentId | | OK |
 | 微信相关 | | | |
 | sendMessage | data | data子参数为：content, url(点击跳转链接), template_id(参见微信后台对应列表，发送编号(1-11)即可) | OK |

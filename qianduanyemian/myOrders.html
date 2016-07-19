@@ -6,10 +6,15 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=0.96,initial-scale=0.96" />
 		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="./js/common.js"></script>
+		<script src="./js/address.js"></script>
+		<script src="./js/plane.js"></script>
+		<script src="./js/order.js"></script>
+		<script src="./js/hotel.js"></script>
 		<style type="text/css">
 			body {
 				background: #efeff4;
-				width: 375px;
+				width: 100% ;
 				margin: 0;
 							}
 			
@@ -106,7 +111,6 @@
 				color: #8c8c8c;
 				letter-spacing: 0px;
 				text-align: left;
-				width: 181px;
 				height: 20px;
 				margin-left: 11px;
 			}
@@ -139,7 +143,6 @@
 				color: #ff0000;
 				letter-spacing: 0px;
 				text-align: center;
-				width: 42px;
 				height: 16px;
 				margin-right: 11px;
 				margin-top: 8px;
@@ -156,11 +159,11 @@
 			}
 			.paid {
 				font-family:PingFangSC-Regular;
-font-size:14px;
-color:#030303;
-letter-spacing:0px;
-text-align:center;
-width: 42px;
+				font-size:14px;
+				color:#030303;
+				letter-spacing:0px;
+				text-align:center;
+				width: 42px;
 				height: 16px;
 				margin-right: 11px;
 				margin-top: 8px;
@@ -168,15 +171,15 @@ width: 42px;
 			}
 			.finished {
 				font-family:PingFangSC-Regular;
-font-size:14px;
-color:#030303;
-letter-spacing:0px;
-text-align:center;
-width: 56px;
-height: 16px;
-margin-top: 8px;
-margin-right: 11px;
-float: right;
+				font-size:14px;
+				color:#030303;
+				letter-spacing:0px;
+				text-align:center;
+				width: 56px;
+				height: 16px;
+				margin-top: 8px;
+				margin-right: 11px;
+				float: right;
 			}
 			#fixed {
 				width: 100%;
@@ -186,11 +189,11 @@ float: right;
 			}
 			#fixed1 {
 				background:rgba(0,0,0,0.30);
-border-radius:8px;
-width:48px;
-height:48px;
-float: right;
-margin-right: 10px;
+				border-radius:8px;
+				width:48px;
+				height:48px;
+				float: right;
+				margin-right: 10px;
 			}
 		</style>
 		<title>我的订单</title>
@@ -261,10 +264,15 @@ margin-right: 10px;
 			</div>
 		</div>
 		<div id="fixed">
-			<div id="fixed1">
-				<img src="./img/Shape@1x.png"/ style="margin-top: 12px;margin-left: 16px;">
-			</div>
+			<a href="#container">
+				<div id="fixed1">
+					<img src="./img/Shape@1x.png" style="margin-top: 12px;margin-left: 16px;">
+				</div>
+			</a>
 		</div>
+		<script>
+			loadUserPayments();
+		</script>
 	</body>
 
 </html>

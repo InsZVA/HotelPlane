@@ -10,6 +10,9 @@
 		<link rel="stylesheet" type="text/css" href="./css/shutu.css" />
 		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 		<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+		<script src="./js/common.js"></script>
+		<script src="./js/address.js"></script>
+		<script src="./js/hotel.js"></script>
 		<style type="text/css">
 			body {
 				background: #efeff4;
@@ -137,7 +140,6 @@
 				opacity: 0.89;
 				background: #f9f9f9;
 				box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.20);
-				width: 375px;
 				height: 49px;
 				position: fixed;
 				bottom: 0;
@@ -181,29 +183,32 @@
 				</div>
 				<div id="rightDiv">
 					<img src="img/placeHolderGrey.png"/>
-					&nbsp;杭州市 西湖区
+					&nbsp;<span id="cityName">杭州市</span>
 				</div>
 			</div>
-			<div class="hotelTuwen">
-				<div class="caption">杭州温德至尊豪廷大酒店</div>
-				<div class="region"> 下城区 五星级 </div>
-				<div class="price">￥707 </div>
+			<div id="list">
+				<div class="hotelTuwen">
+					<div class="caption">杭州温德至尊豪廷大酒店</div>
+					<div class="region"> 下城区 五星级 </div>
+					<div class="price">￥707 </div>
+				</div>
+				<div class="hotelTuwen">
+					<div class="caption">杭州温德至尊豪廷大酒店</div>
+					<div class="region"> 下城区 五星级 </div>
+					<div class="price">￥707 </div>
+				</div>
+				<div class="hotelTuwen">
+					<div class="caption">杭州温德至尊豪廷大酒店</div>
+					<div class="region"> 下城区 五星级 </div>
+					<div class="price">￥707 </div>
+				</div>
+				<div class="hotelTuwen">
+					<div class="caption">杭州温德至尊豪廷大酒店</div>
+					<div class="region"> 下城区 五星级 </div>
+					<div class="price">￥707 </div>
+				</div>
 			</div>
-			<div class="hotelTuwen">
-				<div class="caption">杭州温德至尊豪廷大酒店</div>
-				<div class="region"> 下城区 五星级 </div>
-				<div class="price">￥707 </div>
-			</div>
-			<div class="hotelTuwen">
-				<div class="caption">杭州温德至尊豪廷大酒店</div>
-				<div class="region"> 下城区 五星级 </div>
-				<div class="price">￥707 </div>
-			</div>
-			<div class="hotelTuwen">
-				<div class="caption">杭州温德至尊豪廷大酒店</div>
-				<div class="region"> 下城区 五星级 </div>
-				<div class="price">￥707 </div>
-			</div>
+
 		</div>
 		<div id="fixed">
 			<div class="fixed" style="margin-right: 10px;">
@@ -211,22 +216,47 @@
 			</div>
 		</div>
 		<div class="fixedBottom">
-			<img class="pic" src="./img/indexBlue.png" style="margin-left: 22px;" />
-			<img class="pic" src="./img/plane.png" />
-			<!--此处更换VIP管家标识-->
-			<img class="pic" src="./img/manager.png" />
-			<img class="pic" src="./img/hotelGrey.png" />
-			<img class="pic" src="./img/me.png" />
-			<div id="info">
-				<div class="info" style="margin-left: 24px;">首页</div>
-				<div class="info">机票</div>
-				<div class="info">管家</div>
+			<div class="bottomContainer">
+				<img class="pic" src="./img/indexBlue.png" style="margin-left: 22px;" />
+				<a href="orderFlight.html"><img class="pic" src="./img/plane.png" /></a>
 				<!--此处更换VIP管家标识-->
-				<div class="info">酒店</div>
-				<div class="info">我</div>
+				<a href="chat.html"><img class="pic" src="./img/manager.png" /></a>
+				<a href="hotelList.html"><img class="pic" src="./img/hotelGrey.png" /></a>
+				<a href="memberInfo.html"><img class="pic" src="./img/me.png" /></a>
+				<div id="info">
+					<div class="info" style="margin-left: 24px;">首页</div>
+					<div class="info">机票</div>
+					<div class="info">管家</div>
+					<!--此处更换VIP管家标识-->
+					<div class="info">酒店</div>
+					<div class="info">我</div>
+				</div>
 			</div>
-
 		</div>
+	<script>
+		var cityId = localStorage.getItem("cityId");
+		var order = localStorage.getItem("order");
+		if (cityId == undefined || cityId == "") cityId = 1;
+		if (order == undefined || order == "") order = "asc";
+
+		$("#cityName").html(getCityName(cityId));
+		loadNSHotel(cityId, order);
+		$("#rightDiv").click(function() {
+			location.replace("pickRegion.html?callback=hotelList.html&key=cityId");
+			return;
+		})
+		$("#leftDiv").click(function() {
+			if (order == "desc") {
+				$("#leftDiv").html('价格 由低到高 	<span class="caretup"></span>');
+				localStorage.setItem("order", "asc");
+			} else {
+				$("#leftDiv").html('价格 由高到低    <span class="caret"></span>');
+				localStorage.setItem("order", "desc");
+			}
+			order = localStorage.getItem("order");
+			loadNSHotel(cityId, order);
+		})
+	</script>
 	</body>
 
 </html>

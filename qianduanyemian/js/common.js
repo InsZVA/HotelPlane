@@ -24,8 +24,21 @@ function CallAPI(data, callback) {
     }
     data.userId = getUserID();
     data.token = getToken();
-    var api = "http://121.41.61.101/api/api.php";
+    var api = "http://api.xszlv.com/api/api.php";
     $.post(api, JSON.stringify(data), callback);
+}
+
+function CallAPINotAsync(data) {
+    var ret;
+    if (getToken() == undefined || getToken() == "") {
+        window.location.href = "landing.html";
+        return;
+    }
+    data.userId = getUserID();
+    data.token = getToken();
+    var api = "http://api.xszlv.com/api/api.php";
+    $.ajax({url: api, data: JSON.stringify(data), method: "post", async: false, success: function(data) {ret = data;}});
+    return ret;
 }
 
 function getJsUrl(){

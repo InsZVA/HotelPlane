@@ -8,8 +8,16 @@
 		<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
 		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 		<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+		<script src="./js/common.js"></script>
+		<script src="./js/hotel.js"></script>
+		<link href="./css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+		<script src="./js/bootstrap-datetimepicker.min.js"></script>
 		<title>订单信息</title>
 		<style type="text/css">
+			input {
+				border: 0;
+			}
+
 			body {
 				background: #efeff4;
 				margin: 0 auto;
@@ -127,7 +135,7 @@
 				height: 32px;
 				line-height: 32px;
 				text-align: center;
-				margin-top: 30px;
+				margin-top: 60px;
 			}
 			
 			#orderInfoH {
@@ -174,7 +182,7 @@
 				width: 86px;
 				height: 30px;
 				font-family: PingFangSC-Semibold;
-				font-size: 20px;
+				font-size: 14px;
 				color: #000000;
 				letter-spacing: -0.49px;
 				line-height: 30px;
@@ -185,6 +193,7 @@
 				float: left;
 				margin-left: 30px;
 				height: 30px;
+				width: 86px;
 			}
 			
 			#downDiv2A {
@@ -205,6 +214,9 @@
 			
 			#downDiv3 {
 				float: right;
+				width: 86px;
+				font-size: 14px;
+				color: #000000;
 			}
 			
 			.infoForm {
@@ -232,8 +244,8 @@
 				color: #000000;
 				letter-spacing: -0.41px;
 				text-align: right;
-				height: 44px;
-				line-height: 44px;
+				height: 40px;
+				line-height: 40px;
 				float: right;
 				margin-right: 15px;
 			}
@@ -266,8 +278,8 @@
 				color: #000000;
 				letter-spacing: -0.41px;
 				text-align: right;
-				height: 44px;
-				line-height: 44px;
+				height: 40px;
+				line-height: 40px;
 				float: right;
 				margin-right: 15px;
 			}
@@ -373,13 +385,15 @@
 			}
 			
 			#popup {
-				background: rgba(255, 255, 255, 0.50);
+				background: rgba(255, 255, 255, 1);
 				border-radius: 13px;
 				width: 270px;
 				height: 214px;
 				position: fixed;
 				left: 53px;
 				bottom: 201px;
+				border: 1px solid #C8C7CC;
+				display: none;
 			}
 			
 			#selectID {
@@ -439,7 +453,8 @@
 			}
 			
 			#popup2 {
-				background: #FFFFFF;
+				//background: #FFFFFF;
+				display: none;
 			}
 			
 			#hotelTuwen {
@@ -527,51 +542,54 @@
 	<body>
 		<div id="container">
 			<div id="firstPic">
-				<img src="./img/picGrey.png" />
+				<img id="img" src="./img/picGrey.png" />
 			</div>
 			<div id="firstBar">
 				<div id="firstBar1">
 					杭州温德至尊豪廷大酒店
 				</div>
 				<div id="firstBar2">
-					下城区 五星级
+					5星级
 				</div>
 			</div>
 			<div id="remarks2">
 
 			</div>
-			<div class="randomH">
-				<div id="leftDiv">
+			<div id="rooms">
+				<div class="randomH">
+					<div id="leftDiv">
 
-				</div>
-				<div id="midDiv">
-					随即房（钟点房）（8点到18点，连住三小时）
-				</div>
-				<div id="rightDiv">
-					<div id="price2">
-						¥ 707
 					</div>
-					<div id="confirmBtn">
-						选择此房
+					<div id="midDiv">
+						随即房（钟点房）（8点到18点，连住三小时）
+					</div>
+					<div id="rightDiv">
+						<div id="price2">
+							¥ 707
+						</div>
+						<div id="confirmBtn" class="selectRoom">
+							选择此房
+						</div>
+					</div>
+				</div>
+				<div class="randomH">
+					<div id="leftDiv">
+
+					</div>
+					<div id="midDiv">
+						随即房（钟点房）（8点到18点，连住三小时）
+					</div>
+					<div id="rightDiv">
+						<div id="price2">
+							¥ 707
+						</div>
+						<div id="confirmBtn" class="selectRoom">
+							选择此房
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="randomH">
-				<div id="leftDiv">
 
-				</div>
-				<div id="midDiv">
-					随即房（钟点房）（8点到18点，连住三小时）
-				</div>
-				<div id="rightDiv">
-					<div id="price2">
-						¥ 707
-					</div>
-					<div id="confirmBtn">
-						选择此房
-					</div>
-				</div>
-			</div>
 			<div id="orderInfoH">
 				<div id="upDiv">
 					<div id="upDiv1">
@@ -582,20 +600,15 @@
 					</div>
 				</div>
 				<div id="downDiv">
-					<div id="downDiv1">
-						06月05日
-					</div>
+					<input type="text" id="downDiv1" data-date-format="yyyy-m-d" >
 					<div id="downDiv2">
 						<div id="downDiv2A">
-							1天 1夜
+							共 1 夜
 						</div>
 						<div id="downDiv2B">
-
 						</div>
 					</div>
-					<div id="downDiv3">
-						06月06日
-					</div>
+					<input type="text" id="downDiv3" data-date-format="yyyy-m-d" >
 				</div>
 			</div>
 
@@ -603,9 +616,7 @@
 				<div class="infoItem">
 					乘机人姓名
 				</div>
-				<div class="name">
-					张三
-				</div>
+				<input class="name" type="text" id="name" placeholder="张三">
 			</div>
 			<div class="infoForm">
 				<div class="infoItem">
@@ -620,9 +631,7 @@
 				<div class="infoItem">
 					证件号码
 				</div>
-				<div class="numbers">
-					3622209900999009909
-				</div>
+				<input class="numbers" id="idCode">
 			</div>
 			<div class="infoForm">
 				<div class="infoItem">
@@ -635,30 +644,18 @@
 					男
 				</div>
 			</div>
-			<div class="infoForm">
-				<div class="infoItem">
-					出生日期
-				</div>
-				<div id="birthday">
-					1980/01/01
-				</div>
-			</div>
 			<div id="contacts">
 				<div class="infoForm">
 					<div class="infoItem">
 						联系人
 					</div>
-					<div class="name">
-						李四
-					</div>
+					<input class="name" id="contact" placeholder="李四">
 				</div>
 				<div class="infoForm">
 					<div class="infoItem">
-						证件号码
+						手机号码
 					</div>
-					<div class="numbers">
-						13333333333
-					</div>
+					<input class="numbers" type="tel" id="phone">
 				</div>
 
 			</div>
@@ -667,7 +664,7 @@
 					¥ 1033
 				</div>
 
-				<div id="submitBtn">
+				<div id="submitBtn" onclick="submitPaymentH()">
 					提交订单
 				</div>
 				<div class="arrowUp">
@@ -682,27 +679,27 @@
 			<div id="selectID">
 				选择证件
 			</div>
-			<div class="selectItems" style="margin-top: 21px;">
+			<div class="selectItems" style="margin-top: 21px;" onclick="select0()">
 				<div class="idCard">
 					身份证
 				</div>
 				<div class="selected">
-					<img src="./img/selectedBlue.png" />
+					<img id="idimg0" src="./img/selectedBlue.png" />
 				</div>
 			</div>
-			<div class="selectItems" style="margin-top: -1px;">
+			<div class="selectItems" style="margin-top: -1px;" onclick="select1()">
 				<div class="idCard">
 					护照
 				</div>
 				<div class="selected">
-					<img src="./img/selectedGrey.png" />
+					<img id="idimg1" src="./img/selectedGrey.png" />
 				</div>
 			</div>
 			<div id="btns">
-				<div class="btns">
+				<div class="btns" id="cancel" onclick="cancel()">
 					取消
 				</div>
-				<div class="btns" style="border-right: none;">
+				<div class="btns" style="border-right: none;" id="ok" onclick="ok()">
 					确认
 				</div>
 			</div>
@@ -731,7 +728,106 @@
 			</div>
 
 		</div>
+	<script>
+		loadHotelData(getJsUrl()['id']);
+		localStorage.setItem("day", 1);
+		function select0() {
+			localStorage.setItem("idTypeSel", 0);
+			$("#idimg0").attr("src", "./img/selectedBlue.png");
+			$("#idimg1").attr("src", "./img/selectedGrey.png");
+		}
+		function select1() {
+			localStorage.setItem("idTypeSel", 1);
+			$("#idimg1").attr("src", "./img/selectedBlue.png");
+			$("#idimg0").attr("src", "./img/selectedGrey.png");
+		}
+		function ok() {
+			$("#popup").hide();
+			localStorage.setItem("idType", localStorage.getItem("idTypeSel"));
+			if (localStorage.getItem("idTypeSel") == 0)
+				$("#IDcards").html("身份证");
+			else
+				$("#IDcards").html("护照");
 
+		}
+		function cancel() {
+			$("#popup").hide();
+		}
+		$("#IDcards").click(function() {
+			var left = ($(window).width() - $("#popup").width()) / 2;
+			var top = ($(window).height() * 0.2);
+			$("#popup").css({top: top, left: left});
+			$("#popup").show();
+		});
+		localStorage.setItem("idTypeSel", 0);
+		localStorage.setItem("idType", 0);
+		localStorage.setItem("sex", 0);
+		$("#male").click(function () {
+			$("#male").css({backgroundColor: "#009ce5"});
+			$("#female").css({backgroundColor: "white"});
+			localStorage.setItem("sex", 0);
+		});
+		$("#female").click(function () {
+			$("#female").css({backgroundColor: "#009ce5"});
+			$("#male").css({backgroundColor: "white"});
+			localStorage.setItem("sex", 1);
+		});
+
+
+		$('#downDiv1').datetimepicker({
+			"minView": "month",
+			"autoclose": true
+		}).on('changeDate', function(ev) {
+			window.localStorage.setItem("start_date", $('#downDiv1').val());
+			var sd = $('#downDiv1').val();
+			sd = sd.replace(/-/g,"/");
+			var sd = new Date(sd );
+			var ed = $('#downDiv3').val();
+			ed = ed.replace(/-/g,"/");
+			var ed = new Date(ed );
+			var day = (ed - sd) / (24 * 3600 * 1000);
+			$("#downDiv2A").html("共" + day + "夜");
+			localStorage.setItem("day", day);
+			$("#price").html("￥" + parseFloat(localStorage.getItem("pricePerDay")) * parseInt(localStorage.getItem("day")));
+		});
+		$('#downDiv3').datetimepicker({
+			"minView": "month",
+			"autoclose": true
+		}).on('changeDate', function(ev) {
+			window.localStorage.setItem("end_date", $('#downDiv3').val());
+			var sd = $('#downDiv1').val();
+			sd = sd.replace(/-/g,"/");
+			var sd = new Date(sd );
+			var ed = $('#downDiv3').val();
+			ed = ed.replace(/-/g,"/");
+			var ed = new Date(ed );
+			var day = (ed - sd) / (24 * 3600 * 1000);
+			$("#downDiv2A").html("共" + day + "夜");
+			localStorage.setItem("day", day);
+			$("#price").html("￥" + parseFloat(localStorage.getItem("pricePerDay")) * parseInt(localStorage.getItem("day")));
+		});
+		var myDate = new Date();
+		var tomorow = new Date(myDate.getTime() + 3600 * 24 * 1000);
+		$('#downDiv1').val(
+				myDate.getFullYear() + "-" + (myDate.getMonth() + 1) + "-" + myDate.getDate()
+		);
+		$('#downDiv3').val(
+				tomorow.getFullYear() + "-" + (tomorow.getMonth() + 1) + "-" + tomorow.getDate()
+		);
+		window.localStorage.setItem("start_date", $('#downDiv1').val());
+		window.localStorage.setItem("end_date", $('#downDiv3').val());
+
+		function selectRoom(a) {
+			$(".selectRoom").show();
+			$(".randomH").css({backgroundColor: "white"});
+			$(a).parent().parent().css({backgroundColor: "#009ce5"});
+			localStorage.setItem("roomId", $(a).attr("rid"));
+			localStorage.setItem("pricePerDay", $(a).attr("price"));
+			$("#price").html("￥" + parseFloat($(a).attr("price")) * parseInt(localStorage.getItem("day")));
+			$(a).hide();
+		}
+
+	</script>
 	</body>
 
 </html>

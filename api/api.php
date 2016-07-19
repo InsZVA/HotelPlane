@@ -473,6 +473,14 @@ switch ($postData->requestMethod) {
         echo json_encode($result);
         exit(0);
         break;
+    case "getPlaneData":
+        if (!isset($postData->planeId)) break;
+        $plane = new Plane();
+        $result = $plane->getData($postData->planeId);
+        if (!$result) break;
+        echo json_encode($result);
+        exit(0);
+        break;
     //Payment
     case "createPayment":
         if (!isset($postData->data)) break;

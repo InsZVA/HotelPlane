@@ -152,18 +152,25 @@ and `start_time` between ? and ? limit ?,?";
             $time1, $time2, $data->offset, $data->num);
         $stmt->execute();
         $result = $stmt->get_result();
-
-        $this->mysqli->query("select * from `plane` where `start_city_id`=
-$data->start_city_id and `end_city_id`=$data->end_city_id
-and `start_time` between '$time1' and '$time2'");
+        //$this->mysqli->query("select * from `plane` where `start_city_id`=
+//$data->start_city_id and `end_city_id`=$data->end_city_id
+//and `start_time` between '$time1' and '$time2'");
         if ($result) {
             $rows = [];
-            $rows['amount']=mysqli_affected_rows($this->mysqli);
+            //$rows['amount']=mysqli_affected_rows($this->mysqli);
             while($row = $result->fetch_assoc()) {
                 $rows[] = $row;
             }
             return $rows;
         }
         return false;
+    }
+
+    public function getData($id) {
+        $id = intval($id);
+        $result = $this->mysqli->query("select * from `plane` where `plane_id` = $id");
+        $rows = [];
+        if ($result) $rows[] = $result->fetch_assoc();
+        return $rows;
     }
 }

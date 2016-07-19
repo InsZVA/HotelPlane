@@ -10,6 +10,10 @@
 		<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 		<title>订单信息</title>
 		<style type="text/css">
+			input {
+				border: 0;
+			}
+
 			body {
 				background: #efeff4;
 				margin: 0 auto;
@@ -36,7 +40,7 @@
 				color: #000000;
 				letter-spacing: -0.2px;
 				text-align: left;
-				width: 158px;
+				//width: 158px;
 				height: 14px;
 				line-height: 14px;
 				margin-left: 11px;
@@ -128,7 +132,7 @@
 			}
 			
 			#part4 {
-				width: 79px;
+				//width: 79px;
 				height: 14px;
 				margin-left: 11px;
 				margin-top: 13px;
@@ -145,6 +149,7 @@
 				background: #ffffff;
 				border: 1px solid rgba(171, 179, 189, 0.60);
 				width: 375px;
+				color: red;
 			}
 			
 			.infoForm {
@@ -172,8 +177,8 @@
 				color: #000000;
 				letter-spacing: -0.41px;
 				text-align: right;
-				height: 44px;
-				line-height: 44px;
+				height: 42px;
+				line-height: 42px;
 				float: right;
 				margin-right: 15px;
 			}
@@ -206,8 +211,8 @@
 				color: #000000;
 				letter-spacing: -0.41px;
 				text-align: right;
-				height: 44px;
-				line-height: 44px;
+				height: 42px;
+				line-height: 42px;
 				float: right;
 				margin-right: 15px;
 			}
@@ -312,13 +317,14 @@
 				padding-top: 12px;
 			}
 			#popup {
-				background: rgba(255, 255, 255, 0.50);
+				background: rgba(255, 255, 255, 1);
 				border-radius: 13px;
 				width: 270px;
 				height: 214px;
 				position: fixed;
 				left: 53px;
 				bottom: 201px;
+				border: 1px solid #C8C7CC;
 			}
 			
 			#selectID {
@@ -418,9 +424,8 @@ line-height: 44px;
 				<div class="infoItem">
 					乘机人姓名
 				</div>
-				<div class="name">
-					张三
-				</div>
+				<input id="name" type="text" class="name" placeholder="张三">
+
 			</div>
 			<div class="infoForm">
 				<div class="infoItem">
@@ -435,9 +440,7 @@ line-height: 44px;
 				<div class="infoItem">
 					证件号码
 				</div>
-				<div class="numbers">
-					3622209900999009909
-				</div>
+				<input id="idCode" class="numbers" type="text">
 			</div>
 			<div class="infoForm">
 				<div class="infoItem">
@@ -450,30 +453,19 @@ line-height: 44px;
 					男
 				</div>
 			</div>
-			<div class="infoForm">
-				<div class="infoItem">
-					出生日期
-				</div>
-				<div id="birthday">
-					1980/01/01
-				</div>
-			</div>
+
 			<div id="contacts">
 				<div class="infoForm">
 					<div class="infoItem">
 						联系人
 					</div>
-					<div class="name">
-						李四
-					</div>
+					<input id="contact" class="name" type="text" placeholder="李四">
 				</div>
 				<div class="infoForm">
 					<div class="infoItem">
-						证件号码
+						电话号码
 					</div>
-					<div class="numbers">
-						13333333333
-					</div>
+					<input id="phone" class="numbers" type="tel">
 				</div>
 
 			</div>
@@ -482,7 +474,7 @@ line-height: 44px;
 					¥ 1033
 				</div>
 
-				<div id="submitBtn">
+				<div id="submitBtn" onclick="submitPayment()">
 					提交订单
 				</div>
 				<div class="arrowUp">
@@ -493,35 +485,83 @@ line-height: 44px;
 		<div id="fixed">
 			<img src="./img/managerWhite.png" />
 		</div>
-		<div id="popup">
+			<div id="popup">
 				<div id="selectID">
 					选择证件
 				</div>
-				<div class="selectItems" style="margin-top: 21px;">
+				<div class="selectItems" style="margin-top: 21px;" onclick="select0()">
 					<div class="idCard">
 						身份证
 					</div>
 					<div class="selected">
-						<img src="./img/selectedBlue.png" />
+						<img id="idimg0" src="./img/selectedBlue.png" />
 					</div>
 				</div>
-				<div class="selectItems" style="margin-top: -1px;">
+				<div class="selectItems" style="margin-top: -1px;" onclick="select1()">
 					<div class="idCard">
 						护照
 					</div>
 					<div class="selected">
-						<img src="./img/selectedGrey.png" />
+						<img id="idimg1" src="./img/selectedGrey.png" />
 					</div>
 				</div>
 				<div id="btns">
-					<div class="btns">
+					<div class="btns" id="cancel" onclick="cancel()">
 						取消
 					</div>
-					<div class="btns" style="border-right: none;">
+					<div class="btns" style="border-right: none;" id="ok" onclick="ok()">
 						确认
 					</div>
 				</div>
 			</div>
+		<script src="./js/common.js"></script>
+		<script src="./js/address.js"></script>
+		<script src="./js/plane.js"></script>
+	<script>
+		function select0() {
+			localStorage.setItem("idTypeSel", 0);
+			$("#idimg0").attr("src", "./img/selectedBlue.png");
+			$("#idimg1").attr("src", "./img/selectedGrey.png");
+		}
+		function select1() {
+			localStorage.setItem("idTypeSel", 1);
+			$("#idimg1").attr("src", "./img/selectedBlue.png");
+			$("#idimg0").attr("src", "./img/selectedGrey.png");
+		}
+		function ok() {
+			$("#popup").hide();
+			localStorage.setItem("idType", localStorage.getItem("idTypeSel"));
+			if (localStorage.getItem("idTypeSel") == 0)
+				$("#IDcards").html("身份证");
+			else
+				$("#IDcards").html("护照");
+
+		}
+		function cancel() {
+			$("#popup").hide();
+		}
+		localStorage.setItem("idTypeSel", 0);
+		localStorage.setItem("idType", 0);
+		localStorage.setItem("sex", 0);
+		$("#popup").hide();
+		readyPayment(getJsUrl()['id']);
+		$("#IDcards").click(function() {
+			var left = ($(window).width() - $("#popup").width()) / 2;
+			var top = ($(window).height() * 0.2);
+			$("#popup").css({top: top, left: left});
+			$("#popup").show();
+		});
+		$("#male").click(function () {
+			$("#male").css({backgroundColor: "#009ce5"});
+			$("#female").css({backgroundColor: "white"});
+			localStorage.setItem("sex", 0);
+		});
+		$("#female").click(function () {
+			$("#female").css({backgroundColor: "#009ce5"});
+			$("#male").css({backgroundColor: "white"});
+			localStorage.setItem("sex", 1);
+		});
+	</script>
 	</body>
 
 </html>

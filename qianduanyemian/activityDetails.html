@@ -8,6 +8,8 @@
 		<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
 		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 		<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+		<script src="./js/common.js"></script>
+		<script src="./js/activity.js"></script>
 		<style type="text/css">
 			body {
 				background: #efeff4;
@@ -15,7 +17,6 @@
 			
 			#container {
 				width: 375px;
-				height: 1270px;
 				margin: 0 auto;
 			}
 			
@@ -84,6 +85,11 @@
 				max-width: 24px;
 				height: 24px;
 			}
+
+			#content {
+				clear: left;
+				padding-top: 5px;
+			}
 		</style>
 	</head>
 
@@ -101,7 +107,7 @@
 			<div id="price">
 				￥707
 			</div>
-			<div id="">
+			<div id="content">
 
 			</div>
 		</div>
@@ -110,13 +116,15 @@
 				<a href="#bar"><img class="fixedp" src="img/Shape@1x.png" /></a>
 			</div>
 			<div class="fixed" style="margin-right: 15px;">
-				<img class="fixedp" src="img/XMLID_140_@1x.png" />
+				<a href="chat.html"><img class="fixedp" src="img/XMLID_140_@1x.png" /></a>
 			</div>
 			<div class="fixed" style="margin-right: 15px;">
-				<img class="fixedp" src="img/shopping-cart@1x.png" />
+				<a href="#bar"><img class="fixedp" src="img/shopping-cart@1x.png" /></a>
 			</div>
 		</div>
-
+		<script>
+			loadActivity(getJsUrl()['id']);
+		</script>
 	</body>
 
 </html>

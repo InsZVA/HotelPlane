@@ -7,7 +7,7 @@
  * Time: 11:54
  */
 
-require_once('/home/wwwroot/default/Config/MySQL.php');
+require_once('/home/wwwroot/api.xszlv.com/Config/MySQL.php');
 
 class TokenManager
 {
