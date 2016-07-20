@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>跳转中</title>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+</head>
+<body>
+    <script>
+        var code = getJsUrl()['code'];
+        var state = getJsUrl()['state'];
+        if (code == undefined || code == "") {
+            //alert("微信自动登录失败，尝试用户名密码登录。");
+            window.location.replace("../" + state + ".html");
+        }
+        $.post("http://api.xszlv.com/api/api.php", JSON.stringify({requestMethod: "autoLogin", code: code}), function(data) {
+            if (data.code == -1) {
+                //alert("微信自动登录失败，尝试用户名密码登录。");
+                window.location.replace("../" + state + ".html");
+            }
+            if (data.token != undefined) {
+                setUserID(data.user_id);
+                setToken(data.token);
+                window.location.replace("../" + state + ".html");
+            }
+            if (data.openid != undefined) {
+                localStorage.setItem("openid", data.openid);
+                localStorage.setItem("headimgurl", data.headimgurl);
+                localStorage.setItem("nickname", data.nickname);
+                window.location.replace("../" + state + ".html");
+
+            }
+        })
+    </script>
+</body>
+</html>

@@ -17,7 +17,7 @@ function loadHotHotels() {
         for (var i = 0;i < data.length;i++) {
             data[i].images = JSON.parse(data[i].images);
             html += '<div id="huodong' + (i+1) +'">'+
-                '<img src="' + data[i].images[0] + '" style="width: 175px;height: 85px;"'+
+                '<img onclick="goHotel('+ data[i].hotel_id +')" src="' + data[i].images[0] + '" style="width: 175px;height: 85px;"'+
                 '/>  <div id="hdbt">' + data[i].name +'</div>  </div>';
         }
         $("#tjjd").html(html);

@@ -22,6 +22,7 @@ require_once ('../Activity/Activity.php');
 require_once ('../Plane/Plane.php');
 require_once ('../Payment/PaymentManager.php');
 require_once ('../Payment/Payment.php');
+require_once ('../Weixin/Weixin.php');
 
 
 function PermissionDenied() {
@@ -36,13 +37,17 @@ function OKResponse() {
 
 $postRaw = file_get_contents("php://input");
 $postData = json_decode($postRaw);
-if (!isset($postData->userId) && !isset($postData->token) && $postData->requestMethod != "login") PermissionDenied();
+
+//if (!isset($postData->userId) && !isset($postData->token) && $postData->requestMethod != "login" && $postData->requestMethod != "autoLogin" && $postData->requestMethod != "newUser") PermissionDenied();
 $level = -1;
-if ($postData->requestMethod != "login") {
+//if ($postData->requestMethod != "login" && $postData->requestMethod != "autoLogin" && $postData->requestMethod != "newUser") {
+if (isset($postData->userId) && isset($postData->token)) {
+
     $tm = new TokenManager();
     $level = $tm->verifyToken($postData->userId, $postData->token);
-    if ($level == -1) PermissionDenied();
 }
+    //if ($level == -1) PermissionDenied();
+//}
 
 switch ($postData->requestMethod) {
     //Hotel
@@ -204,6 +209,7 @@ switch ($postData->requestMethod) {
     //User
     case "newUser":
         if (!isset($postData->data)) break;
+        if ($postData->data->level > $level && $postData->data->level != 1) PermissionDenied();
         $um = new UserManager();
         $id = $um->newUser($postData->data);
         if (!$id) break;
@@ -226,6 +232,7 @@ switch ($postData->requestMethod) {
         exit(0);
         break;
     case "setAvatar":
+        if ($level < 1) PermissionDenied();
         if (!isset($postData->avatar)) break;
         $user = new User($postData->userId);
         $result = $user->setAvatar($postData->avatar);
@@ -247,12 +254,14 @@ switch ($postData->requestMethod) {
         OKResponse();
         break;
     case "isVerified":
+        if ($level < 1) PermissionDenied();
         $user = new User($postData->userId);
         $result = $user->isVerified();
         if (!$result) break;
         echo json_encode(['verified' => $result]);
         exit(0);
     case "verify":
+        if ($level < 1) PermissionDenied();
         if (!isset($postData->data)) break;
         $user = new User($postData->userId);
         $result = $user->verify($postData->data);
@@ -260,6 +269,7 @@ switch ($postData->requestMethod) {
         OKResponse();
         break;
     case "getID":
+        if ($level < 1) PermissionDenied();
         $user = new User($postData->userId);
         $result = $user->getID();
         if (!$result) break;
@@ -267,6 +277,7 @@ switch ($postData->requestMethod) {
         exit(0);
         break;
     case "setID":
+        if ($level < 1) PermissionDenied();
         if (!isset($postData->data)) break;
         $user = new User($postData->userId);
         $result = $user->setID($postData->data);
@@ -274,6 +285,7 @@ switch ($postData->requestMethod) {
         OKResponse();
         break;
     case "bindOpenId":
+        if ($level < 1) PermissionDenied();
         if (!isset($postData->openId)) break;
         $user = new User($postData->userId);
         $result = $user->bindOpenId($postData->openId);
@@ -281,6 +293,7 @@ switch ($postData->requestMethod) {
         OKResponse();
         break;
     case "changePassword":
+        if ($level < 1) PermissionDenied();
         if (!isset($postData->data)) break;
         $user = new User($postData->userId);
         $result = $user->changePassword($postData->data);
@@ -288,6 +301,7 @@ switch ($postData->requestMethod) {
         OKResponse();
         break;
     case "listUsers":
+        if ($level < 2) PermissionDenied();
         if (!isset($postData->offset)) $postData->offset = 0;
         if (!isset($postData->num)) $postData->num = 30;
         if (!isset($postData->orderBy)) $postData->orderBy = "user_id";
@@ -301,6 +315,7 @@ switch ($postData->requestMethod) {
         }
         break;
     case "findUserByPhone":
+        if ($level < 2) PermissionDenied();
         if (isset($postData->phone)) {
             $um = new UserManager();
             $data = $um->findUserByPhone($postData->phone);
@@ -310,6 +325,7 @@ switch ($postData->requestMethod) {
         }
         break;
     case "findUserByIdCode":
+        if ($level < 2) PermissionDenied();
         if (isset($postData->idCode) && isset($postData->idType)) {
             $um = new UserManager();
             $data = $um->findUserByIdCode($postData->idType, $postData->idCode);
@@ -319,6 +335,7 @@ switch ($postData->requestMethod) {
         }
         break;
     case "getUserData":
+        if ($level < 1) PermissionDenied();
         $user = new User($postData->userId);
         $data = $user->getData();
         if ($data == false) break;
@@ -326,6 +343,7 @@ switch ($postData->requestMethod) {
         exit(0);
         break;
     case "isVIP":
+        if ($level < 1) PermissionDenied();
         $user = new User($postData->userId);
         $data = $user->isVIP();
         if ($data == false) break;
@@ -333,11 +351,30 @@ switch ($postData->requestMethod) {
         exit(0);
         break;
     case "setVIP":
+        if ($level < 1) PermissionDenied();
         $user = new User($postData->userId);
         $user->setVIP();
         OKResponse();
+        $weixin = new Weixin();
+        $data = new stdClass();
+        $data->userId = $postData->userId;
+        $data->template_id = 2;
+        $data->data =
         exit(0);
         break;
+    case "autoLogin":
+        if (!isset($postData->code)) break;
+        $weixin = new Weixin();
+        $userData = $weixin->getUserData($postData->code);
+        if (isset($userData->errcode)) break;
+        $loginData = ((new UserManager())->autoLogin($userData->openid));
+        if ($loginData) {
+            echo json_encode($loginData);
+            exit(0);
+        } else {
+            echo json_encode($userData);
+            exit(0);
+        }
     //Coupon
     case "newCoupon":
         if ($level != 3) PermissionDenied();
@@ -347,6 +384,7 @@ switch ($postData->requestMethod) {
         OKResponse();
         break;
     case "getUserCoupons":
+        if ($level < 1) PermissionDenied();
         if (!isset($postData->userId)) break;
         $cm = new CouponManager();
         $result = $cm->getUserCoupons($postData->userId);
@@ -430,6 +468,7 @@ switch ($postData->requestMethod) {
         exit(0);
         break;
     case "deletePlane":
+        if ($level != 3) PermissionDenied();
         $plane=new Plane();
         if(!isset($postData->planeId))
             break;
@@ -437,6 +476,7 @@ switch ($postData->requestMethod) {
             OKResponse();
         break;
     case "editPlane":
+        if ($level != 3) PermissionDenied();
         $plane=new Plane();
         if(!isset($postData->data)) break;
         $result=$plane->editPlane($postData->data);
@@ -483,15 +523,16 @@ switch ($postData->requestMethod) {
         break;
     //Payment
     case "createPayment":
+        if ($level < 1) PermissionDenied();
         if (!isset($postData->data)) break;
         if ($level < 2 && $postData->userId != $postData->data->userId) PermissionDenied();
         $id = (new PaymentManager())->createPayment($postData->data->userId, $postData->data);
         if (!$id) break;
-        //TODO: Send Template Message
-        echo json_encode(['insert_id' => $id]);
+        OKResponse();
         exit(0);
         break;
     case "listUserPayments":
+        if ($level < 1) PermissionDenied();
         if (!isset($postData->offset)) $postData->offset = 0;
         if (!isset($postData->num)) $postData->num = 30;
         $result = (new PaymentManager())->listUserPayments($postData->userId, $postData->offset, $postData->num);
@@ -500,6 +541,7 @@ switch ($postData->requestMethod) {
         exit(0);
         break;
     case "confirmPayment":
+        if ($level < 2) PermissionDenied();
         if (!isset($postData->waiterId)) break;
         if (!isset($postData->paymentId)) break;
         $payment = new Payment($postData->paymentId);
@@ -509,6 +551,7 @@ switch ($postData->requestMethod) {
         exit(0);
         break;
     case "finishPayment":
+        if ($level < 2) PermissionDenied();
         if (!isset($postData->waiterId)) break;
         if (!isset($postData->paymentId)) break;
         $payment = new Payment($postData->paymentId);
@@ -518,6 +561,7 @@ switch ($postData->requestMethod) {
         exit(0);
         break;
     case "getPaymentData":
+        if ($level < 1) PermissionDenied();
         if (!isset($postData->paymentId)) break;
         $payment = new Payment($postData->paymentId);
         $result = $payment->getData();
@@ -527,6 +571,7 @@ switch ($postData->requestMethod) {
         break;
     //Weixin
     case "sendMessage":
+        if ($level < 2) PermissionDenied();
         if(!isset($postData->data))
             break;
         $weixin=new Weixin();

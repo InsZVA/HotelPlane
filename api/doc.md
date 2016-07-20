@@ -63,6 +63,7 @@
 | getUserData | | | OK |
 | setVIP | | | OK |
 | isVIP | | | OK |
+| autoLogin | code | code为微信自动跳转获取到的code | OK |
 | 优惠券相关 | | | |
 | newCoupon | data | data中子参数为：discount, minPrice, [startTime], endTime, type(0 新用户注册获得 1 老用户分享获得 -1 已下架) | OK |
 | getUserCoupons | userId | | OK |

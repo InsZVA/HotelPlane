@@ -20,20 +20,19 @@ chatAPI.initialize = function() {
 	this.refreshCount = 1000;
 	this.loop = false;
 	this.lastTimeStamp = 0;
-	this.headpic = "sc/1.png";
+	this.headpic = "sc/2.png";
 	this.create();
+	var temp = this;
 	$.ajax({
 		url:"http://api.xszlv.com/api/api.php",
 		data:JSON.stringify({
 			"requestMethod":"getAvatar",
-			"userId":chatAPI._id,
+			"userId":chatAPI.userId,
 			"token":"test"
 		}),
 		type:"post",
 		success:function(avatar) {
-			chatAPI.headpic = avatar.avatar;
-		},error:function(avatar) {
-			warn(JSON.stringify(avatar));
+			temp.headpic = avatar.avatar;
 		}
 	});
 	$(".headinfo").html("等待客服接起...");
@@ -69,6 +68,7 @@ chatAPI.updateChat = function() {
 		    success: function (res) {
 		        var localId = res.localId; // 返回图片下载后的本地ID
 		        temp.attr("src",localId);
+		        temp.removeAttr("rid");
 		    }
 		});
 			
@@ -200,7 +200,7 @@ chatAPI.getNewestMessage = function() {
 		});
 }
 
-chatAPI.postMessage = function(check=true) {
+chatAPI.postMessage = function(check) {
 	if(this.status != 0)
 	{
 		warn("还没有找到客服为您服务！");
@@ -208,8 +208,9 @@ chatAPI.postMessage = function(check=true) {
 	}
 	var temp = this;
 	var content = $("input[name='message']").val();
+	check = check || false;
 	/* 内容合法性检查 */
-	if(check) content = VerifyPost(content);
+	if(!check) content = VerifyPost(content);
 	createPostMethod("userSendMessage",
 	{
 			data:{"userId":temp.userId,"sessionId":temp.sessionId,"type":"text","content":content},
@@ -274,7 +275,7 @@ $("a.submit").click(function() {
 	chatAPI.postMessage();
 });
 
-$("[type='file']").change(
+/*$("[type='file']").change(
 	function() {
 			if(chatAPI.status != 0)
 			{
@@ -293,10 +294,10 @@ $("[type='file']").change(
 				data:_data,
 				type:"post",
 				success:function(data) {
-					warn(JSON.stringify(data));
+					
 				}
 			});
-			/*var reader = new FileReader(); 
+			var reader = new FileReader(); 
 			reader.readAsDataURL(this.files[0]);
 			reader.onload = function(e) {
 			var base64 = this.result.replace(/data:[^;]+;base64,/,"");
@@ -313,10 +314,10 @@ $("[type='file']").change(
 						chatAPI.postMessage(false);
 					},error:function() {}
 				}
-				);*/
+				);
 		
 	}
-);
+);*/
 
 
 
@@ -376,7 +377,7 @@ $("#camera").click(
 				    success: function (res) {
 				        var serverId = res.serverId; // 返回图片的服务器端ID
 				        $("input[name='message']").val("<img rid='"+serverId+"'>");
-				        chatAPI.postMessage(false);
+				        chatAPI.postMessage(true);
 				    }
 				});
 		    }

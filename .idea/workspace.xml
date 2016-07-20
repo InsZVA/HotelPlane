@@ -5,32 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c7f020c-5222-4964-8d09-ca49080e56ac" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/test.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qianduanyemian/wx/index.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qianduanyemian/wx/index.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Plane/Plane.php" afterPath="$PROJECT_DIR$/Plane/Plane.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Token/TokenManager.php" afterPath="$PROJECT_DIR$/Token/TokenManager.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/User/UserManager.php" afterPath="$PROJECT_DIR$/User/UserManager.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/api.php" afterPath="$PROJECT_DIR$/api/api.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/doc.md" afterPath="$PROJECT_DIR$/api/doc.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/.idea/workspace.xml" afterPath="$PROJECT_DIR$/qianduanyemian/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/activityDetails.html" afterPath="$PROJECT_DIR$/qianduanyemian/activityDetails.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/activityList.html" afterPath="$PROJECT_DIR$/qianduanyemian/activityList.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/css/shutu.css" afterPath="$PROJECT_DIR$/qianduanyemian/css/shutu.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/flightList.html" afterPath="$PROJECT_DIR$/qianduanyemian/flightList.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/hotelInfo.html" afterPath="$PROJECT_DIR$/qianduanyemian/hotelInfo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/home.php" afterPath="$PROJECT_DIR$/qianduanyemian/home.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/hotelList.html" afterPath="$PROJECT_DIR$/qianduanyemian/hotelList.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/index.html" afterPath="$PROJECT_DIR$/qianduanyemian/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/js/address.js" afterPath="$PROJECT_DIR$/qianduanyemian/js/address.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/js/common.js" afterPath="$PROJECT_DIR$/qianduanyemian/js/common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/js/chat.js" afterPath="$PROJECT_DIR$/qianduanyemian/js/chat.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/js/hotel.js" afterPath="$PROJECT_DIR$/qianduanyemian/js/hotel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/js/plane.js" afterPath="$PROJECT_DIR$/qianduanyemian/js/plane.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/js/user.js" afterPath="$PROJECT_DIR$/qianduanyemian/js/user.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/landing.html" afterPath="$PROJECT_DIR$/qianduanyemian/landing.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/manager.html" afterPath="$PROJECT_DIR$/qianduanyemian/manager.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/memberInfo.html" afterPath="$PROJECT_DIR$/qianduanyemian/memberInfo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/myOrders.html" afterPath="$PROJECT_DIR$/qianduanyemian/myOrders.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/orderFlight.html" afterPath="$PROJECT_DIR$/qianduanyemian/orderFlight.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/paying.html" afterPath="$PROJECT_DIR$/qianduanyemian/paying.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/pickRegion.html" afterPath="$PROJECT_DIR$/qianduanyemian/pickRegion.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/ticket.html" afterPath="$PROJECT_DIR$/qianduanyemian/ticket.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/register.html" afterPath="$PROJECT_DIR$/qianduanyemian/register.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/weixin/Weixin.php" afterPath="$PROJECT_DIR$/weixin/Weixin.php" />
     </list>
     <ignored path="PhpstormProjects.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,46 +43,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="const.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Hotel/const.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="17" column="77" selection-start-line="17" selection-start-column="77" selection-end-line="17" selection-end-column="77" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HotelManager.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Hotel/HotelManager.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1416">
-              <caret line="64" column="23" selection-start-line="64" selection-start-column="23" selection-end-line="64" selection-end-column="23" />
-              <folding>
-                <marker date="1468090420667" expanded="true" signature="1078:1227" ph="insert into hotel... " />
-                <marker date="1468090420667" expanded="true" signature="1656:1852" ph="select * fro... hotel" />
-                <marker date="1468090420667" expanded="true" signature="2395:2593" ph="select * fro... hotel" />
-                <marker date="1468090420667" expanded="true" signature="3180:3331" ph="select * fro... hotel" />
-                <marker date="1468090420667" expanded="true" signature="3180:3332" ph="select * fro... hotel" />
-                <marker date="1468090420667" expanded="true" signature="3180:3340" ph="select * fro... hotel" />
-                <marker date="1468090420667" expanded="true" signature="3180:3341" ph="select * fro... hotel" />
-                <marker date="1468090420667" expanded="true" signature="3180:3342" ph="select * fro... hotel" />
-                <marker date="1468090420667" expanded="true" signature="3180:3358" ph="select `hote... hotel" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MySQL.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Config/MySQL.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="test.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/test.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -106,28 +57,38 @@
       </file>
       <file leaf-file-name="doc.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/doc.md">
+          <provider editor-type-id="MarkdownFxPreviewEditor">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="727">
-                <caret line="48" column="52" selection-start-line="48" selection-start-column="52" selection-end-line="48" selection-end-column="52" />
+              <first_editor relative-caret-position="1440">
+                <caret line="60" column="34" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="34" />
                 <folding />
               </first_editor>
               <second_editor />
             </state>
-          </provider>
-          <provider editor-type-id="MarkdownFxPreviewEditor">
-            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Weixin.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Weixin/Weixin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1680">
-              <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+            <state relative-caret-position="624">
+              <caret line="32" column="26" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="26" />
               <folding>
-                <marker date="1468503398463" expanded="true" signature="597:642" ph="select `open... user" />
+                <marker date="1469009185420" expanded="true" signature="634:679" ph="select `open... user" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Const.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Weixin/Const.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -135,20 +96,21 @@
       <file leaf-file-name="home.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/qianduanyemian/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="2" column="54" selection-start-line="2" selection-start-column="54" selection-end-line="2" selection-end-column="54" />
+            <state relative-caret-position="96">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/qianduanyemian/wx/index.php">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/qianduanyemian/wx/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="600">
+              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
               <folding>
-                <element signature="e#6#87#0#PHP" expanded="true" />
+                <marker date="1469021053193" expanded="true" signature="1278:1292" ph="{...}" />
+                <marker date="1469021053193" expanded="true" signature="1278:1302" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -157,9 +119,53 @@
       <file leaf-file-name="api.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10230">
-              <caret line="479" column="28" selection-start-line="479" selection-start-column="28" selection-end-line="479" selection-end-column="28" />
+            <state relative-caret-position="327">
+              <caret line="527" column="74" selection-start-line="527" selection-start-column="74" selection-end-line="527" selection-end-column="74" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/User/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2880">
+              <caret line="120" column="48" selection-start-line="120" selection-start-column="48" selection-end-line="120" selection-end-column="48" />
+              <folding>
+                <marker date="1468236804304" expanded="true" signature="385:430" ph="select `user... user" />
+                <marker date="1468236804304" expanded="true" signature="582:642" ph="select `coun... user" />
+                <marker date="1468236804304" expanded="true" signature="985:1046" ph="update `user... " />
+                <marker date="1468236804304" expanded="true" signature="1273:1319" ph="select `avat... user" />
+                <marker date="1468236804304" expanded="true" signature="1597:1642" ph="update `user... " />
+                <marker date="1468236804304" expanded="true" signature="1946:2018" ph="update `user... " />
+                <marker date="1468236804304" expanded="true" signature="2245:2293" ph="select `veri... user" />
+                <marker date="1468236804304" expanded="true" signature="2578:2624" ph="update `user... " />
+                <marker date="1468236804304" expanded="true" signature="2794:2852" ph="select `id_t... user" />
+                <marker date="1468236804304" expanded="true" signature="3188:3247" ph="update `user... " />
+                <marker date="1468236804304" expanded="true" signature="3590:3661" ph="select `user... user" />
+                <marker date="1468236804304" expanded="true" signature="4030:4077" ph="update `user... " />
+                <marker date="1468236804304" expanded="true" signature="4284:4321" ph="select * fro... user" />
+                <marker date="1468236804304" expanded="true" signature="4566:4607" ph="select `vip`... user" />
+                <marker date="1468236804304" expanded="true" signature="4810:4852" ph="update `user... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserManager.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/User/UserManager.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1464">
+              <caret line="66" column="23" selection-start-line="66" selection-start-column="23" selection-end-line="66" selection-end-column="23" />
+              <folding>
+                <marker date="1468918075108" expanded="true" signature="1103:1222" ph="insert into `user`... " />
+                <marker date="1468918075108" expanded="true" signature="1562:1665" ph="insert into `user`... " />
+                <marker date="1468918075108" expanded="true" signature="2065:2138" ph="select `user... user" />
+                <marker date="1468918075108" expanded="true" signature="2692:2747" ph="select `user... user" />
+                <marker date="1468918075108" expanded="true" signature="3437:3506" ph="select `user... user" />
+                <marker date="1468918075108" expanded="true" signature="3871:3912" ph="select * fro... user" />
+                <marker date="1468918075108" expanded="true" signature="4461:4526" ph="select * fro... user" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -167,7 +173,7 @@
       <file leaf-file-name="Plane.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Plane/Plane.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="788">
+            <state relative-caret-position="4152">
               <caret line="173" column="21" selection-start-line="173" selection-start-column="21" selection-end-line="173" selection-end-column="21" />
               <folding>
                 <marker date="1468770253008" expanded="true" signature="1003:1197" ph="insert into plane... " />
@@ -205,7 +211,6 @@
         <option value="$PROJECT_DIR$/WX/index.php" />
         <option value="$PROJECT_DIR$/Address/Country.php" />
         <option value="$PROJECT_DIR$/Coupon/CouponManager.php" />
-        <option value="$PROJECT_DIR$/User/UserManager.php" />
         <option value="$PROJECT_DIR$/Hotel/Hotel.php" />
         <option value="$PROJECT_DIR$/Address/City.php" />
         <option value="$PROJECT_DIR$/Address/CityManager.php" />
@@ -225,11 +230,14 @@
         <option value="$PROJECT_DIR$/STChat/lib/SessionManager.php" />
         <option value="$PROJECT_DIR$/Token/TokenManager.php" />
         <option value="$PROJECT_DIR$/STChat/api/api.php" />
-        <option value="$PROJECT_DIR$/qianduanyemian/home.php" />
-        <option value="$PROJECT_DIR$/qianduanyemian/wx/index.php" />
         <option value="$PROJECT_DIR$/Plane/Plane.php" />
-        <option value="$PROJECT_DIR$/api/api.php" />
+        <option value="$PROJECT_DIR$/qianduanyemian/wx/index.php" />
+        <option value="$PROJECT_DIR$/User/UserManager.php" />
         <option value="$PROJECT_DIR$/api/doc.md" />
+        <option value="$PROJECT_DIR$/qianduanyemian/home.php" />
+        <option value="$PROJECT_DIR$/qianduanyemian/wx/index.html" />
+        <option value="$PROJECT_DIR$/Weixin/Weixin.php" />
+        <option value="$PROJECT_DIR$/api/api.php" />
       </list>
     </option>
   </component>
@@ -246,7 +254,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="width" value="1929" />
-    <option name="height" value="1056" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -273,6 +281,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -289,6 +298,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="PhpstormProjects" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PhpstormProjects" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PhpstormProjects" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WX" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -566,7 +589,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -648,17 +670,19 @@
       <workItem from="1468659200004" duration="618000" />
       <workItem from="1468734448551" duration="4515000" />
       <workItem from="1468768033564" duration="3401000" />
+      <workItem from="1468916486954" duration="5294000" />
+      <workItem from="1469005968519" duration="5819000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136657000" />
+    <option name="totallyTimeSpent" value="147770000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1929" height="1056" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="0" width="1929" height="1038" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14636697" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14599685" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -695,7 +719,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Address/China.php" />
     <entry file="file://$PROJECT_DIR$/Address/Province.php" />
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/mysqli.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -728,20 +751,20 @@
     <entry file="file://$PROJECT_DIR$/Address/World.php" />
     <entry file="file://$PROJECT_DIR$/Address/Country.php" />
     <entry file="file://$PROJECT_DIR$/api/doc.md.bak">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="1776">
             <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -788,27 +811,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/User/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2880">
-          <caret line="120" column="48" selection-start-line="120" selection-start-column="48" selection-end-line="120" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Weixin/Const.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/User/UserManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Activity/Activity.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1464">
@@ -845,6 +847,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/STChat/readme.md">
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="0">
@@ -852,9 +857,6 @@
           </first_editor>
           <second_editor />
         </state>
-      </provider>
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/STChat/test/Session_test.php">
@@ -949,6 +951,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/STChat/api/doc.md">
+      <provider selected="true" editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
       <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="813">
@@ -956,9 +961,6 @@
           </first_editor>
           <second_editor />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="MarkdownFxPreviewEditor">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Payment/PaymentManager.php">
@@ -986,7 +988,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="17" column="77" selection-start-line="17" selection-start-column="77" selection-end-line="17" selection-end-column="77" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1026,19 +1027,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Weixin/Weixin.php">
+    <entry file="file://$PROJECT_DIR$/qianduanyemian/wx/index.php" />
+    <entry file="file://$PROJECT_DIR$/Weixin/Const.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1680">
-          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/User/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2880">
+          <caret line="120" column="48" selection-start-line="120" selection-start-column="48" selection-end-line="120" selection-end-column="48" />
           <folding>
-            <marker date="1468503398463" expanded="true" signature="597:642" ph="select `open... user" />
+            <marker date="1468236804304" expanded="true" signature="385:430" ph="select `user... user" />
+            <marker date="1468236804304" expanded="true" signature="582:642" ph="select `coun... user" />
+            <marker date="1468236804304" expanded="true" signature="985:1046" ph="update `user... " />
+            <marker date="1468236804304" expanded="true" signature="1273:1319" ph="select `avat... user" />
+            <marker date="1468236804304" expanded="true" signature="1597:1642" ph="update `user... " />
+            <marker date="1468236804304" expanded="true" signature="1946:2018" ph="update `user... " />
+            <marker date="1468236804304" expanded="true" signature="2245:2293" ph="select `veri... user" />
+            <marker date="1468236804304" expanded="true" signature="2578:2624" ph="update `user... " />
+            <marker date="1468236804304" expanded="true" signature="2794:2852" ph="select `id_t... user" />
+            <marker date="1468236804304" expanded="true" signature="3188:3247" ph="update `user... " />
+            <marker date="1468236804304" expanded="true" signature="3590:3661" ph="select `user... user" />
+            <marker date="1468236804304" expanded="true" signature="4030:4077" ph="update `user... " />
+            <marker date="1468236804304" expanded="true" signature="4284:4321" ph="select * fro... user" />
+            <marker date="1468236804304" expanded="true" signature="4566:4607" ph="select `vip`... user" />
+            <marker date="1468236804304" expanded="true" signature="4810:4852" ph="update `user... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/User/UserManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1464">
+          <caret line="66" column="23" selection-start-line="66" selection-start-column="23" selection-end-line="66" selection-end-column="23" />
+          <folding>
+            <marker date="1468918075108" expanded="true" signature="1103:1222" ph="insert into `user`... " />
+            <marker date="1468918075108" expanded="true" signature="1562:1665" ph="insert into `user`... " />
+            <marker date="1468918075108" expanded="true" signature="2065:2138" ph="select `user... user" />
+            <marker date="1468918075108" expanded="true" signature="2692:2747" ph="select `user... user" />
+            <marker date="1468918075108" expanded="true" signature="3437:3506" ph="select `user... user" />
+            <marker date="1468918075108" expanded="true" signature="3871:3912" ph="select * fro... user" />
+            <marker date="1468918075108" expanded="true" signature="4461:4526" ph="select * fro... user" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Plane/Plane.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="788">
+        <state relative-caret-position="4152">
           <caret line="173" column="21" selection-start-line="173" selection-start-column="21" selection-end-line="173" selection-end-column="21" />
           <folding>
             <marker date="1468770253008" expanded="true" signature="1003:1197" ph="insert into plane... " />
@@ -1057,42 +1097,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/qianduanyemian/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="54" selection-start-line="2" selection-start-column="54" selection-end-line="2" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/qianduanyemian/wx/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#87#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/doc.md">
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="727">
-            <caret line="48" column="52" selection-start-line="48" selection-start-column="52" selection-end-line="48" selection-end-column="52" />
+          <first_editor relative-caret-position="1440">
+            <caret line="60" column="34" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="34" />
             <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qianduanyemian/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qianduanyemian/wx/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding>
+            <marker date="1469021053193" expanded="true" signature="1278:1292" ph="{...}" />
+            <marker date="1469021053193" expanded="true" signature="1278:1302" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Weixin/Weixin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="32" column="26" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="26" />
+          <folding>
+            <marker date="1469009185420" expanded="true" signature="634:679" ph="select `open... user" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10230">
-          <caret line="479" column="28" selection-start-line="479" selection-start-column="28" selection-end-line="479" selection-end-column="28" />
+        <state relative-caret-position="327">
+          <caret line="527" column="74" selection-start-line="527" selection-start-column="74" selection-end-line="527" selection-end-column="74" />
           <folding />
         </state>
       </provider>

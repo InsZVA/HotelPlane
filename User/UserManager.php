@@ -64,7 +64,7 @@ class UserManager
         if (!$result || $result->num_rows == 0) return false;
         $row = $result->fetch_assoc();
         $tm = new TokenManager();
-        return ['token'=> $tm->newToken($row['user_id'], $row['level']), 'level'=> $row['level']];
+        return ['user_id' => $row['user_id'], 'token'=> $tm->newToken($row['user_id'], $row['level']), 'level'=> $row['level']];
     }
 
     public function listUsers($offset, $num, $orderBy, $order) {

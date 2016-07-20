@@ -5,7 +5,7 @@
  * Date: 2016/7/12
  * Time: 18:45
  */
-require_once "const.php";
+require_once "Const.php";
 class Weixin
 {
     private $mysqli;
@@ -20,6 +20,7 @@ class Weixin
         $data=$postData->data;
         $user_id=$postData->userId;
 
+        $user_id = intval($user_id);
         $access_token=$this->getToken();
         if(!$access_token)
             return false;
@@ -91,5 +92,15 @@ class Weixin
         fclose($token);
 
         return $access_token->access_token;
+    }
+
+    public function getUserData($code) {
+        $data = file_get_contents("https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx81c1603b41b5f4f6&secret=15d9382d85bb018c56e3cc41bb299d5b&code=$code&grant_type=authorization_code");
+        $data = json_decode($data);
+        if (isset($data->errcode))
+            return $data;
+        $userData = file_get_contents("https://api.weixin.qq.com/sns/userinfo?access_token=$data->access_token&openid=$data->openid&lang=zh_CN");
+        $userData = json_decode($userData);
+        return $userData;
     }
 }

@@ -6,6 +6,8 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=0.96,initial-scale=0.96" />
 		<title>注册</title>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="./js/common.js"></script>
 		<style type="text/css">
 			body {
 				background: #efeff4;
@@ -65,11 +67,55 @@
 				<input type="text" id="name" value="" placeholder="用户名" />
 				<input type="password" id="psd" value="" placeholder="密码" />
 				<input type="password" id="psd2" value="" placeholder="重复密码" />
-				<div id="Rectangle"> 立即注册</div>
+				<div id="Rectangle" onclick="register()"> 立即注册</div>
 			</div>
 
 		</div>
 
+		<script>
+			function register() {
+				var username = $("#name").val();
+				var pwd1 = $("#psd").val();
+				var pwd2 = $("#psd2").val();
+				if (username.length < 5 || pwd1.length < 6 || pwd1 != pwd2) {
+					alert("输入数据非法！请重新输入！");
+					return;
+				}
+				$.post("http://api.xszlv.com/api/api.php", JSON.stringify({requestMethod: "newUser", data: {username: username, password: pwd1, level: 1}}), function(data) {
+					if (data.code == -1) {
+						alert("注册失败！");
+						return;
+					}
+					if (data.inserted_id != undefined) {
+						$.post("http://api.xszlv.com/api/api.php", JSON.stringify({requestMethod: "login", data: {username: username, password: pwd1}}), function(data) {
+							var obj = data;
+							if (obj.user_id && obj.token) {
+								setToken(obj.token);
+								setUserID(obj.user_id);
+								if (localStorage.getItem("openid") != undefined) {
+									CallAPI({requestMethod: "bindOpenId", openId: localStorage.getItem("openid")}, function(data) {
+										if (data.code != -1) {
+											alert("微信号绑定成功！");
+											if (localStorage.getItem("headimgurl") != undefined) {
+												CallAPI({requestMethod: "setAvatar", avatar: localStorage.getItem("headimgurl")}, function(data) {
+													if (data.code != -1) {
+														alert("头像绑定成功！");
+														window.location.replace("index.html");
+													}
+												})
+											}
+										}
+									})
+								}
+							} else {
+								alert("登录失败！");
+							}
+						});
+
+					}
+				})
+			}
+		</script>
 	</body>
 
 </html>
