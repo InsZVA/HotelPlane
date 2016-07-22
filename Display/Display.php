@@ -21,7 +21,7 @@ class Display
         while($row = $query->fetch_assoc()) {
             $rows[]=$row['path'];
         }
-        return $rows;
+        return json_encode($rows);
     }
 
     public function changeDisplay($data)
@@ -30,8 +30,9 @@ class Display
         if(!isset($data->state)) return false;
         if(!isset($data->weight)) return false;
         if(!isset($data->image_id)) return false;
-        return $this->mysqli->query("update `display` set `path`=$data->path,`state`=$data->state,
-        `weight`=$data->weight where `image_id`=$data->image_id");
+
+        return $this->mysqli->query("update `display` set `path`='$data->path',`state`='$data->state',
+        `weight`='$data->weight' where `image_id`='$data->image_id'");
     }
 
 }

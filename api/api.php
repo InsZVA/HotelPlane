@@ -23,6 +23,8 @@ require_once ('../Plane/Plane.php');
 require_once ('../Payment/PaymentManager.php');
 require_once ('../Payment/Payment.php');
 require_once ('../Weixin/Weixin.php');
+require_once ('../Statistics/Statistics.php');
+require_once ('../Display/Display.php');
 
 
 function PermissionDenied() {
@@ -579,6 +581,37 @@ switch ($postData->requestMethod) {
         if(!$result)
             break;
         echo $result;
+        exit(0);
+        break;
+    //Statistics
+    case "getStatistics":
+        if ($level < 2) PermissionDenied();
+        $statistics=new Statistics();
+        $result=$statistics->getStatistics();
+        if(!$result)
+            break;
+        echo $result;
+        exit(0);
+        break;
+    //Display
+    case "getDisplay":
+    if ($level < 2) PermissionDenied();
+    $display=new Display();
+    $result=$display->getDisplay();
+    if(!$result)
+        break;
+    echo $result;
+    exit(0);
+    break;
+    case "changeDisplay":
+        if ($level < 2) PermissionDenied();
+        if(!isset($postData->data))
+            break;
+        $display=new Display();
+        $result=$display->changeDisplay($postData->data);
+        if(!$result)
+            break;
+        OKResponse();
         exit(0);
         break;
 }
