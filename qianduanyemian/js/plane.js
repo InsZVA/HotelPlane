@@ -6,7 +6,7 @@ function loadNSPlanes(offset, num, orderBy, order, standard) {
     function(data) {
         var html = '<div id="Triangle"></div>'+
             '<div id="tjjpbt">特价机票</div>'+
-            '<div id="more">+more</div>';
+            '<a href="/flightList.html?ns=1"><div id="more">+more</div></a>';
         if (data.code == -2) {
             alert("请先登录！");
             window.location.replace("landing.html");
@@ -24,6 +24,38 @@ function loadNSPlanes(offset, num, orderBy, order, standard) {
     });
 }
 
+
+function listNSPlanes() {
+    CallAPI({requestMethod: "listPlanes", offset: 0, num: 30, orderBy: "price", order: "asc", standard: 1},
+        function(data) {
+            var html = '';
+            if (data.code == -2) {
+                alert("请先登录！");
+                window.location.replace("landing.html");
+                return;
+            }
+            if (data.code == -1) {
+                $("#container").html(html);
+                alert("未找到特价机票，已为您推荐特价活动。");
+                window.location.replace("activityList.html");
+                return;
+            }
+            var html = "";
+            var regex = /([0-9]+:[0-9]+):[0-9]+/;
+            window.localStorage.setItem("datas", JSON.stringify(data));
+            for (var i = 0;i < data.length;i++) {
+                data[i].start_time = regex.exec(data[i].start_time)[1];
+                data[i].end_time = regex.exec(data[i].end_time)[1];
+                data[i].price = "￥" + data[i].price;
+                html += '<div class="part" onclick="nsplane('+ i +')"><div class="leftPart"><div class="part1"><div class="start">'+ data[i].start_time +'</div>'+
+                    '<div class="line"></div><div class="end">'+ data[i].end_time +'</div></div><div class="part2"><div class="airport1">'+
+                    data[i].start_airport +'</div><div class="airport2">'+ data[i].end_airport +'</div></div><div class="part3"><div class="flightInfo">'+
+                    data[i].flight_number +'</div></div></div><div class="rightPart">' + data[i].price + '</div></div>';
+            }
+            $("#container").html(html);
+        });
+}
+
 function searchPlanes(start_city_id, end_city_id, start_date, offset, num) {
     CallAPI({requestMethod: "findPlanes", data: {offset: offset, num: num, start_city_id: start_city_id, end_city_id: end_city_id, start_date: start_date}}, function(data) {
         if (data.code == -2) {
@@ -34,8 +66,7 @@ function searchPlanes(start_city_id, end_city_id, start_date, offset, num) {
         if (data.code == -1) {
             $("#container").html(html);
             alert("未找到相关机票，已为您推荐附近酒店。");
-            //TODO: 转到酒店
-            window.location.replace("index.html");
+            window.location.replace("hotelList.html?cityId=" + end_city_id);
             return;
         }
         var html = "";
@@ -118,4 +149,8 @@ function submitPayment() {
 function getPlaneData(id) {
     id = parseInt(id);
     return CallAPINotAsync({requestMethod: "getPlaneData", planeId: id})[0];
+}
+
+function nsplane(id) {
+    window.location.replace("chat.html");
 }

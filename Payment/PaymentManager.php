@@ -51,4 +51,15 @@ class PaymentManager
         while ($row = $result->fetch_assoc()) $rows[] = $row;
         return $rows;
     }
+
+    public function listPayments($offset, $num) {
+        $offset = intval($offset);
+        $num = intval($num);
+        $sql = "select * from `payment` where order by `update_time` desc limit $offset, $num";
+        $result = $this->mysqli->query($sql);
+        if (!$result) return false;
+        $rows = [];
+        while ($row = $result->fetch_assoc()) $rows[] = $row;
+        return $rows;
+    }
 }

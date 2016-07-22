@@ -17,11 +17,11 @@ function setUserID(userId) {
     window.localStorage.setItem("userID", userId);
 }
 
-function CallAPI(data, callback) {
+function CallAPI(data, callback) {/*
     if (getToken() == undefined || getToken() == "") {
         window.location.href = "landing.html";
         return;
-    }
+    }*/
     data.userId = getUserID();
     data.token = getToken();
     var api = "http://api.xszlv.com/api/api.php";
@@ -29,11 +29,11 @@ function CallAPI(data, callback) {
 }
 
 function CallAPINotAsync(data) {
-    var ret;
+    var ret;/*
     if (getToken() == undefined || getToken() == "") {
         window.location.href = "landing.html";
         return;
-    }
+    }*/
     data.userId = getUserID();
     data.token = getToken();
     var api = "http://api.xszlv.com/api/api.php";

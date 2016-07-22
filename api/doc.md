@@ -90,6 +90,7 @@
 | confirmPayment | waiterId paymentId | | OK |
 | finishPayment | waiterId paymentId | | OK |
 | getPaymentData | paymentId | | OK |
+| listPayments | offset num | | OK |
 | 微信相关 | | | |
 | sendMessage | data | data子参数为：content, url(点击跳转链接), template_id(参见微信后台对应列表，发送编号(1-11)即可) | OK |
 | 统计数据相关 | | | |

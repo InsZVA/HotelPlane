@@ -13,7 +13,7 @@ function loadHotHotels() {
         }
         var html = '<div id="Triangle"></div>'+
             '<div id="tjjpbt">特价酒店</div>'+
-            '<div id="more">+more</div>';
+            '<a href="/hotelList.html"><div id="more">+more</div></a>';
         for (var i = 0;i < data.length;i++) {
             data[i].images = JSON.parse(data[i].images);
             html += '<div id="huodong' + (i+1) +'">'+
@@ -26,7 +26,7 @@ function loadHotHotels() {
 
 function loadNSHotel(cityId, order) {
     cityId = parseInt(cityId);
-    CallAPI({requestMethod: "listHotels", cityId: cityId, orderBy: "price", order: order}, function(data) {
+    CallAPI({requestMethod: "findHotelsByCity", cityId: cityId, orderBy: "price", order: order}, function(data) {
         var html = "";
         if (data.code == -2) {
             alert("请先登录！");
@@ -35,6 +35,8 @@ function loadNSHotel(cityId, order) {
         }
         if (data.code == -1) {
             $("#list").html(html);
+            alert("未找到相关酒店，已为您推荐相关活动！");
+            location.replace('activityList.html');
             return;
         }
         for (var i = 0;i < data.length;i++) {

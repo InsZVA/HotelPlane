@@ -154,7 +154,10 @@
 		var sid = window.localStorage.getItem("startCityId");
 		var eid = window.localStorage.getItem("endCityId");
 		var sd = window.localStorage.getItem("start_date");
-		searchPlanes(sid, eid, sd, 0, 30);
+		if (getJsUrl()['ns'] != undefined) {
+			listNSPlanes();
+		} else
+			searchPlanes(sid, eid, sd, 0, 30);
 		function onplane(id) {
 			window.location.href="ticket.html?id=" + id;
 		}

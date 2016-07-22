@@ -21,7 +21,7 @@ function loadCities(chinese) {
         var html = "";
         for (var i = 0;i < data.length;i++) {
             if (letters[data[i].letter] == undefined) letters[data[i].letter] = [{name: data[i].name, id: data[i].city_id}];
-            else letters[data[i].letter].append({name: data[i].name, id: data[i].city_id});
+            else letters[data[i].letter].push({name: data[i].name, id: data[i].city_id});
         }
         letters.sort();
         for (var l in letters) {

@@ -542,6 +542,15 @@ switch ($postData->requestMethod) {
         echo json_encode($result);
         exit(0);
         break;
+    case "listPayments":
+        if ($level < 1) PermissionDenied();
+        if (!isset($postData->offset)) $postData->offset = 0;
+        if (!isset($postData->num)) $postData->num = 30;
+        $result = (new PaymentManager())->listPayments($postData->offset, $postData->num);
+        if (!$result) break;
+        echo json_encode($result);
+        exit(0);
+        break;
     case "confirmPayment":
         if ($level < 2) PermissionDenied();
         if (!isset($postData->waiterId)) break;

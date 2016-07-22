@@ -18,7 +18,7 @@ function listActivity() {
             + data[i].name + '</div><div class="price">￥' + data[i].price + '</div></div>';
         }
         $("#container").html(html);
-    })
+    });
 }
 
 function goActivity(id) {
@@ -43,5 +43,26 @@ function loadActivity(id) {
         $("#price").html("￥" + data.price);
         $("#pic1").attr("src", data.image);
         $("#content").html(data.description);
+    });
+}
+
+function loadActivities() {
+    CallAPI({requestMethod: "listAvailableActivity"}, function(data) {
+        var html = '';
+        if (data.code == -2) {
+            alert("请先登录！");
+            window.location.replace("landing.html");
+            return;
+        }
+        if (data.code == -1) {
+            $("#container").html(html);
+            return;
+        }
+        for (var i = 0;i < data.length;i++) {
+            html += '<div id="huodong'+ (i+1) +'" onclick="goActivity(' + data[i].activity_id + ')"><img src="'+ data[i].image +'" style="width: 175px;height: 85px;"'+
+                '/> <div id="hdbt">' + data[i].name +'</div> </div>';
+        }
+        $("#tjhd").html(html);
+
     });
 }

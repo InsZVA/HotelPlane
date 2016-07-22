@@ -12,11 +12,11 @@
 		<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 		<link href="./css/bootstrap-datetimepicker.min.css" rel="stylesheet">
 		<script src="./js/bootstrap-datetimepicker.min.js"></script>
-		<script type="text/javascript" src="./js/bootstrap-datetimepicker.de.js" charset="UTF-8"></script>
 		<script src="./js/common.js"></script>
 		<script src="./js/address.js"></script>
 		<script src="./js/hotel.js"></script>
 		<script src="./js/plane.js"></script>
+		<script src="./js/activity.js"></script>
 		<style type="text/css">
 			body {
 				background: #efeff4;
@@ -380,24 +380,27 @@
 			<div class="tjjp">
 				<div id="Triangle"></div>
 				<div id="tjjpbt">热门活动</div>
-				<div id="more">+more</div>
-				<div id="huodong1">
-					<img src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1467684389&di=c67792c4cd69e320f2daec61be78315b&src=http://image41.360doc.com/DownloadImg/2011/11/0706/19073054_28.jpg" style="width: 175px;height: 85px;"
-					/>
-					<div id="hdbt">简短活动标题</div>
+				<a href="activityList.html"><div id="more">+more</div></a>
+				<div id="tjhd">
+					<div id="huodong1">
+						<img src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1467684389&di=c67792c4cd69e320f2daec61be78315b&src=http://image41.360doc.com/DownloadImg/2011/11/0706/19073054_28.jpg" style="width: 175px;height: 85px;"
+						/>
+						<div id="hdbt">简短活动标题</div>
+					</div>
+					<div id="huodong2">
+						<img src="http://bbs.weiphone.com/data/attachment/forum/pw/Day_120207/68_550091_d270feb4da612c0.jpg" style="width: 175px;height: 85px;" />
+						<div id="hdbt">简短活动标题</div>
+					</div>
+					<div id="huodong3">
+						<img src="http://pic1.win4000.com/wallpaper/4/568c90477a93d.jpg" style="width: 175px;height: 85px;" />
+						<div id="hdbt">简短活动标题</div>
+					</div>
+					<div id="huodong4">
+						<img src="http://img3.imgtn.bdimg.com/it/u=617347983,2979068976&fm=21&gp=0.jpg" style="width: 175px;height: 85px;" />
+						<div id="hdbt">简短活动标题</div>
+					</div>
 				</div>
-				<div id="huodong2">
-					<img src="http://bbs.weiphone.com/data/attachment/forum/pw/Day_120207/68_550091_d270feb4da612c0.jpg" style="width: 175px;height: 85px;" />
-					<div id="hdbt">简短活动标题</div>
-				</div>
-				<div id="huodong3">
-					<img src="http://pic1.win4000.com/wallpaper/4/568c90477a93d.jpg" style="width: 175px;height: 85px;" />
-					<div id="hdbt">简短活动标题</div>
-				</div>
-				<div id="huodong4">
-					<img src="http://img3.imgtn.bdimg.com/it/u=617347983,2979068976&fm=21&gp=0.jpg" style="width: 175px;height: 85px;" />
-					<div id="hdbt">简短活动标题</div>
-				</div>
+
 			</div>
 			<div id="jipiao">
 
@@ -446,7 +449,7 @@
 					<div id="hdbt">简短活动标题</div>
 				</div>
 			</div>
-			<div class="tjjp" id="tjjd">
+			<div class="tjjp" style="clear: right;" id="tjjd">
 				<div id="Triangle"></div>
 				<div id="tjjpbt">特价酒店</div>
 				<div id="more">+more</div>
@@ -493,6 +496,7 @@
 		<script>
 			loadNSPlanes(0, 4, "price", "asc", 1);
 			loadHotHotels();
+			loadActivities();
 			var sId = window.localStorage.getItem("startCityId");
 			var eId = window.localStorage.getItem("endCityId");
 			if (sId == undefined) {
