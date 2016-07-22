@@ -92,3 +92,8 @@
 | getPaymentData | paymentId | | OK |
 | 微信相关 | | | |
 | sendMessage | data | data子参数为：content, url(点击跳转链接), template_id(参见微信后台对应列表，发送编号(1-11)即可) | OK |
+| 统计数据相关 | | | |
+| getStatistics | | | OK |
+| 首页轮播图相关 | | | |
+| getDisplay | | | OK |
+| changeDisplay | data | data子参数为：path, state（1显示0隐藏）, image_id,weight(权重） | OK |
