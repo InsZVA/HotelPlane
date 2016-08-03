@@ -98,3 +98,6 @@
 | 首页轮播图相关 | | | |
 | getDisplay | | | OK |
 | changeDisplay | data | data子参数为：path, state（1显示0隐藏）, image_id,weight(权重） | OK |
+| 验证码相关 | | | |
+| sendCode | phone | | TEST |
+| verifyCode | phone code | | TEST |

@@ -25,6 +25,7 @@ require_once ('../Payment/Payment.php');
 require_once ('../Weixin/Weixin.php');
 require_once ('../Statistics/Statistics.php');
 require_once ('../Display/Display.php');
+require_once ('../Msg/sms.php');
 
 
 function PermissionDenied() {
@@ -622,6 +623,23 @@ switch ($postData->requestMethod) {
             break;
         OKResponse();
         exit(0);
+        break;
+    //Code
+    case "sendCode":
+        if(!isset($postData->phone)) break;
+        $sms = new Sms();
+        $sms->SendCode($postData->phone);
+        OKResponse();
+        exit(0);
+        break;
+    case "verifyCode":
+        if(!isset($postData->phone) || !isset($postData->code)) break;
+        $sms = new Sms();
+        if ($sms->Verify($postData->phone, $postData->code)) {
+            OKResponse();
+            exit(0);
+            break;
+        }
         break;
 }
 
