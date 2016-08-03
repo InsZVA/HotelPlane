@@ -102,7 +102,7 @@ class Plane
             }
             return $rows;
         }
-        return false;
+        return [];
     }
     
     public function search($keyword,$offset,$num)

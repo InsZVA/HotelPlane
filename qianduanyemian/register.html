@@ -55,6 +55,22 @@
 				text-align: center;
 				line-height: 35px;
 			}
+
+			#codeBtn {
+				background: #009ce5;
+				border-radius: 2.5px;
+				width: 62px;
+				display: block!important;
+				font-family: PingFangSC-Medium;
+				font-size: 17px;
+				color: #ffffff;
+				letter-spacing: 0px;
+				text-align: center;
+				line-height: 38px;
+				margin-top: 2px;
+				margin-left: 4px;
+				margin-bottom: 4px;
+			}
 		</style>
 	</head>
 
@@ -67,7 +83,11 @@
 				<input type="text" id="name" value="" placeholder="用户名" />
 				<input type="password" id="psd" value="" placeholder="密码" />
 				<input type="password" id="psd2" value="" placeholder="重复密码" />
-				<div id="Rectangle" onclick="register()"> 立即注册</div>
+				<input type="text" id="realname" value="" placeholder="真实姓名" />
+				<input type="tel" id="phone" value="" placeholder="手机号码" />
+				<input type="text" id="code" value="" placeholder="验证码" style="width:180px;float: left;" />
+				<div id="codeBtn" onclick="getCode()" style="float:left">获取</div>
+				<div id="Rectangle" onclick="register()" style="clear:both"> 立即注册</div>
 			</div>
 
 		</div>
@@ -81,37 +101,61 @@
 					alert("输入数据非法！请重新输入！");
 					return;
 				}
+				var phone = $("#phone").val();
+				var code = $("#code").val();
+				var realname = $("#realname").val();
+				var data = CallAPINotAsync({requestMethod: "verifyCode", phone: phone, code: code });
+				if (data.code != 0) {
+					alert("验证码输入错误，请重新输入！");
+					return;
+				}
 				$.post("http://api.xszlv.com/api/api.php", JSON.stringify({requestMethod: "newUser", data: {username: username, password: pwd1, level: 1}}), function(data) {
 					if (data.code == -1) {
 						alert("注册失败！");
 						return;
 					}
 					if (data.inserted_id != undefined) {
-						$.post("http://api.xszlv.com/api/api.php", JSON.stringify({requestMethod: "login", data: {username: username, password: pwd1}}), function(data) {
-							var obj = data;
-							if (obj.user_id && obj.token) {
-								setToken(obj.token);
-								setUserID(obj.user_id);
-								if (localStorage.getItem("openid") != undefined) {
-									CallAPI({requestMethod: "bindOpenId", openId: localStorage.getItem("openid")}, function(data) {
-										if (data.code != -1) {
-											alert("微信号绑定成功！");
-											if (localStorage.getItem("headimgurl") != undefined) {
-												CallAPI({requestMethod: "setAvatar", avatar: localStorage.getItem("headimgurl")}, function(data) {
-													if (data.code != -1) {
-														alert("头像绑定成功！");
-														window.location.replace("index.html");
-													}
-												})
+						CallAPI({requestMethod: "verify", data: {realname: realname, phone: phone}}, function(data) {
+							$.post("http://api.xszlv.com/api/api.php", JSON.stringify({requestMethod: "login", data: {username: username, password: pwd1}}), function(data) {
+								var obj = data;
+								if (obj.user_id && obj.token) {
+									setToken(obj.token);
+									setUserID(obj.user_id);
+									if (localStorage.getItem("openid") != undefined) {
+										CallAPI({requestMethod: "bindOpenId", openId: localStorage.getItem("openid")}, function(data) {
+											if (data.code != -1) {
+												alert("微信号绑定成功！");
+												if (localStorage.getItem("headimgurl") != undefined) {
+													CallAPI({requestMethod: "setAvatar", avatar: localStorage.getItem("headimgurl")}, function(data) {
+														if (data.code != -1) {
+															alert("头像绑定成功！");
+															window.location.replace("index.html");
+														}
+													})
+												}
 											}
-										}
-									})
+										})
+									} else {
+										window.location.replace("index.html");
+									}
+								} else {
+									alert("登录失败！");
 								}
-							} else {
-								alert("登录失败！");
-							}
+							});
 						});
 
+
+					}
+				})
+			}
+
+			function getCode() {
+				if ($("#codeBtn").html() == "已发送") return;
+				$phone = parseInt($("#phone").val());
+				CallAPI({requestMethod: "sendCode", phone: $phone}, function(data) {
+					if (data.code == 0) {
+						$("#codeBtn").css({backgroundColor: "#efeff4"});
+						$("#codeBtn").html("已发送");
 					}
 				})
 			}

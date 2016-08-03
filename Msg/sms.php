@@ -6,7 +6,7 @@
  * Time: 15:48
  */
 include ('TopSdk.php');
-include (__DIR__ . "/../Config/MySQL.php");
+require_once ("../Config/MySQL.php");
 
 class Sms {
     private $mysqli;
@@ -31,12 +31,13 @@ class Sms {
         $req->setSmsType("normal");
         $req->setSmsFreeSignName("测试");
         $req->setSmsParam("{\"number\":\"$code\"}");
-        $req->setRecNum($phone);
+        $req->setRecNum("$phone");
         $req->setSmsTemplateCode("SMS_12906039");
         $resp = $c->execute($req);
         $t = time();
         $this->mysqli->query("delete from `code` where `phone` = '$phone'");
         $this->mysqli->query("insert into `code` values($phone, $code, $t)");
+        var_dump($resp);
         return $resp;
     }
 
@@ -47,7 +48,7 @@ class Sms {
             return false;
         } else {
             $row = $result->fetch_assoc();
-            if ($row['code'] == $code) return true;
+            if ($row['code'] == $code && $row['update_time'] - time() < 600) return true;
             return false;
         }
     }
