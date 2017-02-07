@@ -8,6 +8,6 @@
  */
 class MySQLConfig
 {
-    static public $db_address = 'localhost', $db_user = 'root',
+    static public $db_address = '10.172.202.13:3307', $db_user = 'root',
     $db_name = 'ST', $db_password = 'ST-MySQL-610';
 }

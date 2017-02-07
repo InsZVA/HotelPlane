@@ -23,10 +23,6 @@ require_once ('../Plane/Plane.php');
 require_once ('../Payment/PaymentManager.php');
 require_once ('../Payment/Payment.php');
 require_once ('../Weixin/Weixin.php');
-require_once ('../Statistics/Statistics.php');
-require_once ('../Display/Display.php');
-require_once ('../Msg/sms.php');
-require_once ('../Weixin/Weixin.php');
 
 
 function PermissionDenied() {
@@ -41,17 +37,13 @@ function OKResponse() {
 
 $postRaw = file_get_contents("php://input");
 $postData = json_decode($postRaw);
-
-//if (!isset($postData->userId) && !isset($postData->token) && $postData->requestMethod != "login" && $postData->requestMethod != "autoLogin" && $postData->requestMethod != "newUser") PermissionDenied();
+if (!isset($postData->userId) && !isset($postData->token) && $postData->requestMethod != "login") PermissionDenied();
 $level = -1;
-//if ($postData->requestMethod != "login" && $postData->requestMethod != "autoLogin" && $postData->requestMethod != "newUser") {
-if (isset($postData->userId) && isset($postData->token)) {
-
+if ($postData->requestMethod != "login") {
     $tm = new TokenManager();
     $level = $tm->verifyToken($postData->userId, $postData->token);
+    if ($level == -1) PermissionDenied();
 }
-    //if ($level == -1) PermissionDenied();
-//}
 
 switch ($postData->requestMethod) {
     //Hotel
@@ -203,13 +195,6 @@ switch ($postData->requestMethod) {
         if (!$data) break;
         echo json_encode($data);
         exit(0);
-    case "getCityId":
-        if (!isset($postData->cityName)) break;
-        $cm = new CityManager();
-        $data = $cm->getCityId($postData->cityName);
-        if (!$data) break;
-        echo json_encode($data);
-        exit(0);
     case "getCity":
         if (!isset($postData->countyId)) break;
         $cm = new CityManager();
@@ -220,7 +205,6 @@ switch ($postData->requestMethod) {
     //User
     case "newUser":
         if (!isset($postData->data)) break;
-        if ($postData->data->level > $level && $postData->data->level != 1) PermissionDenied();
         $um = new UserManager();
         $id = $um->newUser($postData->data);
         if (!$id) break;
@@ -243,7 +227,6 @@ switch ($postData->requestMethod) {
         exit(0);
         break;
     case "setAvatar":
-        if ($level < 1) PermissionDenied();
         if (!isset($postData->avatar)) break;
         $user = new User($postData->userId);
         $result = $user->setAvatar($postData->avatar);
@@ -265,14 +248,12 @@ switch ($postData->requestMethod) {
         OKResponse();
         break;
     case "isVerified":
-        if ($level < 1) PermissionDenied();
         $user = new User($postData->userId);
         $result = $user->isVerified();
         if (!$result) break;
         echo json_encode(['verified' => $result]);
         exit(0);
     case "verify":
-        if ($level < 1) PermissionDenied();
         if (!isset($postData->data)) break;
         $user = new User($postData->userId);
         $result = $user->verify($postData->data);
@@ -280,7 +261,6 @@ switch ($postData->requestMethod) {
         OKResponse();
         break;
     case "getID":
-        if ($level < 1) PermissionDenied();
         $user = new User($postData->userId);
         $result = $user->getID();
         if (!$result) break;
@@ -288,7 +268,6 @@ switch ($postData->requestMethod) {
         exit(0);
         break;
     case "setID":
-        if ($level < 1) PermissionDenied();
         if (!isset($postData->data)) break;
         $user = new User($postData->userId);
         $result = $user->setID($postData->data);
@@ -296,7 +275,6 @@ switch ($postData->requestMethod) {
         OKResponse();
         break;
     case "bindOpenId":
-        if ($level < 1) PermissionDenied();
         if (!isset($postData->openId)) break;
         $user = new User($postData->userId);
         $result = $user->bindOpenId($postData->openId);
@@ -304,7 +282,6 @@ switch ($postData->requestMethod) {
         OKResponse();
         break;
     case "changePassword":
-        if ($level < 1) PermissionDenied();
         if (!isset($postData->data)) break;
         $user = new User($postData->userId);
         $result = $user->changePassword($postData->data);
@@ -312,7 +289,6 @@ switch ($postData->requestMethod) {
         OKResponse();
         break;
     case "listUsers":
-        if ($level < 2) PermissionDenied();
         if (!isset($postData->offset)) $postData->offset = 0;
         if (!isset($postData->num)) $postData->num = 30;
         if (!isset($postData->orderBy)) $postData->orderBy = "user_id";
@@ -326,7 +302,6 @@ switch ($postData->requestMethod) {
         }
         break;
     case "findUserByPhone":
-        if ($level < 2) PermissionDenied();
         if (isset($postData->phone)) {
             $um = new UserManager();
             $data = $um->findUserByPhone($postData->phone);
@@ -336,7 +311,6 @@ switch ($postData->requestMethod) {
         }
         break;
     case "findUserByIdCode":
-        if ($level < 2) PermissionDenied();
         if (isset($postData->idCode) && isset($postData->idType)) {
             $um = new UserManager();
             $data = $um->findUserByIdCode($postData->idType, $postData->idCode);
@@ -346,7 +320,6 @@ switch ($postData->requestMethod) {
         }
         break;
     case "getUserData":
-        if ($level < 1) PermissionDenied();
         $user = new User($postData->userId);
         $data = $user->getData();
         if ($data == false) break;
@@ -354,7 +327,6 @@ switch ($postData->requestMethod) {
         exit(0);
         break;
     case "isVIP":
-        if ($level < 1) PermissionDenied();
         $user = new User($postData->userId);
         $data = $user->isVIP();
         if ($data == false) break;
@@ -362,30 +334,11 @@ switch ($postData->requestMethod) {
         exit(0);
         break;
     case "setVIP":
-        if ($level < 1) PermissionDenied();
         $user = new User($postData->userId);
         $user->setVIP();
         OKResponse();
-        $weixin = new Weixin();
-        $data = new stdClass();
-        $data->userId = $postData->userId;
-        $data->template_id = 2;
-        $data->data =
         exit(0);
         break;
-    case "autoLogin":
-        if (!isset($postData->code)) break;
-        $weixin = new Weixin();
-        $userData = $weixin->getUserData($postData->code);
-        if (isset($userData->errcode)) break;
-        $loginData = ((new UserManager())->autoLogin($userData->openid));
-        if ($loginData) {
-            echo json_encode($loginData);
-            exit(0);
-        } else {
-            echo json_encode($userData);
-            exit(0);
-        }
     //Coupon
     case "newCoupon":
         if ($level != 3) PermissionDenied();
@@ -395,7 +348,6 @@ switch ($postData->requestMethod) {
         OKResponse();
         break;
     case "getUserCoupons":
-        if ($level < 1) PermissionDenied();
         if (!isset($postData->userId)) break;
         $cm = new CouponManager();
         $result = $cm->getUserCoupons($postData->userId);
@@ -415,14 +367,6 @@ switch ($postData->requestMethod) {
         if (!isset($postData->type)) break;
         $cm = new CouponManager();
         $result = $cm->getCoupons($postData->type);
-        echo json_encode($result);
-        exit(0);
-        break;
-    case "getCouponData":
-        if ($level < 1) PermissionDenied();
-        if (!isset($postData->couponId)) break;
-        $cm = new CouponManager();
-        $result = $cm->getCoupon($postData->couponId);
         echo json_encode($result);
         exit(0);
         break;
@@ -487,7 +431,6 @@ switch ($postData->requestMethod) {
         exit(0);
         break;
     case "deletePlane":
-        if ($level != 3) PermissionDenied();
         $plane=new Plane();
         if(!isset($postData->planeId))
             break;
@@ -495,7 +438,6 @@ switch ($postData->requestMethod) {
             OKResponse();
         break;
     case "editPlane":
-        if ($level != 3) PermissionDenied();
         $plane=new Plane();
         if(!isset($postData->data)) break;
         $result=$plane->editPlane($postData->data);
@@ -532,44 +474,17 @@ switch ($postData->requestMethod) {
         echo json_encode($result);
         exit(0);
         break;
-    case "getPlaneData":
-        if (!isset($postData->planeId)) break;
-        $plane = new Plane();
-        $result = $plane->getData($postData->planeId);
-        if (!$result) break;
-        echo json_encode($result);
-        exit(0);
-        break;
     //Payment
     case "createPayment":
-        if ($level < 1) PermissionDenied();
         if (!isset($postData->data)) break;
         if ($level < 2 && $postData->userId != $postData->data->userId) PermissionDenied();
         $id = (new PaymentManager())->createPayment($postData->data->userId, $postData->data);
         if (!$id) break;
-        OKResponse();
-        exit(0);
-        break;
-    case "createNSPayment":
-        if ($level < 2) PermissionDenied();
-        if (!isset($postData->data)) break;
-        $id = (new PaymentManager())->createNSPayment($postData->data);
-        if (!$id) break;
-        echo json_encode(['inserted_id'=>$id]);
-        exit(0);
-        break;
-    case "cancelPayment":
-        if ($level < 2) PermissionDenied();
-        if (!isset($postData->waiterId)) break;
-        if (!isset($postData->paymentId)) break;
-        $payment = new Payment($postData->paymentId);
-        $result = $payment->cancel($postData->waiterId);
-        if (!$result) break;
-        OKResponse();
+        //TODO: Send Template Message
+        echo json_encode(['insert_id' => $id]);
         exit(0);
         break;
     case "listUserPayments":
-        if ($level < 1) PermissionDenied();
         if (!isset($postData->offset)) $postData->offset = 0;
         if (!isset($postData->num)) $postData->num = 30;
         $result = (new PaymentManager())->listUserPayments($postData->userId, $postData->offset, $postData->num);
@@ -577,112 +492,16 @@ switch ($postData->requestMethod) {
         echo json_encode($result);
         exit(0);
         break;
-    case "listPayments":
-        if ($level < 1) PermissionDenied();
-        if (!isset($postData->offset)) $postData->offset = 0;
-        if (!isset($postData->num)) $postData->num = 30;
-        $result = (new PaymentManager())->listPayments($postData->offset, $postData->num);
-        if (!$result) break;
-        echo json_encode($result);
-        exit(0);
-        break;
     case "confirmPayment":
-        if ($level < 2) PermissionDenied();
         if (!isset($postData->waiterId)) break;
         if (!isset($postData->paymentId)) break;
         $payment = new Payment($postData->paymentId);
         $result = $payment->confirm($postData->waiterId);
         if (!$result) break;
-        $paymentData = $payment->getData();
-        $userId = $paymentData['user_id'];
-        $wx = new Weixin();
-        $msgData = [];
-
-        if ($paymentData['type'] == 0 && $paymentData['standard'] == 0) { //Plane
-            $plane = new Plane();
-            $planeData = $plane->getData($paymentData['plane_id'])[0];
-            $startCity = new City($paymentData['start_city_id']);
-            $startCityName = $startCity->getData()['name'];
-            $endCity = new City($paymentData['end_city_id']);
-            $endCityName = $startCity->getData()['name'];
-            $msgData = ['template_id' => 6, "url"=> "http://wap.xszlv.com/paymentConfirmed.html?id=" . $paymentData['payment_id'],
-                'content'=> ['first'=> ['value'=> '您好，您的机票订单已成功订位。支付成功后，我们保证出票和价格。请您放心安排行程。', 'color'=> '#173177'],
-                    'OrderID'=> ['value'=> $paymentData['payment_code'], 'color'=> '#173177'],
-                    'PersonName'=> ['value'=> $paymentData['name'], 'color'=> '#173177'],
-                    'pay'=> ['value'=> $planeData['price'], 'color'=> '#173177'],
-                    'FlightInfor'=> ['value'=> '航班号：'. $planeData['flight_number'] . " " . $startCityName . "--" . $endCityName . " 起飞时间：" . $planeData['start_time'], 'color'=> '#173177'],
-                    'Remark'=> ['value'=> '点击消息进入支付页面', 'color'=> '#173177']]];
-        } else if ($paymentData['type'] == 0) { //NSPlane
-            $msgData = ['template_id' => 6, "url"=> "http://wap.xszlv.com/paymentConfirmed.html?id=" . $paymentData['payment_id'],
-                'content'=> ['first'=> ['value'=> '您好，您的机票订单已成功订位。支付成功后，我们保证出票和价格。请您放心安排行程。', 'color'=> '#173177'],
-                    'OrderID'=> ['value'=> $paymentData['payment_code'], 'color'=> '#173177'],
-                    'PersonName'=> ['value'=> $paymentData['name'], 'color'=> '#173177'],
-                    'pay'=> ['value'=> $paymentData['price'], 'color'=> '#173177'],
-                    'FlightInfor'=>  ['value'=> '航班号：'. $paymentData['flight_number'] . " " . $paymentData['start_city'] . "--" . $paymentData['end_city'] . " 起飞时间：" . $paymentData['start_time'], 'color'=> '#173177']],
-                    'Remark'=> ['value'=> '点击消息进入支付页面', 'color'=> '#173177']];
-        }
-        else { //Hotel
-            $hotel = new Hotel($paymentData['hotel_id']);
-            $rooms = $hotel->getRooms();
-            $roomType = '标准间';
-            $pay = '0';
-            foreach ($rooms as $r) {
-                if ($r['room_id'] == $paymentData['room_id']) {
-                    $roomType = $r['name'];
-                    $pay = $r['price'];
-                }
-            }
-            $msgData = ['template_id' => 3, "url"=> "http://wap.xszlv.com/paymentConfirmed.html?id=" . $paymentData['payment_id'],
-                'content'=> ['first'=> ['value'=> '您好，您的酒店订单已成功订位。支付成功后，我们保证入住。请您放心安排行程。', 'color'=> '#173177'],
-                    'order'=> ['value'=> $paymentData['payment_code'], 'color'=> '#173177'],
-                    'Name'=> ['value'=> $paymentData['name'], 'color'=> '#173177'],
-                    'datein'=> ['value'=> date('m月d日', $paymentData['start_date']), 'color'=> '#173177'],
-                    'dateout'=> ['value'=> date('m月d日', $paymentData['end_date']), 'color'=> '#173177'],
-                    'room type'=> ['value'=> $roomType, 'color'=> '#173177'],
-                    'number' => ['value'=> 1, 'color'=> '#173177'],
-                    'pay' => ['value'=> $pay, 'color'=> '#173177'],
-                    'Remark'=> ['value'=> '点击消息进入支付页面', 'color'=> '#173177']]];
-        }
-        $data = ['userId' => $userId, 'data' => $msgData];
-        $data = json_decode(json_encode($data));
-        ($wx->sendMessage($data));
         OKResponse();
         exit(0);
         break;
-    case "getPaymentPrice":
-        //if ($level < 1) PermissionDenied();
-        if (!isset($postData->paymentId)) break;
-        $payment = new Payment($postData->paymentId);
-        $paymentData = $payment->getData();
-        if ($paymentData['type'] == 0 && $paymentData['standard'] == 0) { //Plane
-            $plane = new Plane();
-            $planeData = $plane->getData($paymentData['plane_id'])[0];
-            echo json_encode(['price' => $planeData['price']]);
-            exit(0);
-        } else if ($paymentData['type'] == 0) {
-            echo json_encode(['price' => $paymentData['price']]);
-            exit(0);
-        } else if($paymentData['type'] == 1) { //Hotel
-            $hotel = new Hotel($paymentData['hotel_id']);
-            $rooms = $hotel->getRooms();
-            $pay = '0';
-            foreach ($rooms as $r) {
-                if ($r['room_id'] == $paymentData['room_id']) {
-                    $pay = $r['price'];
-                }
-            }
-            echo json_encode(['price' => $pay * intval((intval($paymentData['end_date']) - intval($paymentData['start_date'])) / (24 * 3600))]);
-            exit(0);
-        } else {
-            $aid = $paymentData['activity_id'];
-            $activity = new Activity($aid);
-            $activityData = $activity->getData()[0];
-            echo json_encode(['price' => $activityData['price']]);
-            exit(0);
-        }
-        break;
     case "finishPayment":
-        if ($level < 2) PermissionDenied();
         if (!isset($postData->waiterId)) break;
         if (!isset($postData->paymentId)) break;
         $payment = new Payment($postData->paymentId);
@@ -692,7 +511,6 @@ switch ($postData->requestMethod) {
         exit(0);
         break;
     case "getPaymentData":
-        if ($level < 1) PermissionDenied();
         if (!isset($postData->paymentId)) break;
         $payment = new Payment($postData->paymentId);
         $result = $payment->getData();
@@ -702,7 +520,6 @@ switch ($postData->requestMethod) {
         break;
     //Weixin
     case "sendMessage":
-        if ($level < 2) PermissionDenied();
         if(!isset($postData->data))
             break;
         $weixin=new Weixin();
@@ -712,54 +529,14 @@ switch ($postData->requestMethod) {
         echo $result;
         exit(0);
         break;
-    //Statistics
-    case "getStatistics":
-        if ($level < 2) PermissionDenied();
-        $statistics=new Statistics();
-        $result=$statistics->getStatistics();
-        if(!$result)
-            break;
-        echo $result;
+    /*case "WXsign":
+        $weixin = new Weixin();
+        $res = new array();
+        $res['sign'] = $weixin->GenerateSign($postData->url,$postData->timestamp,$postData->noncestr);
+        echo json_encode($res);
         exit(0);
-        break;
-    //Display
-    case "getDisplay":
-    //if ($level < 1) PermissionDenied();
-    $display=new Display();
-    $result=$display->getDisplay();
-    if(!$result)
-        break;
-    echo $result;
-    exit(0);
-    break;
-    case "changeDisplay":
-        if ($level < 2) PermissionDenied();
-        if(!isset($postData->data))
-            break;
-        $display=new Display();
-        $result=$display->changeDisplay($postData->data);
-        if(!$result)
-            break;
-        OKResponse();
-        exit(0);
-        break;
-    //Code
-    case "sendCode":
-        if(!isset($postData->phone)) break;
-        $sms = new Sms();
-        $sms->SendCode($postData->phone);
-        OKResponse();
-        exit(0);
-        break;
-    case "verifyCode":
-        if(!isset($postData->phone) || !isset($postData->code)) break;
-        $sms = new Sms();
-        if ($sms->Verify($postData->phone, $postData->code)) {
-            OKResponse();
-            exit(0);
-            break;
-        }
-        break;
+        break;*/
+
 }
 
 

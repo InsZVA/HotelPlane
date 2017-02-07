@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - ST@www.xszlv.com" uuid="25ee7077-e3fe-45a8-8305-fc60aaa7fc91">
+    <database-info product="MySQL" version="5.6.29-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="ST"/>
+      <table id="2" parent="1" name="access_control"/>
+      <table id="3" parent="1" name="activity"/>
+      <table id="4" parent="1" name="code"/>
+      <table id="5" parent="1" name="coupon"/>
+      <table id="6" parent="1" name="display"/>
+      <table id="7" parent="1" name="hotel"/>
+      <table id="8" parent="1" name="payment"/>
+      <table id="9" parent="1" name="plane"/>
+      <table id="10" parent="1" name="region">
+        <comment>行政区域代码-省市区-简称-级别-邮编-区号-拼音- 省市区聚合-经纬度 精确程度：省份、城市、区县、乡镇(街道)、村(社区) 共五个层级 含行政代码、行政名称、区县（三级标记）、乡镇（四级标记）、城乡分类标记、层级共五列 本数据库结构共为12位代码，分为5层码段 第1～2位，第一层级为省级代码； 第3～4 位，第二层级为地级代码； 第5～6位，第三层级为县级代码； 第7～9位，第四层级为乡级代码； 第10～12位，第五层级为村级代码； 行政代码：代表每个行政区域的唯一标记代码 行政名称：代表每个行政区域的名字 区县标记：用于区分该行政单位是县、区、县级市 乡镇标记：用于区分该行政单位是乡、镇、街道、类似乡级单位 城乡分类标记：用于区分该行政单位是主城区、城乡接合区、镇中心区、镇乡接合区、特殊区域、乡中心区、村庄。 层级：用于标记该行政单位是哪一级，省（1）、市（2）、区县（3）、乡镇（4）、村（5）</comment>
+      </table>
+      <table id="11" parent="1" name="room"/>
+      <table id="12" parent="1" name="trade"/>
+      <table id="13" parent="1" name="user"/>
+      <table id="14" parent="1" name="user_coupon"/>
+      <column id="15" parent="2" name="token">
+        <comment>token</comment>
+        <mandatory>1</mandatory>
+        <data-type>char(32)</data-type>
+      </column>
+      <column id="16" parent="2" name="user_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="17" parent="2" name="level">
+        <comment>访问权限等级</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="18" parent="2" name="update_time">
+        <comment>更新时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="19" parent="2" name="PRIMARY">
+        <columns>token</columns>
+        <primary>1</primary>
+      </key>
+      <column id="20" parent="3" name="activity_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="21" parent="3" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(128)</data-type>
+      </column>
+      <column id="22" parent="3" name="description">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="23" parent="3" name="image">
+        <mandatory>1</mandatory>
+        <data-type>varchar(1024)</data-type>
+      </column>
+      <column id="24" parent="3" name="old_price">
+        <mandatory>1</mandatory>
+        <data-type>float</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="25" parent="3" name="price">
+        <mandatory>1</mandatory>
+        <data-type>float</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="26" parent="3" name="state">
+        <comment>0 正常 -1 已下架</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="27" parent="3" name="weight">
+        <comment>权重</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <key id="28" parent="3" name="PRIMARY">
+        <columns>activity_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="29" parent="4" name="phone">
+        <mandatory>1</mandatory>
+        <data-type>char(16)</data-type>
+      </column>
+      <column id="30" parent="4" name="code">
+        <mandatory>1</mandatory>
+        <data-type>char(4)</data-type>
+      </column>
+      <column id="31" parent="4" name="update_time">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="32" parent="4" name="PRIMARY">
+        <columns>phone</columns>
+        <primary>1</primary>
+      </key>
+      <column id="33" parent="5" name="coupon_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="34" parent="5" name="discount">
+        <comment>优惠数量</comment>
+        <mandatory>1</mandatory>
+        <data-type>float</data-type>
+      </column>
+      <column id="35" parent="5" name="min_price">
+        <comment>订单价格要求</comment>
+        <mandatory>1</mandatory>
+        <data-type>float</data-type>
+      </column>
+      <column id="36" parent="5" name="start_time">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="37" parent="5" name="end_time">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="38" parent="5" name="type">
+        <comment>0:新用户注册得到 1 邀请用户得到 -1 下架</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="39" parent="5" name="PRIMARY">
+        <columns>coupon_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="40" parent="6" name="image_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="41" parent="6" name="path">
+        <mandatory>1</mandatory>
+        <data-type>varchar(512)</data-type>
+      </column>
+      <column id="42" parent="6" name="weight">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="43" parent="6" name="state">
+        <comment>0隐藏1显示</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="44" parent="6" name="PRIMARY">
+        <columns>image_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="45" parent="7" name="hotel_id">
+        <comment>hotel_id</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="46" parent="7" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(128)</data-type>
+      </column>
+      <column id="47" parent="7" name="address">
+        <mandatory>1</mandatory>
+        <data-type>varchar(512)</data-type>
+      </column>
+      <column id="48" parent="7" name="star">
+        <comment>星级</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="49" parent="7" name="remarks">
+        <comment>备注</comment>
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="50" parent="7" name="images">
+        <comment>images json</comment>
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="51" parent="7" name="city_id">
+        <comment>国家</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="52" parent="7" name="county_id">
+        <comment>区域id</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="53" parent="7" name="type">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="54" parent="7" name="description">
+        <comment>说明</comment>
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="55" parent="7" name="hot">
+        <comment>热度</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="56" parent="7" name="phone">
+        <mandatory>1</mandatory>
+        <data-type>char(13)</data-type>
+      </column>
+      <index id="57" parent="7" name="city_id">
+        <columns>city_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="58" parent="7" name="county_code">
+        <columns>county_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="59" parent="7" name="PRIMARY">
+        <columns>hotel_id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="60" parent="7" name="hotel_ibfk_1">
+        <columns>city_id</columns>
+        <ref-key>address.city(city_id)</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="61" parent="8" name="payment_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="62" parent="8" name="standard">
+        <comment>0-半标 1-非标</comment>
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="63" parent="8" name="type">
+        <comment>0-机票 1-酒店</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="64" parent="8" name="user_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="65" parent="8" name="id_type">
+        <comment>0-身份证 1-护照 （乘机人/入住人）</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="66" parent="8" name="id_code">
+        <comment>（乘机人/入住人）</comment>
+        <mandatory>1</mandatory>
+        <data-type>char(21)</data-type>
+      </column>
+      <column id="67" parent="8" name="sex">
+        <comment>0-男 1-女 （乘机人/入住人）</comment>
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="68" parent="8" name="birthday">
+        <comment>生日（乘机人/入住人）</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="69" parent="8" name="contact">
+        <comment>联系人姓名</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(12)</data-type>
+      </column>
+      <column id="70" parent="8" name="phone">
+        <comment>联系人电话</comment>
+        <mandatory>1</mandatory>
+        <data-type>char(13)</data-type>
+      </column>
+      <column id="71" parent="8" name="name">
+        <comment>乘机人/入住人姓名</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(12)</data-type>
+      </column>
+      <column id="72" parent="8" name="start_date">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="73" parent="8" name="end_date">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="74" parent="8" name="payment_code">
+        <comment>订单号</comment>
+        <mandatory>1</mandatory>
+        <data-type>char(16)</data-type>
+      </column>
+      <column id="75" parent="8" name="create_time">
+        <comment>创建时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="76" parent="8" name="update_time">
+        <comment>更改时间</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="77" parent="8" name="waiter_id">
+        <comment>经手客服</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="78" parent="8" name="plane_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="79" parent="8" name="hotel_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="80" parent="8" name="room_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="81" parent="8" name="state">
+        <comment>0-等待确认 1-等待付款 2-已付款 3-已完成</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <index id="82" parent="8" name="user_id">
+        <columns>user_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="83" parent="8" name="PRIMARY">
+        <columns>payment_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="84" parent="9" name="plane_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="85" parent="9" name="flight_number">
+        <mandatory>1</mandatory>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="86" parent="9" name="start_city_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="87" parent="9" name="start_airport">
+        <mandatory>1</mandatory>
+        <data-type>varchar(512)</data-type>
+      </column>
+      <column id="88" parent="9" name="end_city_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="89" parent="9" name="end_airport">
+        <mandatory>1</mandatory>
+        <data-type>varchar(512)</data-type>
+      </column>
+      <column id="90" parent="9" name="start_time">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="91" parent="9" name="end_time">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="92" parent="9" name="remarks">
+        <mandatory>1</mandatory>
+        <data-type>varchar(512)</data-type>
+      </column>
+      <column id="93" parent="9" name="standard">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="94" parent="9" name="type">
+        <mandatory>1</mandatory>
+        <data-type>varchar(512)</data-type>
+      </column>
+      <column id="95" parent="9" name="price">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <index id="96" parent="9" name="end_city_id">
+        <columns>end_city_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="97" parent="9" name="start_city_id">
+        <columns>start_city_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="98" parent="9" name="PRIMARY">
+        <columns>plane_id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="99" parent="9" name="endcity">
+        <columns>end_city_id</columns>
+        <ref-key>address.city(city_id)</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="100" parent="9" name="startcity">
+        <columns>start_city_id</columns>
+        <ref-key>address.city(city_id)</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="101" parent="10" name="REGION_ID">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="102" parent="10" name="REGION_CODE">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="103" parent="10" name="REGION_NAME">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="104" parent="10" name="PARENT_ID">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="105" parent="10" name="REGION_LEVEL">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="106" parent="10" name="REGION_ORDER">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="107" parent="10" name="REGION_NAME_EN">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="108" parent="10" name="REGION_SHORTNAME_EN">
+        <mandatory>1</mandatory>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <key id="109" parent="10" name="PRIMARY">
+        <columns>REGION_ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="110" parent="11" name="room_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="111" parent="11" name="hotel_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="112" parent="11" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(48)</data-type>
+      </column>
+      <column id="113" parent="11" name="image">
+        <mandatory>1</mandatory>
+        <data-type>varchar(512)</data-type>
+      </column>
+      <column id="114" parent="11" name="description">
+        <mandatory>1</mandatory>
+        <data-type>varchar(1024)</data-type>
+      </column>
+      <column id="115" parent="11" name="price">
+        <mandatory>1</mandatory>
+        <data-type>float</data-type>
+      </column>
+      <index id="116" parent="11" name="hotel_id">
+        <columns>hotel_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="117" parent="11" name="price">
+        <columns>price</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="118" parent="11" name="PRIMARY">
+        <columns>room_id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="119" parent="11" name="room_ibfk_1">
+        <columns>hotel_id</columns>
+        <ref-key>~.hotel.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="120" parent="12" name="pid">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="121" parent="12" name="ucid">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="122" parent="13" name="user_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="123" parent="13" name="level">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="124" parent="13" name="password">
+        <comment>md5</comment>
+        <mandatory>1</mandatory>
+        <data-type>char(128)</data-type>
+      </column>
+      <column id="125" parent="13" name="avatar">
+        <data-type>varchar(1024)</data-type>
+      </column>
+      <column id="126" parent="13" name="username">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="127" parent="13" name="realname">
+        <data-type>char(12)</data-type>
+      </column>
+      <column id="128" parent="13" name="id_type">
+        <comment>0-身份证 1-护照</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="129" parent="13" name="id_code">
+        <data-type>char(19)</data-type>
+      </column>
+      <column id="130" parent="13" name="phone">
+        <data-type>char(13)</data-type>
+      </column>
+      <column id="131" parent="13" name="verified">
+        <comment>0-未验证 1-已验证</comment>
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="132" parent="13" name="inviter_id">
+        <comment>邀请人id</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="133" parent="13" name="payment_num">
+        <comment>下单数量</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="134" parent="13" name="create_time">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="135" parent="13" name="last_login_time">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="136" parent="13" name="city_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="137" parent="13" name="county_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="138" parent="13" name="account">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="139" parent="13" name="award_account">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="140" parent="13" name="open_id">
+        <data-type>char(32)</data-type>
+      </column>
+      <column id="141" parent="13" name="vip">
+        <comment>0-非vip 1-vip</comment>
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <index id="142" parent="13" name="username">
+        <columns>username</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="143" parent="13" name="PRIMARY">
+        <columns>user_id</columns>
+        <primary>1</primary>
+      </key>
+      <key id="144" parent="13" name="username">
+        <columns>username</columns>
+        <underlying-index>username</underlying-index>
+      </key>
+      <column id="145" parent="14" name="uc_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="146" parent="14" name="user_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="147" parent="14" name="coupon_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="148" parent="14" name="coupon_id">
+        <columns>coupon_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="149" parent="14" name="user_id">
+        <columns>user_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="150" parent="14" name="PRIMARY">
+        <columns>uc_id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="151" parent="14" name="user_coupon_ibfk_1">
+        <columns>user_id</columns>
+        <ref-key>~.user.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="152" parent="14" name="user_coupon_ibfk_2">
+        <columns>coupon_id</columns>
+        <ref-key>~.coupon.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+    </database-model>
+  </data-source>
+</component>

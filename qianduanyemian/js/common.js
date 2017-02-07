@@ -53,3 +53,33 @@ function getJsUrl(){
     }
     return array;
 }
+
+function autologin() {
+    var code = getJsUrl()['code'];
+    if (code == undefined) return;
+    var state = getJsUrl()['state'];
+    if (code == undefined || code == "") {
+        //alert("微信自动登录失败，尝试用户名密码登录。");
+        window.location.replace("../" + state + ".html");
+    }
+    $.post("http://api.xszlv.com/api/api.php", JSON.stringify({requestMethod: "autoLogin", code: code}), function(data) {
+        if (data.code == -1) {
+            //alert("微信自动登录失败，尝试用户名密码登录。");
+            //window.location.replace("../" + state + ".html");
+        }
+        if (data.token != undefined) {
+            setUserID(data.user_id);
+            setToken(data.token);
+            //window.location.replace("../" + state + ".html");
+        }
+        if (data.openid != undefined) {
+            localStorage.setItem("openid", data.openid);
+            localStorage.setItem("headimgurl", data.headimgurl);
+            localStorage.setItem("nickname", data.nickname);
+            //window.location.replace("../" + state + ".html");
+
+        }
+    })
+}
+
+autologin();

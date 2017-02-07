@@ -32,8 +32,9 @@ function loadUserData() {
         $("#account").html("￥" + data.account);
         $("#award_account").html("￥" + data.award_account);
         $("#name").html(data.username);
+        $("#yue").html("余额： ￥" + data.account);
         if (data.avatar != "")
-            $("#portrait").attr("src", data.avatar);
+            $("#avatar").attr("src", data.avatar);
         if (data.vip == 1) {
             $("#bar").html("至尊会员");
             //TODO 会员

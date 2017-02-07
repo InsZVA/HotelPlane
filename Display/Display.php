@@ -16,10 +16,10 @@ class Display
 
     public function getDisplay()
     {
-        $query=$this->mysqli->query("select `path` from `display`");
+        $query=$this->mysqli->query("select * from `display`");
         $rows=[];
         while($row = $query->fetch_assoc()) {
-            $rows[]=$row['path'];
+            $rows[]=$row;
         }
         return json_encode($rows);
     }
@@ -28,11 +28,12 @@ class Display
     {
         if(!isset($data->path)) return false;
         if(!isset($data->state)) return false;
-        if(!isset($data->weight)) return false;
+        //if(!isset($data->weight)) return false;
         if(!isset($data->image_id)) return false;
+        if(!isset($data->href)) return false;
 
         return $this->mysqli->query("update `display` set `path`='$data->path',`state`='$data->state',
-        `weight`='$data->weight' where `image_id`='$data->image_id'");
+        `href`='$data->href' where `image_id`='$data->image_id'");
     }
 
 }

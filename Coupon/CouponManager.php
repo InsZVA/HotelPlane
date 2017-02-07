@@ -68,4 +68,14 @@ class CouponManager
         }
         return $rows;
     }
+
+    public function getCoupon($couponId) {
+        $couponId = intval($couponId);
+        $result = $this->mysqli->query("select * from `coupon` where `coupon_id`=$couponId");
+        if ($result) {
+            $row = $result->fetch_assoc();
+            return $row;
+        }
+        return false;
+    }
 }

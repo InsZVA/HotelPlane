@@ -66,3 +66,27 @@ function loadActivities() {
 
     });
 }
+
+function getActivityData(id) {
+    id = parseInt(id);
+    var data = CallAPINotAsync({requestMethod: "getActivityData", activityId: id});
+    return data[0];
+}
+
+function submitActivity(id) {
+    CallAPI({requestMethod: "createPayment", data: {userId: getUserID(), standard: 0, type: 2, activityId: id}}, function(data) {
+        if (data.code == -2) {
+            alert("请先登录！");
+            window.location.replace("landing.html");
+            return;
+        }
+        if (data.code == -1) {
+            alert("订单生成失败！");
+            //window.location.replace("index.html");
+            return;
+        }
+        alert("您的活动已经预定，请及时付款~");
+        window.location.replace("/myOrders.html");
+        return;
+    });
+}

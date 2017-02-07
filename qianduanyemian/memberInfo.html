@@ -59,10 +59,11 @@
 				color: #ffffff;
 				letter-spacing: 0px;
 				text-align: center;
-				width: 44px;
+				width: 100%;
 				height: 19px;
-				margin-left: 166px;
-				margin-right: 121px;
+				/* margin-left: 166px; */
+				/* margin-right: 121px; */
+				display: block;
 			}
 			
 			.div2 {
@@ -79,7 +80,6 @@
 				letter-spacing: -0.41px;
 				margin-left: 15px;
 				margin-top: 10px;
-				width: 67px;
 				height: 19px;
 				float: left;
 			}
@@ -202,10 +202,10 @@
 
 	<body>
 		<div id="container">
-			<div id="div1">
+			<div id="div1" style="background-image: url('./img/img4.jpg')">
 				<div id="bar">普通会员</div>
 				<div id="portrait">
-					<img src="./img/Person@1x.png" />
+					<img id="avatar" src="./img/Person@1x.png" style="width:90px;height:90px;border-radius:90px" />
 					<!--此处插入VIP图片效果-->
 				</div>
 				<div id="namebar">
@@ -223,22 +223,24 @@
 				</div>
 			</a>
 
-			<div class="div2">
-				<div class="project">账户余额</div>
-				<div class="num" id="account">¥ 9999999999</div>
+			<!--<div class="div2">
+				<div class="project">常用登记/住宿人</div>
+				<input class="num" id="account" style="border:0; height:22px">
 			</div>
 			<div class="div2">
-				<div class="project">奖励余额</div>
-				<div class="num" id="award_account">¥ 9999999999</div>
-			</div>
-			<div class="div2">
+
+			</div>-->
+			<div class="div2" onclick="location.href='/voucher.html?nouse=1'">
 				<div class="project">代金券</div>
 				<div class="arrow">
 					<img src="./img/Disclosure.png" />
 				</div>
 			</div>
-			<div class="div2">
-				<div class="project">邀请好友</div>
+			<div class="div2" onclick="location.href='/recharge.html'">
+				<div class="project" id="yue">余额: 0</div>
+				<div class="arrow">
+					<img src="./img/Disclosure.png" />
+				</div>
 			</div>
 		</div>
 		<!--分享效果弹窗部分-->

@@ -53,4 +53,12 @@ class Payment
         $sql = "update `payment` set `state`=3 where `payment_id`=$this->id";
         return $this->mysqli->query($sql);
     }
+
+    public function cancel($waiterId) {
+        $data = $this->getData();
+        $waiterId = intval($waiterId);
+        if ($data['state'] != 0) return false;
+        $sql = "update `payment` set `state`=-1, `waiter_id`=$waiterId where `payment_id`=$this->id";
+        return $this->mysqli->query($sql);
+    }
 }

@@ -10,10 +10,15 @@
 		<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 		<title>余额充值</title>
 		<style type="text/css">
+			body {
+				background: #efeff4;
+			}
 			#container {
 				background: #efeff4;
 				width: 375px;
 				height: 592px;
+				margin: 0 auto;
+				//border: 1px white solid;
 			}
 			
 			#bar {
@@ -143,32 +148,16 @@
 
 			<form role="form">
 				<div class="form-group">
-					<label id="lable" for="name">充值金额</label>
-					<input type="text" class="form-control" id="name" placeholder="请填写充值金额">
+					<label id="lable" for="num">充值金额</label>
+					<input type="text" class="form-control" id="num" placeholder="请填写充值金额">
 				</div>
 			</form>
 			<div id="lableP">支付方式</div>
 			<div class="paymentMethod">
-				<div class="paymentMethods">支付宝</div>
-				<div id="selected"><img src="./img/selectedBlue.png" /></div>
-			</div>
-			<div class="paymentMethod">
 				<div class="paymentMethods" style="color: rgba(77, 77, 77, 0.78);">
 					微信支付
 				</div>
-				<div id="selected"><img src="./img/selectedGrey.png" /></div>
-			</div>
-			<div class="paymentMethod">
-				<div class="paymentMethods" style="color: rgba(77, 77, 77, 0.78);">
-					账户余额
-				</div>
-				<div id="selected"><img src="./img/selectedGrey.png" /></div>
-			</div>
-			<div class="paymentMethod">
-				<div class="paymentMethods" style="color: rgba(77, 77, 77, 0.78);">
-					奖励余额
-				</div>
-				<div id="selected"><img src="./img/selectedGrey.png" /></div>
+				<div id="selected"><img src="./img/selectedBlue.png" /></div>
 			</div>
 			
 			<!--点击查看更多支付方式按钮行隐藏于此-->
@@ -180,11 +169,24 @@
 			</div>-->
 
 			<div id="fixed">
-				<div id="Rectangle">
+				<div id="Rectangle" onclick="recharge()">
 					下一步
 				</div>
 			</div>
 		</div>
+
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="js/common.js"></script>
+	<script>
+		function recharge() {
+			var num = parseFloat($("#num").val());
+			if (num <= 0) {
+				alert("填写格式非法！");
+				return false;
+			}
+			window.location.replace('/pay/example/jsapi2.php?num=' + num + '&userId=' + getUserID());
+		}
+	</script>
 	</body>
 
 </html>

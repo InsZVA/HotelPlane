@@ -5,11 +5,503 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c7f020c-5222-4964-8d09-ca49080e56ac" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/user.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qianduanyemian/js/coupon.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/jsapi2.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/notify.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/cert/apiclient_cert.pem" afterPath="$PROJECT_DIR$/qianduanyemian/pay/cert/apiclient_cert.pem" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/cert/apiclient_key.pem" afterPath="$PROJECT_DIR$/qianduanyemian/pay/cert/apiclient_key.pem" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/doc/README" afterPath="$PROJECT_DIR$/qianduanyemian/pay/doc/README" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/doc/README.doc" afterPath="$PROJECT_DIR$/qianduanyemian/pay/doc/README.doc" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/WxPay.JsApiPay.php" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/WxPay.JsApiPay.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/WxPay.MicroPay.php" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/WxPay.MicroPay.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/WxPay.NativePay.php" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/WxPay.NativePay.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/download.php" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/download.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/jsapi.php" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/jsapi.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/log.php" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/log.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/micropay.php" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/micropay.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/native.php" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/native.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/native_notify.php" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/native_notify.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/notify.php" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/notify2.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/orderquery.php" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/orderquery.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/CHANGELOG" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/CHANGELOG" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/INSTALL" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/INSTALL" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/LICENSE" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/LICENSE" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/README" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/README" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/VERSION" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/VERSION" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/bindings/tcpdf/qrcode.php" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/bindings/tcpdf/qrcode.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_1.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_1.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_1.png" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_1.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_10.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_10.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_10.png" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_10.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_11.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_11.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_11.png" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_11.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_12.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_12.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_12.png" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_12.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_13.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_13.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_13.png" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_13.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_14.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_14.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_14.png" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_14.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_15.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_15.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_15.png" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_15.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_16.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_16.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_16.png" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_16.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_17.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_17.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_17.png" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_17.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_18.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_18.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_18.png" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_18.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_19.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_19.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_19.png" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_19.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_2.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_2.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_2.png" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_2.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_20.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_20.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_20.png" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_20.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_21.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_21.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_21.png" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_21.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_22.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_22.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_22.png" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_22.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_23.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_23.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_23.png" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_23.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_24.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_24.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_24.png" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_24.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_25.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_25.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_25.png" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_25.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_26.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_26.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_26.png" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_26.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_27.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_27.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_27.png" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_27.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_28.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_28.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_28.png" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_28.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_29.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_29.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_29.png" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_29.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_3.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_3.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_3.png" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_3.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_30.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_30.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_30.png" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_30.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_31.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_31.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_31.png" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_31.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_32.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_32.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_32.png" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_32.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_33.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_33.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_33.png" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_33.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_34.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_34.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_34.png" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_34.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_35.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_35.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_35.png" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_35.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_36.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_36.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_36.png" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_36.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_37.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_37.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_37.png" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_37.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_38.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_38.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_38.png" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_38.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_39.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_39.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_39.png" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_39.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_4.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_4.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_4.png" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_4.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_40.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_40.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_40.png" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_40.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_5.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_5.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_5.png" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_5.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_6.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_6.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_6.png" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_6.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_7.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_7.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_7.png" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_7.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_8.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_8.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_8.png" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_8.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_9.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_9.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/frame_9.png" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/frame_9.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_0/mask_101_0.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_0/mask_101_0.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_0/mask_105_0.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_0/mask_105_0.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_0/mask_109_0.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_0/mask_109_0.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_0/mask_113_0.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_0/mask_113_0.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_0/mask_117_0.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_0/mask_117_0.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_0/mask_121_0.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_0/mask_121_0.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_0/mask_125_0.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_0/mask_125_0.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_0/mask_129_0.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_0/mask_129_0.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_0/mask_133_0.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_0/mask_133_0.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_0/mask_137_0.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_0/mask_137_0.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_0/mask_141_0.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_0/mask_141_0.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_0/mask_145_0.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_0/mask_145_0.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_0/mask_149_0.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_0/mask_149_0.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_0/mask_153_0.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_0/mask_153_0.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_0/mask_157_0.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_0/mask_157_0.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_0/mask_161_0.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_0/mask_161_0.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_0/mask_165_0.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_0/mask_165_0.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_0/mask_169_0.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_0/mask_169_0.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_0/mask_173_0.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_0/mask_173_0.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_0/mask_177_0.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_0/mask_177_0.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_0/mask_21_0.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_0/mask_21_0.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_0/mask_25_0.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_0/mask_25_0.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_0/mask_29_0.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_0/mask_29_0.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_0/mask_33_0.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_0/mask_33_0.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_0/mask_37_0.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_0/mask_37_0.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_0/mask_41_0.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_0/mask_41_0.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_0/mask_45_0.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_0/mask_45_0.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_0/mask_49_0.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_0/mask_49_0.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_0/mask_53_0.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_0/mask_53_0.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_0/mask_57_0.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_0/mask_57_0.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_0/mask_61_0.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_0/mask_61_0.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_0/mask_65_0.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_0/mask_65_0.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_0/mask_69_0.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_0/mask_69_0.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_0/mask_73_0.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_0/mask_73_0.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_0/mask_77_0.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_0/mask_77_0.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_0/mask_81_0.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_0/mask_81_0.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_0/mask_85_0.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_0/mask_85_0.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_0/mask_89_0.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_0/mask_89_0.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_0/mask_93_0.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_0/mask_93_0.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_0/mask_97_0.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_0/mask_97_0.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_1/mask_101_1.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_1/mask_101_1.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_1/mask_105_1.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_1/mask_105_1.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_1/mask_109_1.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_1/mask_109_1.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_1/mask_113_1.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_1/mask_113_1.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_1/mask_117_1.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_1/mask_117_1.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_1/mask_121_1.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_1/mask_121_1.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_1/mask_125_1.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_1/mask_125_1.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_1/mask_129_1.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_1/mask_129_1.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_1/mask_133_1.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_1/mask_133_1.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_1/mask_137_1.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_1/mask_137_1.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_1/mask_141_1.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_1/mask_141_1.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_1/mask_145_1.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_1/mask_145_1.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_1/mask_149_1.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_1/mask_149_1.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_1/mask_153_1.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_1/mask_153_1.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_1/mask_157_1.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_1/mask_157_1.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_1/mask_161_1.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_1/mask_161_1.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_1/mask_165_1.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_1/mask_165_1.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_1/mask_169_1.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_1/mask_169_1.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_1/mask_173_1.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_1/mask_173_1.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_1/mask_177_1.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_1/mask_177_1.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_1/mask_21_1.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_1/mask_21_1.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_1/mask_25_1.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_1/mask_25_1.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_1/mask_29_1.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_1/mask_29_1.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_1/mask_33_1.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_1/mask_33_1.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_1/mask_37_1.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_1/mask_37_1.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_1/mask_41_1.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_1/mask_41_1.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_1/mask_45_1.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_1/mask_45_1.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_1/mask_49_1.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_1/mask_49_1.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_1/mask_53_1.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_1/mask_53_1.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_1/mask_57_1.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_1/mask_57_1.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_1/mask_61_1.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_1/mask_61_1.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_1/mask_65_1.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_1/mask_65_1.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_1/mask_69_1.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_1/mask_69_1.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_1/mask_73_1.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_1/mask_73_1.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_1/mask_77_1.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_1/mask_77_1.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_1/mask_81_1.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_1/mask_81_1.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_1/mask_85_1.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_1/mask_85_1.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_1/mask_89_1.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_1/mask_89_1.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_1/mask_93_1.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_1/mask_93_1.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_1/mask_97_1.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_1/mask_97_1.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_2/mask_101_2.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_2/mask_101_2.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_2/mask_105_2.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_2/mask_105_2.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_2/mask_109_2.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_2/mask_109_2.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_2/mask_113_2.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_2/mask_113_2.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_2/mask_117_2.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_2/mask_117_2.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_2/mask_121_2.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_2/mask_121_2.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_2/mask_125_2.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_2/mask_125_2.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_2/mask_129_2.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_2/mask_129_2.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_2/mask_133_2.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_2/mask_133_2.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_2/mask_137_2.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_2/mask_137_2.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_2/mask_141_2.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_2/mask_141_2.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_2/mask_145_2.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_2/mask_145_2.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_2/mask_149_2.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_2/mask_149_2.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_2/mask_153_2.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_2/mask_153_2.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_2/mask_157_2.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_2/mask_157_2.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_2/mask_161_2.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_2/mask_161_2.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_2/mask_165_2.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_2/mask_165_2.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_2/mask_169_2.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_2/mask_169_2.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_2/mask_173_2.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_2/mask_173_2.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_2/mask_177_2.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_2/mask_177_2.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_2/mask_21_2.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_2/mask_21_2.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_2/mask_25_2.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_2/mask_25_2.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_2/mask_29_2.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_2/mask_29_2.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_2/mask_33_2.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_2/mask_33_2.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_2/mask_37_2.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_2/mask_37_2.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_2/mask_41_2.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_2/mask_41_2.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_2/mask_45_2.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_2/mask_45_2.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_2/mask_49_2.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_2/mask_49_2.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_2/mask_53_2.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_2/mask_53_2.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_2/mask_57_2.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_2/mask_57_2.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_2/mask_61_2.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_2/mask_61_2.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_2/mask_65_2.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_2/mask_65_2.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_2/mask_69_2.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_2/mask_69_2.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_2/mask_73_2.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_2/mask_73_2.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_2/mask_77_2.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_2/mask_77_2.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_2/mask_81_2.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_2/mask_81_2.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_2/mask_85_2.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_2/mask_85_2.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_2/mask_89_2.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_2/mask_89_2.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_2/mask_93_2.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_2/mask_93_2.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_2/mask_97_2.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_2/mask_97_2.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_3/mask_101_3.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_3/mask_101_3.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_3/mask_105_3.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_3/mask_105_3.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_3/mask_109_3.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_3/mask_109_3.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_3/mask_113_3.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_3/mask_113_3.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_3/mask_117_3.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_3/mask_117_3.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_3/mask_121_3.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_3/mask_121_3.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_3/mask_125_3.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_3/mask_125_3.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_3/mask_129_3.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_3/mask_129_3.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_3/mask_133_3.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_3/mask_133_3.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_3/mask_137_3.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_3/mask_137_3.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_3/mask_141_3.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_3/mask_141_3.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_3/mask_145_3.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_3/mask_145_3.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_3/mask_149_3.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_3/mask_149_3.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_3/mask_153_3.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_3/mask_153_3.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_3/mask_157_3.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_3/mask_157_3.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_3/mask_161_3.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_3/mask_161_3.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_3/mask_165_3.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_3/mask_165_3.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_3/mask_169_3.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_3/mask_169_3.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_3/mask_173_3.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_3/mask_173_3.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_3/mask_177_3.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_3/mask_177_3.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_3/mask_21_3.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_3/mask_21_3.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_3/mask_25_3.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_3/mask_25_3.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_3/mask_29_3.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_3/mask_29_3.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_3/mask_33_3.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_3/mask_33_3.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_3/mask_37_3.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_3/mask_37_3.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_3/mask_41_3.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_3/mask_41_3.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_3/mask_45_3.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_3/mask_45_3.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_3/mask_49_3.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_3/mask_49_3.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_3/mask_53_3.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_3/mask_53_3.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_3/mask_57_3.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_3/mask_57_3.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_3/mask_61_3.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_3/mask_61_3.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_3/mask_65_3.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_3/mask_65_3.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_3/mask_69_3.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_3/mask_69_3.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_3/mask_73_3.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_3/mask_73_3.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_3/mask_77_3.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_3/mask_77_3.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_3/mask_81_3.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_3/mask_81_3.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_3/mask_85_3.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_3/mask_85_3.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_3/mask_89_3.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_3/mask_89_3.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_3/mask_93_3.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_3/mask_93_3.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_3/mask_97_3.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_3/mask_97_3.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_4/mask_101_4.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_4/mask_101_4.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_4/mask_105_4.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_4/mask_105_4.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_4/mask_109_4.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_4/mask_109_4.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_4/mask_113_4.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_4/mask_113_4.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_4/mask_117_4.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_4/mask_117_4.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_4/mask_121_4.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_4/mask_121_4.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_4/mask_125_4.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_4/mask_125_4.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_4/mask_129_4.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_4/mask_129_4.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_4/mask_133_4.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_4/mask_133_4.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_4/mask_137_4.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_4/mask_137_4.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_4/mask_141_4.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_4/mask_141_4.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_4/mask_145_4.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_4/mask_145_4.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_4/mask_149_4.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_4/mask_149_4.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_4/mask_153_4.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_4/mask_153_4.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_4/mask_157_4.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_4/mask_157_4.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_4/mask_161_4.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_4/mask_161_4.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_4/mask_165_4.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_4/mask_165_4.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_4/mask_169_4.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_4/mask_169_4.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_4/mask_173_4.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_4/mask_173_4.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_4/mask_177_4.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_4/mask_177_4.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_4/mask_21_4.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_4/mask_21_4.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_4/mask_25_4.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_4/mask_25_4.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_4/mask_29_4.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_4/mask_29_4.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_4/mask_33_4.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_4/mask_33_4.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_4/mask_37_4.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_4/mask_37_4.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_4/mask_41_4.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_4/mask_41_4.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_4/mask_45_4.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_4/mask_45_4.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_4/mask_49_4.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_4/mask_49_4.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_4/mask_53_4.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_4/mask_53_4.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_4/mask_57_4.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_4/mask_57_4.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_4/mask_61_4.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_4/mask_61_4.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_4/mask_65_4.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_4/mask_65_4.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_4/mask_69_4.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_4/mask_69_4.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_4/mask_73_4.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_4/mask_73_4.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_4/mask_77_4.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_4/mask_77_4.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_4/mask_81_4.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_4/mask_81_4.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_4/mask_85_4.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_4/mask_85_4.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_4/mask_89_4.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_4/mask_89_4.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_4/mask_93_4.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_4/mask_93_4.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_4/mask_97_4.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_4/mask_97_4.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_5/mask_101_5.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_5/mask_101_5.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_5/mask_105_5.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_5/mask_105_5.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_5/mask_109_5.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_5/mask_109_5.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_5/mask_113_5.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_5/mask_113_5.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_5/mask_117_5.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_5/mask_117_5.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_5/mask_121_5.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_5/mask_121_5.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_5/mask_125_5.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_5/mask_125_5.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_5/mask_129_5.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_5/mask_129_5.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_5/mask_133_5.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_5/mask_133_5.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_5/mask_137_5.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_5/mask_137_5.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_5/mask_141_5.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_5/mask_141_5.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_5/mask_145_5.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_5/mask_145_5.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_5/mask_149_5.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_5/mask_149_5.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_5/mask_153_5.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_5/mask_153_5.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_5/mask_157_5.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_5/mask_157_5.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_5/mask_161_5.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_5/mask_161_5.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_5/mask_165_5.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_5/mask_165_5.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_5/mask_169_5.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_5/mask_169_5.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_5/mask_173_5.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_5/mask_173_5.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_5/mask_177_5.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_5/mask_177_5.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_5/mask_21_5.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_5/mask_21_5.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_5/mask_25_5.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_5/mask_25_5.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_5/mask_29_5.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_5/mask_29_5.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_5/mask_33_5.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_5/mask_33_5.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_5/mask_37_5.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_5/mask_37_5.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_5/mask_41_5.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_5/mask_41_5.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_5/mask_45_5.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_5/mask_45_5.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_5/mask_49_5.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_5/mask_49_5.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_5/mask_53_5.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_5/mask_53_5.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_5/mask_57_5.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_5/mask_57_5.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_5/mask_61_5.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_5/mask_61_5.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_5/mask_65_5.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_5/mask_65_5.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_5/mask_69_5.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_5/mask_69_5.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_5/mask_73_5.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_5/mask_73_5.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_5/mask_77_5.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_5/mask_77_5.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_5/mask_81_5.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_5/mask_81_5.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_5/mask_85_5.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_5/mask_85_5.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_5/mask_89_5.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_5/mask_89_5.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_5/mask_93_5.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_5/mask_93_5.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_5/mask_97_5.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_5/mask_97_5.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_6/mask_101_6.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_6/mask_101_6.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_6/mask_105_6.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_6/mask_105_6.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_6/mask_109_6.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_6/mask_109_6.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_6/mask_113_6.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_6/mask_113_6.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_6/mask_117_6.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_6/mask_117_6.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_6/mask_121_6.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_6/mask_121_6.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_6/mask_125_6.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_6/mask_125_6.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_6/mask_129_6.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_6/mask_129_6.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_6/mask_133_6.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_6/mask_133_6.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_6/mask_137_6.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_6/mask_137_6.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_6/mask_141_6.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_6/mask_141_6.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_6/mask_145_6.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_6/mask_145_6.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_6/mask_149_6.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_6/mask_149_6.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_6/mask_153_6.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_6/mask_153_6.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_6/mask_157_6.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_6/mask_157_6.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_6/mask_161_6.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_6/mask_161_6.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_6/mask_165_6.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_6/mask_165_6.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_6/mask_169_6.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_6/mask_169_6.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_6/mask_173_6.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_6/mask_173_6.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_6/mask_177_6.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_6/mask_177_6.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_6/mask_21_6.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_6/mask_21_6.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_6/mask_25_6.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_6/mask_25_6.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_6/mask_29_6.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_6/mask_29_6.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_6/mask_33_6.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_6/mask_33_6.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_6/mask_37_6.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_6/mask_37_6.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_6/mask_41_6.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_6/mask_41_6.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_6/mask_45_6.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_6/mask_45_6.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_6/mask_49_6.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_6/mask_49_6.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_6/mask_53_6.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_6/mask_53_6.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_6/mask_57_6.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_6/mask_57_6.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_6/mask_61_6.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_6/mask_61_6.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_6/mask_65_6.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_6/mask_65_6.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_6/mask_69_6.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_6/mask_69_6.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_6/mask_73_6.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_6/mask_73_6.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_6/mask_77_6.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_6/mask_77_6.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_6/mask_81_6.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_6/mask_81_6.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_6/mask_85_6.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_6/mask_85_6.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_6/mask_89_6.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_6/mask_89_6.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_6/mask_93_6.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_6/mask_93_6.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_6/mask_97_6.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_6/mask_97_6.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_7/mask_101_7.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_7/mask_101_7.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_7/mask_105_7.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_7/mask_105_7.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_7/mask_109_7.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_7/mask_109_7.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_7/mask_113_7.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_7/mask_113_7.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_7/mask_117_7.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_7/mask_117_7.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_7/mask_121_7.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_7/mask_121_7.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_7/mask_125_7.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_7/mask_125_7.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_7/mask_129_7.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_7/mask_129_7.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_7/mask_133_7.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_7/mask_133_7.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_7/mask_137_7.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_7/mask_137_7.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_7/mask_141_7.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_7/mask_141_7.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_7/mask_145_7.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_7/mask_145_7.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_7/mask_149_7.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_7/mask_149_7.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_7/mask_153_7.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_7/mask_153_7.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_7/mask_157_7.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_7/mask_157_7.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_7/mask_161_7.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_7/mask_161_7.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_7/mask_165_7.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_7/mask_165_7.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_7/mask_169_7.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_7/mask_169_7.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_7/mask_173_7.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_7/mask_173_7.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_7/mask_177_7.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_7/mask_177_7.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_7/mask_21_7.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_7/mask_21_7.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_7/mask_25_7.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_7/mask_25_7.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_7/mask_29_7.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_7/mask_29_7.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_7/mask_33_7.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_7/mask_33_7.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_7/mask_37_7.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_7/mask_37_7.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_7/mask_41_7.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_7/mask_41_7.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_7/mask_45_7.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_7/mask_45_7.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_7/mask_49_7.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_7/mask_49_7.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_7/mask_53_7.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_7/mask_53_7.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_7/mask_57_7.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_7/mask_57_7.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_7/mask_61_7.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_7/mask_61_7.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_7/mask_65_7.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_7/mask_65_7.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_7/mask_69_7.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_7/mask_69_7.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_7/mask_73_7.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_7/mask_73_7.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_7/mask_77_7.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_7/mask_77_7.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_7/mask_81_7.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_7/mask_81_7.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_7/mask_85_7.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_7/mask_85_7.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_7/mask_89_7.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_7/mask_89_7.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_7/mask_93_7.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_7/mask_93_7.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/cache/mask_7/mask_97_7.dat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/cache/mask_7/mask_97_7.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/index.php" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/index.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/phpqrcode.php" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/phpqrcode.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/qrbitstream.php" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/qrbitstream.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/qrconfig.php" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/qrconfig.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/qrconst.php" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/qrconst.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/qrencode.php" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/qrencode.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/qrimage.php" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/qrimage.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/qrinput.php" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/qrinput.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/qrlib.php" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/qrlib.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/qrmask.php" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/qrmask.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/qrrscode.php" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/qrrscode.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/qrspec.php" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/qrspec.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/qrsplit.php" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/qrsplit.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/qrtools.php" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/qrtools.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/tools/merge.bat" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/tools/merge.bat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/tools/merge.php" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/tools/merge.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/tools/merge.sh" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/tools/merge.sh" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/tools/merged_config.php" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/tools/merged_config.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/phpqrcode/tools/merged_header.php" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/phpqrcode/tools/merged_header.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/qrcode.php" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/qrcode.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/refund.php" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/refund.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/example/refundquery.php" afterPath="$PROJECT_DIR$/qianduanyemian/pay/example/refundquery.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/index.php" afterPath="$PROJECT_DIR$/qianduanyemian/pay/index.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/lib/WxPay.Api.php" afterPath="$PROJECT_DIR$/qianduanyemian/pay/lib/WxPay.Api.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/lib/WxPay.Config.php" afterPath="$PROJECT_DIR$/qianduanyemian/pay/lib/WxPay.Config.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/lib/WxPay.Data.php" afterPath="$PROJECT_DIR$/qianduanyemian/pay/lib/WxPay.Data.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/lib/WxPay.Exception.php" afterPath="$PROJECT_DIR$/qianduanyemian/pay/lib/WxPay.Exception.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wxpay/lib/WxPay.Notify.php" afterPath="$PROJECT_DIR$/qianduanyemian/pay/lib/WxPay.Notify.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Address/CityManager.php" afterPath="$PROJECT_DIR$/Address/CityManager.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Config/MySQL.php" afterPath="$PROJECT_DIR$/Config/MySQL.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Coupon/CouponManager.php" afterPath="$PROJECT_DIR$/Coupon/CouponManager.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Display/Display.php" afterPath="$PROJECT_DIR$/Display/Display.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Images/api.php" afterPath="$PROJECT_DIR$/Images/api.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Msg/sms.php" afterPath="$PROJECT_DIR$/Msg/sms.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Payment/Payment.php" afterPath="$PROJECT_DIR$/Payment/Payment.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Payment/PaymentManager.php" afterPath="$PROJECT_DIR$/Payment/PaymentManager.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Plane/Plane.php" afterPath="$PROJECT_DIR$/Plane/Plane.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/api.php" afterPath="$PROJECT_DIR$/api/api.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/doc.md" afterPath="$PROJECT_DIR$/api/doc.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/.idea/workspace.xml" afterPath="$PROJECT_DIR$/qianduanyemian/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/activityDetails.html" afterPath="$PROJECT_DIR$/qianduanyemian/activityDetails.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/activityList.html" afterPath="$PROJECT_DIR$/qianduanyemian/activityList.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/chat.html" afterPath="$PROJECT_DIR$/qianduanyemian/chat.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/flightList.html" afterPath="$PROJECT_DIR$/qianduanyemian/flightList.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/home.php" afterPath="$PROJECT_DIR$/qianduanyemian/home.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/hotelInfo.html" afterPath="$PROJECT_DIR$/qianduanyemian/hotelInfo.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/hotelList.html" afterPath="$PROJECT_DIR$/qianduanyemian/hotelList.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/register.html" afterPath="$PROJECT_DIR$/qianduanyemian/register.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/index.html" afterPath="$PROJECT_DIR$/qianduanyemian/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/js/activity.js" afterPath="$PROJECT_DIR$/qianduanyemian/js/activity.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/js/address.js" afterPath="$PROJECT_DIR$/qianduanyemian/js/address.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/js/chat.js" afterPath="$PROJECT_DIR$/qianduanyemian/js/chat.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/js/common.js" afterPath="$PROJECT_DIR$/qianduanyemian/js/common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/js/hotel.js" afterPath="$PROJECT_DIR$/qianduanyemian/js/hotel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/js/jquery.js" afterPath="$PROJECT_DIR$/qianduanyemian/js/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/js/order.js" afterPath="$PROJECT_DIR$/qianduanyemian/js/order.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/js/plane.js" afterPath="$PROJECT_DIR$/qianduanyemian/js/plane.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/js/user.js" afterPath="$PROJECT_DIR$/qianduanyemian/js/user.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/memberInfo.html" afterPath="$PROJECT_DIR$/qianduanyemian/memberInfo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/myOrders.html" afterPath="$PROJECT_DIR$/qianduanyemian/myOrders.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/orderFlight.html" afterPath="$PROJECT_DIR$/qianduanyemian/orderFlight.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/paymentConfirmed.html" afterPath="$PROJECT_DIR$/qianduanyemian/paymentConfirmed.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/paymentF.html" afterPath="$PROJECT_DIR$/qianduanyemian/paymentF.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/paymentH1.html" afterPath="$PROJECT_DIR$/qianduanyemian/paymentH1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/paymentH2.html" afterPath="$PROJECT_DIR$/qianduanyemian/paymentH2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/pickRegion.html" afterPath="$PROJECT_DIR$/qianduanyemian/pickRegion.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/recharge.html" afterPath="$PROJECT_DIR$/qianduanyemian/recharge.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/ticket.html" afterPath="$PROJECT_DIR$/qianduanyemian/ticket.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/voucher.html" afterPath="$PROJECT_DIR$/qianduanyemian/voucher.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qianduanyemian/wx/index.html" afterPath="$PROJECT_DIR$/qianduanyemian/wx/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/weixin/Weixin.php" afterPath="$PROJECT_DIR$/weixin/Weixin.php" />
     </list>
     <ignored path="PhpstormProjects.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,80 +517,54 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="DatabaseView">
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+    </PATH>
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="PhpstormProjects" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="TopClient.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Msg/top/TopClient.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5208">
-              <caret line="217" column="20" selection-start-line="217" selection-start-column="20" selection-end-line="217" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test2.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Msg/test2.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sms.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Msg/sms.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="936">
-              <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
-              <folding>
-                <marker date="1470216504495" expanded="true" signature="1060:1085" ph="delete from " />
-                <marker date="1470216504495" expanded="true" signature="1060:1103" ph="delete from " />
-                <marker date="1470216504495" expanded="true" signature="1066:1085" ph="insert into `code`... " />
-                <marker date="1470216504495" expanded="true" signature="1137:1181" ph="insert into `code`... " />
-                <marker date="1470216504495" expanded="true" signature="1356:1401" ph="select * fro... code" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MySQL.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Config/MySQL.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="doc.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/doc.md">
-          <provider selected="true" editor-type-id="MarkdownFxPreviewEditor">
-            <state />
-          </provider>
-          <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="-555">
-                <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+              <first_editor relative-caret-position="2472">
+                <caret line="103" column="68" selection-start-line="103" selection-start-column="68" selection-end-line="103" selection-end-column="68" />
                 <folding />
               </first_editor>
               <second_editor />
             </state>
           </provider>
+          <provider editor-type-id="MarkdownFxPreviewEditor">
+            <state />
+          </provider>
         </entry>
       </file>
-      <file leaf-file-name="paymentConfirmed.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/qianduanyemian/paymentConfirmed.html">
+      <file leaf-file-name="PaymentManager.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Payment/PaymentManager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4200">
-              <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-              <folding />
+            <state relative-caret-position="1656">
+              <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+              <folding>
+                <marker date="1471781113269" expanded="true" signature="937:1133" ph="insert into `payment`... " />
+                <marker date="1471781113269" expanded="true" signature="1819:2058" ph="insert into `payment`... " />
+                <marker date="1471781113269" expanded="true" signature="2582:2785" ph="insert into `payment`... " />
+                <marker date="1471781113269" expanded="true" signature="3720:4037" ph="insert into `payment`... " />
+                <marker date="1471781113269" expanded="true" signature="4688:4779" ph="select * fro... payment" />
+                <marker date="1471781113269" expanded="true" signature="5109:5176" ph="select * fro... payment" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -106,62 +572,119 @@
       <file leaf-file-name="api.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="494" column="29" selection-start-line="494" selection-start-column="29" selection-end-line="494" selection-end-column="29" />
+            <state relative-caret-position="783">
+              <caret line="740" column="20" selection-start-line="740" selection-start-column="20" selection-end-line="740" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HotelManager.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Hotel/HotelManager.php">
+      <file leaf-file-name="jsapi.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/qianduanyemian/pay/example/jsapi.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="536">
-              <caret line="82" column="23" selection-start-line="82" selection-start-column="23" selection-end-line="82" selection-end-column="23" />
+            <state relative-caret-position="153">
+              <caret line="28" column="59" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="64" />
               <folding>
-                <marker date="1468090420667" expanded="true" signature="1078:1227" ph="insert into hotel... " />
-                <marker date="1468090420667" expanded="true" signature="1656:1852" ph="select `hote... hotel" />
-                <marker date="1468090420667" expanded="true" signature="2395:2593" ph="select `hote... hotel" />
-                <marker date="1468090420667" expanded="true" signature="3180:3358" ph="select `hote... hotel" />
+                <marker date="1471694558306" expanded="true" signature="826:869" ph="select * fro... payment" />
+                <marker date="1471694558306" expanded="true" signature="1260:1299" ph="select * fro... plane" />
+                <marker date="1471694558306" expanded="true" signature="1543:1580" ph="select * fro... room" />
+                <marker date="1471694558306" expanded="true" signature="1778:1823" ph="select * fro... room" />
+                <marker date="1471694558306" expanded="true" signature="1940:2010" ph="SELECT * FRO... coupon" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Plane.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Plane/Plane.php">
+      <file leaf-file-name="jsapi2.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/qianduanyemian/pay/example/jsapi2.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1431">
-              <caret line="104" column="16" selection-start-line="104" selection-start-column="16" selection-end-line="104" selection-end-column="16" />
-              <folding>
-                <marker date="1470218457809" expanded="true" signature="1003:1197" ph="insert into plane... " />
-                <marker date="1470218457809" expanded="true" signature="1684:1769" ph="delete from " />
-                <marker date="1470218457809" expanded="true" signature="1898:1937" ph="delete from " />
-                <marker date="1470218457809" expanded="true" signature="2627:2645" ph="update `plan... " />
-                <marker date="1470218457809" expanded="true" signature="2772:2790" ph="update `plan... " />
-                <marker date="1470218457809" expanded="true" signature="3329:3404" ph="select * fro... plane" />
-                <marker date="1470218457809" expanded="true" signature="3610:3660" ph="select * fro... plane" />
-                <marker date="1470218457809" expanded="true" signature="4011:4038" ph="select * fro... plane" />
-                <marker date="1470218457809" expanded="true" signature="5240:5348" ph="select * fro... plane" />
-                <marker date="1470218457809" expanded="true" signature="5628:5781" ph="select * fro... plane" />
-                <marker date="1470218457809" expanded="true" signature="6163:6203" ph="select * fro... plane" />
-                <marker date="1470218457809" expanded="true" signature="6163:6204" ph="select * fro... plane" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Msg/test.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="432">
+              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="notify2.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/qianduanyemian/pay/example/notify2.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="672">
+              <caret line="57" column="5" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
+              <folding>
+                <marker date="1471962515101" expanded="true" signature="1490:1551" ph="update `user... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="notify.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/qianduanyemian/pay/example/notify.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="489">
+              <caret line="49" column="12" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="50" />
+              <folding>
+                <marker date="1470583137656" expanded="true" signature="1498:1548" ph="update `paym... " />
+                <marker date="1470583137656" expanded="true" signature="1582:1618" ph="delete from " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Display.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Display/Display.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="792">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+              <folding>
+                <marker date="1471851392246" expanded="true" signature="398:421" ph="select * fro... display" />
+                <marker date="1471851392246" expanded="true" signature="891:1020" ph="update `disp... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CityManager.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Address/CityManager.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1224">
+              <caret line="51" column="20" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
+              <folding>
+                <marker date="1470733213434" expanded="true" signature="394:431" ph="select * fro... city" />
+                <marker date="1470733213434" expanded="true" signature="833:892" ph="insert into city... " />
+                <marker date="1470733213434" expanded="true" signature="1194:1229" ph="delete from " />
+                <marker date="1470733213434" expanded="true" signature="1391:1440" ph="select `city... county" />
+                <marker date="1470733213434" expanded="true" signature="1700:1753" ph="select `city... city" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Payment.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Payment/Payment.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1344">
+              <caret line="61" column="42" selection-start-line="61" selection-start-column="42" selection-end-line="61" selection-end-column="42" />
+              <folding>
+                <marker date="1471579881305" expanded="true" signature="404:458" ph="select `paym... payment" />
+                <marker date="1471579881305" expanded="true" signature="681:724" ph="select * fro... payment" />
+                <marker date="1471579881305" expanded="true" signature="1063:1136" ph="update `paym... " />
+                <marker date="1471579881305" expanded="true" signature="1357:1407" ph="update `paym... " />
+                <marker date="1471579881305" expanded="true" signature="1665:1715" ph="update `paym... " />
+                <marker date="1471579881305" expanded="true" signature="1953:2027" ph="update `paym... " />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -169,48 +692,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/api/accessControl.php" />
-        <option value="$PROJECT_DIR$/Address/County.php" />
-        <option value="$PROJECT_DIR$/Address/China.php" />
-        <option value="$PROJECT_DIR$/Address/Province.php" />
-        <option value="$PROJECT_DIR$/gitpull.php" />
-        <option value="$PROJECT_DIR$/Address/World.php" />
-        <option value="$PROJECT_DIR$/STChat/lib/User.php" />
-        <option value="$PROJECT_DIR$/WX/index.php" />
-        <option value="$PROJECT_DIR$/Address/Country.php" />
+        <option value="$PROJECT_DIR$/Msg/sms.php" />
+        <option value="$PROJECT_DIR$/wxpay/example/jsapi.php" />
         <option value="$PROJECT_DIR$/Coupon/CouponManager.php" />
-        <option value="$PROJECT_DIR$/Hotel/Hotel.php" />
-        <option value="$PROJECT_DIR$/Address/City.php" />
+        <option value="$PROJECT_DIR$/qianduanyemian/wxpay/example/WxPay.JsApiPay.php" />
+        <option value="$PROJECT_DIR$/qianduanyemian/voucher.html" />
+        <option value="$PROJECT_DIR$/qianduanyemian/wxpay/lib/WxPay.Config.php" />
+        <option value="$PROJECT_DIR$/qianduanyemian/wxpay/example/jsapi.php" />
+        <option value="$PROJECT_DIR$/qianduanyemian/js/coupon.js" />
+        <option value="$PROJECT_DIR$/qianduanyemian/ticket.html" />
+        <option value="$PROJECT_DIR$/qianduanyemian/wxpay/example/notify.php" />
+        <option value="$PROJECT_DIR$/qianduanyemian/wxpay/lib/WxPay.Notify.php" />
+        <option value="$PROJECT_DIR$/qianduanyemian/pay/example/WxPay.JsApiPay.php" />
+        <option value="$PROJECT_DIR$/qianduanyemian/pay/lib/WxPay.Notify.php" />
+        <option value="$PROJECT_DIR$/qianduanyemian/js/address.js" />
+        <option value="$PROJECT_DIR$/qianduanyemian/pickRegion.html" />
+        <option value="$PROJECT_DIR$/qianduanyemian/js/order.js" />
+        <option value="$PROJECT_DIR$/qianduanyemian/flightList.html" />
+        <option value="$PROJECT_DIR$/qianduanyemian/js/plane.js" />
+        <option value="$PROJECT_DIR$/qianduanyemian/paymentConfirmed.html" />
+        <option value="$PROJECT_DIR$/admin/user.html" />
         <option value="$PROJECT_DIR$/Address/CityManager.php" />
-        <option value="$PROJECT_DIR$/Activity/ActivityManager.php" />
-        <option value="$PROJECT_DIR$/Activity/Activity.php" />
-        <option value="$PROJECT_DIR$/Hotel/const.php" />
-        <option value="$PROJECT_DIR$/User/User.php" />
-        <option value="$PROJECT_DIR$/Payment/Payment.php" />
-        <option value="$PROJECT_DIR$/Hotel/HotelManager.php" />
-        <option value="$PROJECT_DIR$/api/test.php" />
-        <option value="$PROJECT_DIR$/STChat/lib/ChatUser.php" />
-        <option value="$PROJECT_DIR$/STChat/test/test.php" />
+        <option value="$PROJECT_DIR$/Images/api.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/25ee7077-e3fe-45a8-8305-fc60aaa7fc91/console.sql" />
+        <option value="$PROJECT_DIR$/qianduanyemian/orderFlight.html" />
+        <option value="$PROJECT_DIR$/STChat/api/api.php" />
+        <option value="$PROJECT_DIR$/qianduanyemian/js/hotel.js" />
+        <option value="$PROJECT_DIR$/qianduanyemian/home.php" />
+        <option value="$PROJECT_DIR$/qianduanyemian/index.html" />
+        <option value="$PROJECT_DIR$/STChat/lib/MessageManager.php" />
+        <option value="$PROJECT_DIR$/STChat/api/doc.md" />
         <option value="$PROJECT_DIR$/STChat/lib/Session.php" />
         <option value="$PROJECT_DIR$/STChat/lib/Waiter.php" />
-        <option value="$PROJECT_DIR$/STChat/lib/MessageManager.php" />
-        <option value="$PROJECT_DIR$/STChat/lib/SessionManager.php" />
-        <option value="$PROJECT_DIR$/Token/TokenManager.php" />
-        <option value="$PROJECT_DIR$/STChat/api/api.php" />
-        <option value="$PROJECT_DIR$/qianduanyemian/wx/index.php" />
-        <option value="$PROJECT_DIR$/User/UserManager.php" />
-        <option value="$PROJECT_DIR$/qianduanyemian/home.php" />
+        <option value="$PROJECT_DIR$/qianduanyemian/js/chat.js" />
+        <option value="$PROJECT_DIR$/qianduanyemian/js/api_kf.js" />
         <option value="$PROJECT_DIR$/qianduanyemian/wx/index.html" />
+        <option value="$PROJECT_DIR$/api/ServerPicD.php" />
+        <option value="$PROJECT_DIR$/Plane/Plane.php" />
+        <option value="$PROJECT_DIR$/api/wxtoken.php" />
+        <option value="$PROJECT_DIR$/qianduanyemian/pay/lib/WxPay.Api.php" />
+        <option value="$PROJECT_DIR$/wxtoken.php" />
         <option value="$PROJECT_DIR$/Weixin/Weixin.php" />
-        <option value="$PROJECT_DIR$/qianduanyemian/index.html" />
+        <option value="$PROJECT_DIR$/STChat/lib/WaiterManager.php" />
+        <option value="$PROJECT_DIR$/Payment/Payment.php" />
+        <option value="$PROJECT_DIR$/qianduanyemian/pay/example/jsapi.php" />
         <option value="$PROJECT_DIR$/Payment/PaymentManager.php" />
-        <option value="$PROJECT_DIR$/Msg/top/TopClient.php" />
-        <option value="$PROJECT_DIR$/Msg/fileTest.php" />
-        <option value="$PROJECT_DIR$/Msg/test2.php" />
+        <option value="$PROJECT_DIR$/Display/Display.php" />
         <option value="$PROJECT_DIR$/api/doc.md" />
         <option value="$PROJECT_DIR$/api/api.php" />
-        <option value="$PROJECT_DIR$/Msg/sms.php" />
-        <option value="$PROJECT_DIR$/Plane/Plane.php" />
+        <option value="$PROJECT_DIR$/qianduanyemian/pay/example/notify.php" />
+        <option value="$PROJECT_DIR$/qianduanyemian/pay/example/notify2.php" />
+        <option value="$PROJECT_DIR$/qianduanyemian/pay/example/jsapi2.php" />
       </list>
     </option>
   </component>
@@ -225,9 +757,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="width" value="1929" />
-    <option name="height" value="1038" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1932" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -254,6 +787,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -269,20 +804,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="PhpstormProjects" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PhpstormProjects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PhpstormProjects" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WX" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -324,39 +845,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Token" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PhpstormProjects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PhpstormProjects" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="STChat" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PhpstormProjects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PhpstormProjects" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="STChat" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -438,6 +927,68 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="qianduanyemian" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pay" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PhpstormProjects" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PhpstormProjects" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="qianduanyemian" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pay" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PhpstormProjects" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PhpstormProjects" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="qianduanyemian" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pay" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="example" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PhpstormProjects" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PhpstormProjects" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Plane" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -466,25 +1017,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Msg" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PhpstormProjects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PhpstormProjects" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Msg" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aliyun" />
+              <option name="myItemId" value="Images" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -512,35 +1045,21 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Coupon" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PhpstormProjects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PhpstormProjects" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Config" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PhpstormProjects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PhpstormProjects" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PhpstormProjects" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PhpstormProjects" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -574,17 +1093,22 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.smartKeys" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\InsZVA\PhpstormProjects\qianduanyemian\pay\example" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\InsZVA\PhpstormProjects\qianduanyemian" />
       <recent name="C:\Users\InsZVA\PhpstormProjects\Config" />
     </key>
   </component>
@@ -662,18 +1186,38 @@
       <workItem from="1469113705991" duration="1809000" />
       <workItem from="1469190919293" duration="2174000" />
       <workItem from="1469765264262" duration="4331000" />
-      <workItem from="1470194827446" duration="6184000" />
+      <workItem from="1470194827446" duration="7684000" />
+      <workItem from="1470226112981" duration="2384000" />
+      <workItem from="1470237705128" duration="3676000" />
+      <workItem from="1470369053332" duration="6980000" />
+      <workItem from="1470399560503" duration="4531000" />
+      <workItem from="1470466664832" duration="6097000" />
+      <workItem from="1470544226462" duration="4095000" />
+      <workItem from="1470576401200" duration="9655000" />
+      <workItem from="1470637763886" duration="7130000" />
+      <workItem from="1470724458390" duration="11287000" />
+      <workItem from="1470802176396" duration="607000" />
+      <workItem from="1470887276679" duration="17128000" />
+      <workItem from="1471232859103" duration="2119000" />
+      <workItem from="1471317801134" duration="9007000" />
+      <workItem from="1471395706273" duration="741000" />
+      <workItem from="1471574933886" duration="3937000" />
+      <workItem from="1471659814495" duration="5316000" />
+      <workItem from="1471694296855" duration="1954000" />
+      <workItem from="1471781072401" duration="1288000" />
+      <workItem from="1471850126938" duration="4535000" />
+      <workItem from="1471962101748" duration="1244000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162690000" />
+    <option name="totallyTimeSpent" value="267901000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1929" height="1038" extended-state="0" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="1932" height="1048" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14599685" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17345873" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -686,6 +1230,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -710,111 +1255,201 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/STChat/lib/MessageManager.php">
+    <entry file="file://$PROJECT_DIR$/admin/user.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/STChat/lib/Session.php">
+    <entry file="file://$PROJECT_DIR$/Hotel/Hotel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+        <state relative-caret-position="1128">
+          <caret line="52" column="20" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Hotel/HotelManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1848">
+          <caret line="82" column="23" selection-start-line="82" selection-start-column="23" selection-end-line="82" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/25ee7077-e3fe-45a8-8305-fc60aaa7fc91/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qianduanyemian/orderFlight.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5856">
+          <caret line="244" column="109" selection-start-line="244" selection-start-column="109" selection-end-line="244" selection-end-column="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/STChat/lib/accessControl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/STChat/lib/SessionManager.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+        <state relative-caret-position="379">
+          <caret line="48" column="36" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/mongodb.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="456" column="20" selection-start-line="456" selection-start-column="20" selection-end-line="456" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qianduanyemian/hotelInfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qianduanyemian/js/hotel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="642">
+          <caret line="75" column="112" selection-start-line="75" selection-start-column="112" selection-end-line="75" selection-end-column="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qianduanyemian/css/shutu.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qianduanyemian/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="467" column="35" selection-start-line="467" selection-start-column="35" selection-end-line="467" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/STChat/lib/MessageManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="654">
+          <caret line="36" column="29" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_5.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="1092" column="9" selection-start-line="1092" selection-start-column="9" selection-end-line="1092" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/curl_d.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="156" column="9" selection-start-line="156" selection-start-column="9" selection-end-line="156" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/STChat/config/Config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/STChat/lib/Waiter.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+        <state relative-caret-position="192">
+          <caret line="40" column="44" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/STChat/lib/WaiterManager.php">
+    <entry file="file://$PROJECT_DIR$/STChat/api/doc.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="1416">
+            <caret line="59" column="26" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/STChat/lib/Session.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+        <state relative-caret-position="1176">
+          <caret line="54" column="96" selection-start-line="54" selection-start-column="96" selection-end-line="54" selection-end-column="96" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/STChat/lib/common.php">
+    <entry file="file://$PROJECT_DIR$/qianduanyemian/myOrders.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4656">
+          <caret line="194" column="22" selection-start-line="194" selection-start-column="22" selection-end-line="194" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qianduanyemian/js/order.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qianduanyemian/chat.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/STChat/lib/ChatUser.php">
+    <entry file="file://$PROJECT_DIR$/qianduanyemian/js/chat.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="768">
-          <caret line="37" column="9" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+        <state relative-caret-position="8400">
+          <caret line="350" column="15" selection-start-line="350" selection-start-column="15" selection-end-line="350" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/STChat/lib/accessControl.php">
+    <entry file="file://$PROJECT_DIR$/qianduanyemian/js/api_kf.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+        <state relative-caret-position="3264">
+          <caret line="136" column="9" selection-start-line="136" selection-start-column="9" selection-end-line="136" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Token/TokenManager.php">
+    <entry file="file://$PROJECT_DIR$/qianduanyemian/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+        <state relative-caret-position="48">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="206" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/STChat/api/api.php">
+    <entry file="file://$PROJECT_DIR$/qianduanyemian/wx/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        <state relative-caret-position="552">
+          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/STChat/api/doc.md">
-      <provider selected="true" editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
-      <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="813">
-            <caret line="51" column="29" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Hotel/Hotel.php">
+    <entry file="file://$PROJECT_DIR$/api/ServerPicD.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="31" column="43" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
+        <state relative-caret-position="504">
+          <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Hotel/const.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="17" column="77" selection-start-line="17" selection-start-column="77" selection-end-line="17" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/qianduanyemian/wx/index.php" />
     <entry file="file://$PROJECT_DIR$/Weixin/Const.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -822,331 +1457,232 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/qianduanyemian/home.php">
+    <entry file="file://$PROJECT_DIR$/Images/api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state relative-caret-position="552">
+          <caret line="23" column="54" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/api/api.php.bal">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Activity/Activity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qianduanyemian/pay/lib/WxPay.Api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12912">
+          <caret line="538" column="48" selection-start-line="538" selection-start-column="48" selection-end-line="538" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/wxtoken.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1248">
+          <caret line="52" column="24" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wxtoken.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="984">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/token.txt" />
     <entry file="file://$PROJECT_DIR$/Weixin/Weixin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="768">
-          <caret line="32" column="26" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="26" />
+        <state relative-caret-position="1584">
+          <caret line="66" column="60" selection-start-line="66" selection-start-column="60" selection-end-line="66" selection-end-column="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/qianduanyemian/index.php">
+    <entry file="file://$PROJECT_DIR$/Statistics/Statistics.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+        <state relative-caret-position="384">
+          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/qianduanyemian/wx/index.html">
+    <entry file="file://$PROJECT_DIR$/Plane/Plane.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/qianduanyemian/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11952">
-          <caret line="498" column="14" selection-start-line="498" selection-start-column="14" selection-end-line="498" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/User/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2880">
-          <caret line="120" column="48" selection-start-line="120" selection-start-column="48" selection-end-line="120" selection-end-column="48" />
+        <state relative-caret-position="288">
+          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="13" selection-end-column="62" />
           <folding>
-            <marker date="1468236804304" expanded="true" signature="385:430" ph="select `user... user" />
-            <marker date="1468236804304" expanded="true" signature="582:642" ph="select `coun... user" />
-            <marker date="1468236804304" expanded="true" signature="985:1046" ph="update `user... " />
-            <marker date="1468236804304" expanded="true" signature="1273:1319" ph="select `avat... user" />
-            <marker date="1468236804304" expanded="true" signature="1597:1642" ph="update `user... " />
-            <marker date="1468236804304" expanded="true" signature="1946:2018" ph="update `user... " />
-            <marker date="1468236804304" expanded="true" signature="2245:2293" ph="select `veri... user" />
-            <marker date="1468236804304" expanded="true" signature="2578:2624" ph="update `user... " />
-            <marker date="1468236804304" expanded="true" signature="2794:2852" ph="select `id_t... user" />
-            <marker date="1468236804304" expanded="true" signature="3188:3247" ph="update `user... " />
-            <marker date="1468236804304" expanded="true" signature="3590:3661" ph="select `user... user" />
-            <marker date="1468236804304" expanded="true" signature="4030:4077" ph="update `user... " />
-            <marker date="1468236804304" expanded="true" signature="4284:4321" ph="select * fro... user" />
-            <marker date="1468236804304" expanded="true" signature="4566:4607" ph="select `vip`... user" />
-            <marker date="1468236804304" expanded="true" signature="4810:4852" ph="update `user... " />
+            <marker date="1471338093698" expanded="true" signature="1050:1253" ph="insert into plane... " />
+            <marker date="1471338093698" expanded="true" signature="1753:1838" ph="delete from " />
+            <marker date="1471338093698" expanded="true" signature="1967:2006" ph="delete from " />
+            <marker date="1471338093698" expanded="true" signature="2696:2714" ph="update `plan... " />
+            <marker date="1471338093698" expanded="true" signature="2841:2859" ph="update `plan... " />
+            <marker date="1471338093698" expanded="true" signature="3398:3473" ph="select * fro... plane" />
+            <marker date="1471338093698" expanded="true" signature="4083:4110" ph="select * fro... plane" />
+            <marker date="1471338093698" expanded="true" signature="5312:5420" ph="select * fro... plane" />
+            <marker date="1471338093698" expanded="true" signature="6235:6276" ph="select * fro... plane" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/User/UserManager.php">
+    <entry file="file://$PROJECT_DIR$/STChat/lib/WaiterManager.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1464">
-          <caret line="66" column="23" selection-start-line="66" selection-start-column="23" selection-end-line="66" selection-end-column="23" />
+        <state relative-caret-position="912">
+          <caret line="43" column="27" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
           <folding>
-            <marker date="1468918075108" expanded="true" signature="1103:1222" ph="insert into `user`... " />
-            <marker date="1468918075108" expanded="true" signature="1562:1665" ph="insert into `user`... " />
-            <marker date="1468918075108" expanded="true" signature="2065:2138" ph="select `user... user" />
-            <marker date="1468918075108" expanded="true" signature="2692:2747" ph="select `user... user" />
-            <marker date="1468918075108" expanded="true" signature="3437:3506" ph="select `user... user" />
-            <marker date="1468918075108" expanded="true" signature="3871:3912" ph="select * fro... user" />
-            <marker date="1468918075108" expanded="true" signature="4461:4526" ph="select * fro... user" />
+            <marker date="1471576727124" expanded="true" signature="932:981" ph="select count... payment" />
+            <marker date="1471576727124" expanded="true" signature="932:982" ph="select count... payment" />
+            <marker date="1471576727124" expanded="true" signature="1246:1295" ph="select count... payment" />
+            <marker date="1471576727124" expanded="true" signature="1246:1314" ph="select count... payment" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Payment/PaymentManager.php">
+    <entry file="file://$PROJECT_DIR$/Address/City.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
-          <caret line="55" column="34" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
+        <state relative-caret-position="1128">
+          <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
           <folding>
-            <marker date="1469191051645" expanded="true" signature="937:1133" ph="insert into `payment`... " />
-            <marker date="1469191051645" expanded="true" signature="1819:2058" ph="insert into `payment`... " />
-            <marker date="1469191051645" expanded="true" signature="2636:2727" ph="select * fro... payment" />
-            <marker date="1469191051645" expanded="true" signature="3057:3130" ph="select * fro... payment" />
+            <marker date="1467889156936" expanded="true" signature="421:467" ph="select `city... city" />
+            <marker date="1467889156936" expanded="true" signature="748:787" ph="select * fro... county" />
+            <marker date="1467889156936" expanded="true" signature="1152:1229" ph="insert into `county`... " />
+            <marker date="1467889156936" expanded="true" signature="1482:1545" ph="delete from " />
+            <marker date="1467889156936" expanded="true" signature="1641:1678" ph="select * fro... city" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Payment/Payment.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1128">
-          <caret line="52" column="18" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+        <state relative-caret-position="1344">
+          <caret line="61" column="42" selection-start-line="61" selection-start-column="42" selection-end-line="61" selection-end-column="42" />
           <folding>
-            <marker date="1468252341371" expanded="true" signature="404:458" ph="select `paym... payment" />
-            <marker date="1468252341371" expanded="true" signature="681:724" ph="select * fro... payment" />
-            <marker date="1468252341371" expanded="true" signature="1063:1136" ph="update `paym... " />
-            <marker date="1468252341371" expanded="true" signature="1357:1407" ph="update `paym... " />
-            <marker date="1468252341371" expanded="true" signature="1665:1715" ph="update `paym... " />
+            <marker date="1471579881305" expanded="true" signature="404:458" ph="select `paym... payment" />
+            <marker date="1471579881305" expanded="true" signature="681:724" ph="select * fro... payment" />
+            <marker date="1471579881305" expanded="true" signature="1063:1136" ph="update `paym... " />
+            <marker date="1471579881305" expanded="true" signature="1357:1407" ph="update `paym... " />
+            <marker date="1471579881305" expanded="true" signature="1665:1715" ph="update `paym... " />
+            <marker date="1471579881305" expanded="true" signature="1953:2027" ph="update `paym... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/SPL_f.php">
+    <entry file="file://$PROJECT_DIR$/STChat/api/api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="59" column="9" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="9" />
+        <state relative-caret-position="456">
+          <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Msg/aliyun/AliyunClient.php">
+    <entry file="file://$PROJECT_DIR$/Address/CityManager.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5443">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Msg/top/request/AlibabaAliqinFcTtsNumSinglecallRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Msg/top/request/AlibabaAliqinFcVoiceNumDoublecallRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Msg/top/request/AlibabaAliqinFcVoiceNumSinglecallRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Msg/top/ApplicationVar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Msg/top/ClusterTopClient.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4032">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Msg/top/HttpdnsGetRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Msg/top/RequestCheckUtil.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Msg/top/ResultSet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Msg/top/SpiUtils.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Msg/Autoloader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="21" column="69" selection-start-line="21" selection-start-column="69" selection-end-line="21" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Msg/TopSdk.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="32" column="41" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Msg/fileTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Msg/top/request/AlibabaAliqinFcSmsNumQueryRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Msg/top/request/AlibabaAliqinFcSmsNumSendRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Msg/top/TopClient.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5208">
-          <caret line="217" column="20" selection-start-line="217" selection-start-column="20" selection-end-line="217" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Msg/test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Config/MySQL.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Msg/test2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Msg/sms.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="936">
-          <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
+        <state relative-caret-position="1224">
+          <caret line="51" column="20" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
           <folding>
-            <marker date="1470216504495" expanded="true" signature="1060:1085" ph="delete from " />
-            <marker date="1470216504495" expanded="true" signature="1060:1103" ph="delete from " />
-            <marker date="1470216504495" expanded="true" signature="1066:1085" ph="insert into `code`... " />
-            <marker date="1470216504495" expanded="true" signature="1137:1181" ph="insert into `code`... " />
-            <marker date="1470216504495" expanded="true" signature="1356:1401" ph="select * fro... code" />
+            <marker date="1470733213434" expanded="true" signature="394:431" ph="select * fro... city" />
+            <marker date="1470733213434" expanded="true" signature="833:892" ph="insert into city... " />
+            <marker date="1470733213434" expanded="true" signature="1194:1229" ph="delete from " />
+            <marker date="1470733213434" expanded="true" signature="1391:1440" ph="select `city... county" />
+            <marker date="1470733213434" expanded="true" signature="1700:1753" ph="select `city... city" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Hotel/HotelManager.php">
+    <entry file="file://$PROJECT_DIR$/Payment/PaymentManager.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="82" column="23" selection-start-line="82" selection-start-column="23" selection-end-line="82" selection-end-column="23" />
+        <state relative-caret-position="1656">
+          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
           <folding>
-            <marker date="1468090420667" expanded="true" signature="1078:1227" ph="insert into hotel... " />
-            <marker date="1468090420667" expanded="true" signature="1656:1852" ph="select `hote... hotel" />
-            <marker date="1468090420667" expanded="true" signature="2395:2593" ph="select `hote... hotel" />
-            <marker date="1468090420667" expanded="true" signature="3180:3358" ph="select `hote... hotel" />
+            <marker date="1471781113269" expanded="true" signature="937:1133" ph="insert into `payment`... " />
+            <marker date="1471781113269" expanded="true" signature="1819:2058" ph="insert into `payment`... " />
+            <marker date="1471781113269" expanded="true" signature="2582:2785" ph="insert into `payment`... " />
+            <marker date="1471781113269" expanded="true" signature="3720:4037" ph="insert into `payment`... " />
+            <marker date="1471781113269" expanded="true" signature="4688:4779" ph="select * fro... payment" />
+            <marker date="1471781113269" expanded="true" signature="5109:5176" ph="select * fro... payment" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/doc.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="2472">
+            <caret line="103" column="68" selection-start-line="103" selection-start-column="68" selection-end-line="103" selection-end-column="68" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Display/Display.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <marker date="1471851392246" expanded="true" signature="398:421" ph="select * fro... display" />
+            <marker date="1471851392246" expanded="true" signature="891:1020" ph="update `disp... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="494" column="29" selection-start-line="494" selection-start-column="29" selection-end-line="494" selection-end-column="29" />
+        <state relative-caret-position="783">
+          <caret line="740" column="20" selection-start-line="740" selection-start-column="20" selection-end-line="740" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Plane/Plane.php">
+    <entry file="file://$PROJECT_DIR$/qianduanyemian/pay/example/jsapi.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1431">
-          <caret line="104" column="16" selection-start-line="104" selection-start-column="16" selection-end-line="104" selection-end-column="16" />
+        <state relative-caret-position="153">
+          <caret line="28" column="59" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="64" />
           <folding>
-            <marker date="1470218457809" expanded="true" signature="1003:1197" ph="insert into plane... " />
-            <marker date="1470218457809" expanded="true" signature="1684:1769" ph="delete from " />
-            <marker date="1470218457809" expanded="true" signature="1898:1937" ph="delete from " />
-            <marker date="1470218457809" expanded="true" signature="2627:2645" ph="update `plan... " />
-            <marker date="1470218457809" expanded="true" signature="2772:2790" ph="update `plan... " />
-            <marker date="1470218457809" expanded="true" signature="3329:3404" ph="select * fro... plane" />
-            <marker date="1470218457809" expanded="true" signature="3610:3660" ph="select * fro... plane" />
-            <marker date="1470218457809" expanded="true" signature="4011:4038" ph="select * fro... plane" />
-            <marker date="1470218457809" expanded="true" signature="5240:5348" ph="select * fro... plane" />
-            <marker date="1470218457809" expanded="true" signature="5628:5781" ph="select * fro... plane" />
-            <marker date="1470218457809" expanded="true" signature="6163:6203" ph="select * fro... plane" />
-            <marker date="1470218457809" expanded="true" signature="6163:6204" ph="select * fro... plane" />
+            <marker date="1471694558306" expanded="true" signature="826:869" ph="select * fro... payment" />
+            <marker date="1471694558306" expanded="true" signature="1260:1299" ph="select * fro... plane" />
+            <marker date="1471694558306" expanded="true" signature="1543:1580" ph="select * fro... room" />
+            <marker date="1471694558306" expanded="true" signature="1778:1823" ph="select * fro... room" />
+            <marker date="1471694558306" expanded="true" signature="1940:2010" ph="SELECT * FRO... coupon" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/doc.md">
-      <provider selected="true" editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
-      <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="-555">
-            <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
-            <folding />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/qianduanyemian/pay/example/notify.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="49" column="12" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="50" />
+          <folding>
+            <marker date="1470583137656" expanded="true" signature="1498:1548" ph="update `paym... " />
+            <marker date="1470583137656" expanded="true" signature="1582:1618" ph="delete from " />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/qianduanyemian/paymentConfirmed.html">
+    <entry file="file://$PROJECT_DIR$/qianduanyemian/pay/example/notify2.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4200">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+        <state relative-caret-position="672">
+          <caret line="57" column="5" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
+          <folding>
+            <marker date="1471962515101" expanded="true" signature="1490:1551" ph="update `user... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qianduanyemian/pay/example/jsapi2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
         </state>
       </provider>

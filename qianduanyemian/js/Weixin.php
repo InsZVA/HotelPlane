@@ -5,7 +5,9 @@
  * Date: 2016/7/12
  * Time: 18:45
  */
-require_once "Const.php";
+require_once ('../Config/MySQL.php');
+//require_once("const.php");
+
 class Weixin
 {
     private $mysqli;
@@ -20,7 +22,6 @@ class Weixin
         $data=$postData->data;
         $user_id=$postData->userId;
 
-        $user_id = intval($user_id);
         $access_token=$this->getToken();
         if(!$access_token)
             return false;
@@ -49,25 +50,25 @@ class Weixin
         curl_setopt($ch,CURLOPT_URL,$url.$access_token);
         curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
         curl_setopt($ch,CURLOPT_HEADER,0);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER , 0);
 
         curl_setopt($ch,CURLOPT_POST,1);
         curl_setopt($ch,CURLOPT_POSTFIELDS,$info);
         $response=curl_exec($ch);
 
         curl_close($ch);
+
         return $response;
     }
 
     public function getToken()
     {
-        if(file_exists(__DIR__ . "/token.txt"))
+        if(file_exists("token.txt"))
         {
-            $token=fopen(__DIR__ . "/token.txt","r");
-            $access_token=fread($token,filesize(__DIR__ . "/token.txt"));
+            $token=fopen("token.txt","r");
+            $access_token=fread($token,filesize("token.txt"));
             $access_token=json_decode($access_token);
-            if(intval(time())-intval($access_token->time)>7000 || !isset($access_token->access_token));
-            else return $access_token->access_token;
+            if(intval(time())-intval($access_token->time)>7000);
+            return $access_token->access_token;
         }
 
         $ch=curl_init();
@@ -76,7 +77,6 @@ class Weixin
         curl_setopt($ch,CURLOPT_URL,$url);
         curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
         curl_setopt($ch,CURLOPT_HEADER,0);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER , 0);
 
         $access_token=curl_exec($ch);
         $access_token=json_decode($access_token);
@@ -88,31 +88,26 @@ class Weixin
             return false;
 
         $access_token->time=time();
-        $token=fopen(__DIR__ . "/token.txt","w");
+        $token=fopen("token.txt","w");
         fwrite($token,json_encode($access_token));
         fclose($token);
+
         return $access_token->access_token;
     }
 
-    private function curls($url) {
+    public function GenerateSign($url,$timestamp,$noncestr) {
+        $token = $this->getToken();
         $ch=curl_init();
 
-        //$url="https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wx81c1603b41b5f4f6&secret=15d9382d85bb018c56e3cc41bb299d5b";
+        $url="https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=".$token."&type=jsapi";
         curl_setopt($ch,CURLOPT_URL,$url);
         curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
         curl_setopt($ch,CURLOPT_HEADER,0);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER , 0);
 
-        return curl_exec($ch);
-    }
+        $jsapi_ticket = json_decode(curl_exec($ch));
 
-    public function getUserData($code) {
-        $data = $this->curls("https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx81c1603b41b5f4f6&secret=15d9382d85bb018c56e3cc41bb299d5b&code=$code&grant_type=authorization_code");
-        $data = json_decode($data);
-        if (isset($data->errcode))
-            return $data;
-        $userData = $this->curls("https://api.weixin.qq.com/sns/userinfo?access_token=$data->access_token&openid=$data->openid&lang=zh_CN");
-        $userData = json_decode($userData);
-        return $userData;
+        curl_close($ch);
+        $jsapi_ticket=$jsapi_ticket->ticket;
+        return sha1("jsapi_ticket=".$jsapi_ticket."&noncestr=".$noncestr."&timestamp=".$timestamp."&url=".$url);
     }
 }

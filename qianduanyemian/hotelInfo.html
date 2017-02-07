@@ -9,7 +9,7 @@
 		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 		<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 		<script src="./js/common.js"></script>
-		<script src="./js/hotel.js"></script>
+		<script src="./js/hotel.js?v=197"></script>
 		<link href="./css/bootstrap-datetimepicker.min.css" rel="stylesheet">
 		<script src="./js/bootstrap-datetimepicker.min.js"></script>
 		<title>订单信息</title>
@@ -76,6 +76,7 @@
 				height: 94px;
 				margin-top: 10px;
 				margin-bottom: 10px;
+				padding: 8px;
 			}
 			
 			.randomH {
@@ -204,6 +205,7 @@
 				color: #4a4a4a;
 				letter-spacing: -0.2px;
 				text-align: center;
+				width:125px;
 			}
 			
 			#downDiv2B {
@@ -217,6 +219,7 @@
 				width: 86px;
 				font-size: 14px;
 				color: #000000;
+				text-align: right;
 			}
 			
 			.infoForm {
@@ -542,7 +545,7 @@
 	<body>
 		<div id="container">
 			<div id="firstPic">
-				<img id="img" src="./img/picGrey.png" />
+				<img id="img" src="./img/picGrey.png" style="width:100%;height:100%" />
 			</div>
 			<div id="firstBar">
 				<div id="firstBar1">
@@ -600,7 +603,7 @@
 					</div>
 				</div>
 				<div id="downDiv">
-					<input type="text" id="downDiv1" data-date-format="yyyy-m-d" >
+					<input type="text" id="downDiv1" data-date-format="yyyy-m-d" readonly>
 					<div id="downDiv2">
 						<div id="downDiv2A">
 							共 1 夜
@@ -608,19 +611,19 @@
 						<div id="downDiv2B">
 						</div>
 					</div>
-					<input type="text" id="downDiv3" data-date-format="yyyy-m-d" >
+					<input type="text" id="downDiv3" data-date-format="yyyy-m-d" readonly>
 				</div>
 			</div>
 
 			<div class="infoForm">
 				<div class="infoItem">
-					乘机人姓名
+					住宿人姓名
 				</div>
 				<input class="name" type="text" id="name" placeholder="张三">
 			</div>
 			<div class="infoForm">
 				<div class="infoItem">
-					乘机人证件
+					住宿人证件
 				</div>
 				<div class="arrow"></div>
 				<div id="IDcards">
@@ -673,7 +676,7 @@
 			</div>
 		</div>
 		<div id="fixed">
-			<img src="./img/managerWhite.png" />
+			<a href="/chat.html"><img src="./img/managerWhite.png" style="opacity: 0.67"/></a>
 		</div>
 		<div id="popup">
 			<div id="selectID">

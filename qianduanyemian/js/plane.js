@@ -65,8 +65,8 @@ function searchPlanes(start_city_id, end_city_id, start_date, offset, num) {
         }
         if (data.code == -1) {
             $("#container").html(html);
-            alert("未找到相关机票，已为您推荐附近酒店。");
-            window.location.replace("hotelList.html?cityId=" + end_city_id);
+            alert("未找到相关机票，请联系客服。");
+            window.location.replace("chat.html");
             return;
         }
         var html = "";
@@ -79,7 +79,7 @@ function searchPlanes(start_city_id, end_city_id, start_date, offset, num) {
             html += '<div class="part" onclick="onplane('+ i +')"><div class="leftPart"><div class="part1"><div class="start">'+ data[i].start_time +'</div>'+
             '<div class="line"></div><div class="end">'+ data[i].end_time +'</div></div><div class="part2"><div class="airport1">'+
                 data[i].start_airport +'</div><div class="airport2">'+ data[i].end_airport +'</div></div><div class="part3"><div class="flightInfo">'+
-                data[i].flight_number +'</div></div></div><div class="rightPart">' + data[i].price + '</div></div>';
+                data[i].flight_number + ' ' + data[i].type +'</div></div></div><div class="rightPart">' + data[i].price + '</div></div>';
         }
         $("#container").html(html);
     });
@@ -104,12 +104,12 @@ function readyPayment(id) {
     var sd = new Date(st );
     et = et.replace(/-/g,"/");
     var ed = new Date(et );
-    $("#timeT").html(((ed - sd) / 3600000) + "小时" + (((ed - sd) % 3600000) / 60000) + "分钟");
+    $("#timeT").html(parseInt(((ed - sd) / 3600000)) + "小时" + (((ed - sd) % 3600000) / 60000) + "分钟");
     $("#start").html(datas[id].start_airport);
     $("#end").html(datas[id].end_airport);
-    $("#part4").html("航班号：" + datas[id].flight_number);
+    $("#part4").html("航班号：" + datas[id].flight_number + " " + datas[id].type);
     $("#remarks").html(datas[id].remarks);
-    $("#price").html("￥" + datas[id].price);
+    $("#price").html("￥" + datas[id].price + "(含税费:" + datas[id].tax + ")");
 }
 
 function submitPayment() {
@@ -141,7 +141,7 @@ function submitPayment() {
         }
         alert("您的订单已经发送至后台进行处理，我们会在20分钟内对该订单进行确认，之后会以微信推送的形式告知您，请您注意查收！");
         //TODO: 跳转详情页
-        window.location.replace("index.html");
+        window.location.replace("/myOrders.html");
         return;
     });
 }

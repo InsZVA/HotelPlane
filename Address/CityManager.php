@@ -48,4 +48,12 @@ class CityManager
         $row = $result->fetch_assoc();
         return $row;
     }
+
+    public function getCityId($cityName) {
+        $cityName = $this->mysqli->escape_string($cityName);
+        $result = $this->mysqli->query("select `city_id` from `city` where `name`='$cityName'");
+        if (!$result || $result->num_rows == 0) return false;
+        $row = $result->fetch_assoc();
+        return $row;
+    }
 }

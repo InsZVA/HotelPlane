@@ -1,0 +1,145 @@
+﻿div.chatsheet {
+		width: 100%;
+    position: absolute;
+    bottom: 45px;
+    height: 100%;
+    overflow-y: scroll;
+    z-index: 0;
+	}
+	div.chat {
+		width: 100%;
+		margin-top:15px;
+		margin-bottom: 10px;
+		
+		display:inline-block;
+	}
+	div.sender-0 {
+		
+	}
+	div.mate {
+
+	}
+	img.headpic {
+		width:45px;
+		height: 45px;
+		border-radius:23px;
+		margin-left: 15px;
+		margin-right: 15px;
+		float: left;
+	}
+	span.chatback {
+		display: inline-block;
+		padding: 8px 15px;
+		max-width: 65%;
+		margin:0px 0px;
+		background: #e5e5ea;
+		float: left;
+		border-radius: 5px;
+		word-wrap: break-word;
+	}
+	div.sender-0 img.headpic {
+		float:right;
+	}
+	div.sender-0 span.chatback {
+		background: #009ce5;
+		float: right;
+		color:white;
+	}
+	span.chatback:before {
+		float: left;
+		content: "◀";
+		display: inline-block;
+		position: relative;
+		margin-left: -22px;
+		margin-top: -8px;
+		width:0; 
+    	height:0; 
+    	overflow: hidden;
+    	border-top:0px solid transparent;
+    	border-bottom:12px solid transparent; 
+    	border-right:12px solid #e5e5ea; 
+	}
+	div.sender-0 span.chatback:before {
+		float: right;
+		content: "▶";
+		border-left:12px solid #009ce5;
+		border-right:0;
+		display: inline-block;
+		position: relative;
+		font-size:20px;
+		margin-right: -22px;
+		margin-top: -8px;
+	}
+	span.headinfo {
+		    display: block;
+    background: #f9f9f9;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    padding: 5px 0;
+    z-index: 1000;
+	}
+	form.panel {
+		height: 45px;
+		padding: 5px 0px;
+		background: #f9f9f9;
+		display: block;
+		position: fixed;
+		bottom: 0;
+		text-align: center;
+		left:0;
+		width:100%;
+	}
+	input.newmessage {
+		font-size: 20px;
+		display: inline-block;
+		padding: 5px;
+		width: 60%;
+		margin: auto auto;
+		border: 1px solid black;
+		border-radius: 5px;
+	}
+	a.submit {
+		float: right;
+		font-size:20px;
+		border: 0;
+		background: #dbdbdb;
+		border-radius:10px;
+		padding: 5px 15px;
+		margin-left: 0px;
+		margin-right: 10px;
+		cursor: pointer;
+	}
+	input[capture="camera"] {
+		opacity: 0;
+	}
+	a#pic {
+		background: url(../sc/camera.png);
+		display: inline-block;
+		content: " ";
+		width:25px;
+		height: 19px;
+		border: 0;
+		cursor: pointer;
+		overflow: hidden;
+	}
+	input[name="requestMethod"] {
+		display: none;
+		visibility: hidden;
+	}
+	span.chatback img {
+		width:100px;
+		height: 100px;
+	}
+	p.warning {
+		background: grey;
+		color: white;
+		display: inline-block;
+		text-align: center;
+		padding: 3px 10px;
+		border-radius: 16px;
+	}
+	body,html {
+		margin: 0 ;
+		width:100%;
+	}

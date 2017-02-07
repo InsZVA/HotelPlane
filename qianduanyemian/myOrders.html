@@ -11,6 +11,7 @@
 		<script src="./js/plane.js"></script>
 		<script src="./js/order.js"></script>
 		<script src="./js/hotel.js"></script>
+		<script src="./js/activity.js"></script>
 		<style type="text/css">
 			body {
 				background: #efeff4;
@@ -40,6 +41,7 @@
 				border: 1px solid rgba(171, 179, 189, 0.60);
 				width: 375px;
 				height: 145px;
+				margin-top: 8px;
 			}
 			
 			.jd {
@@ -101,8 +103,8 @@
 			
 			.bar3 {
 				width: 100%;
-				height: 40px;
 				margin-top: 25px;
+				margin-bottom: 25px;
 			}
 			
 			.htDetails {
@@ -111,15 +113,14 @@
 				color: #8c8c8c;
 				letter-spacing: 0px;
 				text-align: left;
-				height: 20px;
 				margin-left: 11px;
+				margin-right: 11px;
 			}
 			
 			.ticket {
 				background: #ffffff;
 				border: 1px solid rgba(171, 179, 189, 0.60);
 				width: 375px;
-				height: 145px;
 				margin-top: 8px;
 			}
 			
@@ -202,71 +203,12 @@
 	<body>
 		<div id="container">
 			<div id="bar">我的订单</div>
-			<div class="hotel">
-				<div class="bar1">
-					<img src="./img/hotel@1x.png" style="margin-left: 11px;margin-top:10px;vertical-align: baseline;float: left;" />
-					<span class="jd">酒店</span>
-					<span class="status">交易完成</span>
-				</div>
-				<div class="bar2">
-					<span class="htName">7天酒店上海武宁路店</span>
-					<span class="htPrice">¥ 707</span>
-				</div>
-				<div class="bar3">
-					<div class="htDetails">2015/05/04 至 2015/05/05</div>
-					<div class="htDetails">1晚 1间</div>
-				</div>
-			</div>
-			<div class="ticket">
-				<div class="bar1">
-					<img src="./img/Capa_1@1x.png" style="margin-left: 11px;margin-top:10px;vertical-align: baseline;float: left;" />
-					<span class="jp">机票</span>
-					<span class="arrearage">未付款</span>
-				</div>
-				<div class="bar2">
-					<span class="flight">杭州 — 广州</span>
-					<span class="htPrice">¥ 707</span>
-				</div>
-				<div class="bar3">
-					<div class="htDetails">2015/07/16 12:40 － 14:50</div>
-					<div class="htDetails">国航CA1712</div>
-				</div>
-			</div>
-			<div class="ticket">
-				<div class="bar1">
-					<img src="./img/Capa_1@1x.png" style="margin-left: 11px;margin-top:10px;vertical-align: baseline;float: left;" />
-					<span class="jp">机票</span>
-					<span class="paid">已付款</span>
-				</div>
-				<div class="bar2">
-					<span class="flight">杭州 — 广州</span>
-					<span class="htPrice">¥ 707</span>
-				</div>
-				<div class="bar3">
-					<div class="htDetails">2015/07/16 12:40 － 14:50</div>
-					<div class="htDetails">国航CA1712</div>
-				</div>
-			</div>
-			<div class="ticket">
-				<div class="bar1">
-					<img src="./img/Capa_1@1x.png" style="margin-left: 11px;margin-top:10px;vertical-align: baseline;float: left;" />
-					<span class="jp">机票</span>
-					<span class="finished">出票完成</span>
-				</div>
-				<div class="bar2">
-					<span class="flight">杭州 — 广州</span>
-					<span class="htPrice">¥ 707</span>
-				</div>
-				<div class="bar3">
-					<div class="htDetails">2015/07/16 12:40 － 14:50</div>
-					<div class="htDetails">国航CA1712</div>
-				</div>
-			</div>
+
 		</div>
 		<div id="fixed">
 			<a href="#container">
 				<div id="fixed1">
-					<img src="./img/Shape@1x.png" style="margin-top: 12px;margin-left: 16px;">
+					<a href="#container"><img src="./img/Shape@1x.png" style="margin-top: 12px;margin-left: 16px;"></a>
 				</div>
 			</a>
 		</div>

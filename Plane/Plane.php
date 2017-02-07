@@ -24,16 +24,17 @@ class Plane
         if(!isset($data->start_time)) return false;
         if(!isset($data->end_time)) return false;
         if(!isset($data->remarks)) $data->remarks="";
+        if(!isset($data->tax)) $data->tax = 0;
         if(!isset($data->standard)) return false;
         if(!isset($data->type)) return false;
         if(!isset($data->price)) return false;
 
         $stmt = $this->mysqli->prepare("insert into plane(`flight_number`,`start_city_id`,
  `start_airport`, `end_city_id`,`end_airport`, `start_time`, `end_time`,`remarks`,
-  `standard`, `type`, `price`) values(?,?,?,?,?,?,?,?,?,?,?)");
-        $stmt->bind_param('sisissssisd', $data->flight_number, $data->start_city_id,
+  `standard`, `type`, `price`, `tax`) values(?,?,?,?,?,?,?,?,?,?,?,?)");
+        $stmt->bind_param('sisissssisdd', $data->flight_number, $data->start_city_id,
             $data->start_airport, $data->end_city_id, $data->end_airport, $data->start_time,
-            $data->end_time, $data->remarks, $data->standard, $data->type, $data->price);
+            $data->end_time, $data->remarks, $data->standard, $data->type, $data->price, $data->tax);
         $stmt->execute();
         $stmt->get_result();
 
@@ -102,7 +103,7 @@ class Plane
             }
             return $rows;
         }
-        return [];
+        return false;
     }
     
     public function search($keyword,$offset,$num)

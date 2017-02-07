@@ -23,19 +23,54 @@ $openId = $tools->GetOpenid();
 
 //②、统一下单
 $input = new WxPayUnifiedOrder();
-$input->SetBody("test");
-$input->SetAttach("test");
+$input->SetBody("舒途订单");
+$_GET['pid'] = intval($_GET['pid']);
+$_GET['ucid'] = intval($_GET['ucid']);
+$input->SetAttach("{\"pid\":$_GET[pid], \"ucid\":$_GET[ucid]}");
+$mysqli = new mysqli('127.0.0.1:3307', 'root', 'ST-MySQL-610', 'ST');
+$price = 0;
+$result = $mysqli->query("select * from `payment` where `payment_id`=$_GET[pid]");
+if (!$result || $result->num_rows == 0) {
+	echo "<script>alert('订单无效！');window.history.go(-1);</script>";
+	exit(0);
+}
+$paymentData = $result->fetch_assoc();
+if ($paymentData['state'] >= 2) {
+	echo "<script>alert('订单已经付款，请勿重复付款！');window.history.go(-1);</script>";
+	exit(0);
+}
+if ($paymentData['type'] == 0 && $paymentData['standard'] == 0) { //Plane
+	$result = $mysqli->query("select * from `plane` where `plane_id`=$paymentData[plane_id]");
+	$price = floatval($result->fetch_assoc()['price']) * 100;
+} else if ($paymentData['type'] == 0) {
+	$price = floatval($paymentData['price']);
+} else if ($paymentData['type'] == 1) { // Hotel
+	$result = $mysqli->query("select * from `room` where `room_id`=$paymentData[room_id]");
+	$price = floatval($result->fetch_assoc()['price']) * 100 * intval(($paymentData['end_date'] - $paymentData['start_date']) / (3600*24));
+} else {
+	$result = $mysqli->query("select * from `activity` where `activity_id`=$paymentData[activity_id]");
+	$price = floatval($result->fetch_assoc()['price']) * 100;
+}
+
+$result = $mysqli->query("SELECT * FROM `coupon` join `user_coupon` where `user_coupon`.`uc_id`=$_GET[ucid]");
+if (!$result || $result->num_rows == 0) {
+	$discount = 0 * 100;
+}
+$discount = floatval($result->fetch_assoc()['discount']) * 100;
+$total = $price - $discount;
+if ($total <= 0) $total = 1;
 $input->SetOut_trade_no(WxPayConfig::MCHID.date("YmdHis"));
-$input->SetTotal_fee("1");
+
+$input->SetTotal_fee("$total");
 $input->SetTime_start(date("YmdHis"));
 $input->SetTime_expire(date("YmdHis", time() + 600));
-$input->SetGoods_tag("test");
-$input->SetNotify_url("http://paysdk.weixin.qq.com/example/notify.php");
+$input->SetGoods_tag("tag");
+$input->SetNotify_url("http://wap.xszlv.com/pay/example/notify.php");
 $input->SetTrade_type("JSAPI");
 $input->SetOpenid($openId);
 $order = WxPayApi::unifiedOrder($input);
-echo '<font color="#f00"><b>统一下单支付单信息</b></font><br/>';
-printf_info($order);
+//echo '<font color="#f00"><b>统一下单支付单信息</b></font><br/>';
+//printf_info($order);
 $jsApiParameters = $tools->GetJsApiParameters($order);
 
 //获取共享收货地址js函数参数
@@ -54,7 +89,7 @@ $editAddress = $tools->GetEditAddressParameters();
 <head>
     <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/> 
-    <title>微信支付样例-支付</title>
+    <title>订单支付</title>
     <script type="text/javascript">
 	//调用微信JS api 支付
 	function jsApiCall()
@@ -64,7 +99,16 @@ $editAddress = $tools->GetEditAddressParameters();
 			<?php echo $jsApiParameters; ?>,
 			function(res){
 				WeixinJSBridge.log(res.err_msg);
-				alert(res.err_code+res.err_desc+res.err_msg);
+				//alert(res.err_msg);
+				if (res.err_msg == 'get_brand_wcpay_request:cancel') {
+					alert('付款失败！');
+					return;
+				}
+				if (res.err_msg == 'get_brand_wcpay_request:ok') {
+					alert('付款成功！请尽快和客服联系~');
+					window.location.href="/chat.html?addition={\"paymentId\":$_GET[pid]}";
+					return;
+				}
 			}
 		);
 	}
@@ -102,7 +146,7 @@ $editAddress = $tools->GetEditAddressParameters();
 		);
 	}
 	
-	window.onload = function(){
+	/*window.onload = function(){
 		if (typeof WeixinJSBridge == "undefined"){
 		    if( document.addEventListener ){
 		        document.addEventListener('WeixinJSBridgeReady', editAddress, false);
@@ -113,15 +157,15 @@ $editAddress = $tools->GetEditAddressParameters();
 		}else{
 			editAddress();
 		}
-	};
-	
+	};*/
+	callpay();
 	</script>
 </head>
 <body>
-    <br/>
+    <!--<br/>
     <font color="#9ACD32"><b>该笔订单支付金额为<span style="color:#f00;font-size:50px">1分</span>钱</b></font><br/><br/>
 	<div align="center">
 		<button style="width:210px; height:50px; border-radius: 15px;background-color:#FE6714; border:0px #FE6714 solid; cursor: pointer;  color:white;  font-size:16px;" type="button" onclick="callpay()" >立即支付</button>
-	</div>
+	</div>-->
 </body>
 </html>

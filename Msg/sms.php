@@ -37,7 +37,7 @@ class Sms {
         $t = time();
         $this->mysqli->query("delete from `code` where `phone` = '$phone'");
         $this->mysqli->query("insert into `code` values($phone, $code, $t)");
-        var_dump($resp);
+        //var_dump($resp);
         return $resp;
     }
 

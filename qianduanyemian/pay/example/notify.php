@@ -44,10 +44,21 @@ class PayNotifyCallBack extends WxPayNotify
 			$msg = "订单查询失败";
 			return false;
 		}
+		Log::DEBUG($data['result_code']);
+		if($data['result_code']=='SUCCESS') {
+			//处理订单
+			$pdata = json_decode($data['attach']);
+			$mysqli = new mysqli('127.0.0.1:3307', 'root', 'ST-MySQL-610', 'ST');
+			$pdata->pid = intval($pdata->pid);
+			$pdata->ucid = intval($pdata->ucid);
+			//$mysqli->query("insert into `trade` values($pdata->pid, $pdata->ucid)");
+			$mysqli->query("update `payment` set `state`=2 where `payment_id`=$pdata->pid");
+			$mysqli->query("delete from `coupons` where `uc_id`=$pdata->ucid");
+		}
 		return true;
 	}
 }
 
-Log::DEBUG("begin notify");
+Log::DEBUG("begin notify~");
 $notify = new PayNotifyCallBack();
 $notify->Handle(false);

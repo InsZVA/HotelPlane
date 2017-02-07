@@ -9,10 +9,7 @@
 		<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
 		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 		<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-		<script src="./js/common.js"></script>
-		<script src="./js/address.js"></script>
 		<script>
-			loadCities(1);
 			function select(dom) {
 				var cid = $(dom).attr('cid');
 				var key = getJsUrl()['key'];
@@ -21,7 +18,7 @@
 				}
 
 				var callback = getJsUrl()['callback'];
-				if (callback == undefined || callback == "") callback = "index.html";
+				if (callback == undefined || callback == "") callback = "index.html#jipiao";
 				window.location.replace(callback);
 			}
 		</script>
@@ -71,6 +68,26 @@
 				background: rgba(171, 179, 189, 0.60);
 				width: 375px;
 				height: 24px;
+				clear:left;
+			}
+
+			.hotCity {
+				margin-left: 12px;
+				display: block;
+				float: left;
+				border: 1px gray solid;
+				border-radius: 4px;
+				padding: 5px;
+				background-color: white;
+				margin-top: 5px;
+				font-size: 18px;
+				margin-bottom: 2px;
+			}
+
+			.init {
+				background: rgba(171, 179, 189, 0.60);
+				width: 375px;
+				height: 24px;
 			}
 			
 			.letter {
@@ -96,20 +113,61 @@
 				padding-left: 15px;
 				border-bottom: 1px solid #C8C7CC;
 			}
+
+			.regions2 {
+				font-family: PingFangSC-Regular;
+				font-size: 17px;
+				color: #030303;
+				letter-spacing: -0.41px;
+				background: #ffffff;
+				width: 375px;
+				height: 44px;
+				line-height: 44px;
+				padding-left: 15px;
+				border-bottom: 1px solid #C8C7CC;
+			}
+
+			.split {
+				background: rgba(171, 179, 189, 0.60);
+				width: 375px;
+				height: 24px;
+			}
 		</style>
 	</head>
 
 	<body>
+
 		<div id="container">
+			<div id="header">
+				<div class="init" style="height:40px">
+					<div class="regions2">
+						<input type="text" id="search" placeholder="请输入城市名称以搜索" style="height:30px;width:350px;font-size:14px;line-height:14px" onchange="search()">
+					</div>
+				</div>
+			</div>
 			<div id="selectBar">
-				<div id="leftDiv"  onclick="loadCities(1)">
+				<div id="leftDiv"  onclick="loadCities(0)">
 					国内
 				</div>
-				<div id="rightDiv"  onclick="loadCities(0)">
+				<div id="rightDiv"  onclick="loadCities(1)">
 					国际
 				</div>
 			</div>
-			<div class="initial">
+			<div class="split">
+				热门城市
+			</div>
+			<div id="hot">
+				<span class="hotCity">北京</span>
+				<span class="hotCity">北京</span>
+				<span class="hotCity">北京</span>
+				<span class="hotCity">北京</span>
+				<span class="hotCity">北京</span>
+				<span class="hotCity">北京</span>
+				<span class="hotCity">北京</span>
+				<span class="hotCity">北京</span>
+				<span class="hotCity">北京</span>
+			</div>
+			<div class="initial" id="list">
 				<div class="letter">
 					A
 				</div>
@@ -125,6 +183,87 @@
 			</div>
 
 		</div>
+
+		<script src="./js/common.js"></script>
+		<script src="./js/address.js"></script>
+		<script>
+			var hotCitiesDataS = [[
+				{name: "北京", cid: 88},
+				{name: "上海", cid: 568},
+				{name: "广州", cid: 237},
+				{name: "深圳", cid: 573},
+				{name: "成都", cid: 139},
+				{name: "杭州", cid: 260},
+				{name: "武汉", cid: 672},
+				{name: "西安", cid: 678},
+				{name: "重庆", cid: 141},
+				{name: "青岛", cid: 544},
+				{name: "长沙", cid: 135},
+				{name: "南京", cid: 507},
+				{name: "厦门", cid: 691},
+				{name: "昆明", cid: 364},
+				{name: "大连", cid: 154},
+				{name: "天津", cid: 633},
+				{name: "郑州", cid: 756},
+				{name: "三亚", cid: 767},
+				{name: "济南", cid: 292},
+				{name: "福州", cid: 214}
+			], [
+				{name: "罗马", cid: 430},
+				{name: "米兰", cid: 479},
+				{name: "香港", cid: 695},
+				{name: "澳门", cid: 58},
+				{name: "首尔", cid: 595},
+				{name: "台北", cid: 617},
+				{name: "东京", cid: 179},
+				{name: "新加坡", cid: 704},
+				{name: "胡志明市", cid: 271},
+				{name: "马尼拉", cid: 447},
+				{name: "曼谷", cid: 461},
+				{name: "大阪", cid: 143},
+				{name: "名古屋", cid: 484},
+				{name: "伦敦", cid: 423},
+				{name: "吉隆坡", cid: 290},
+				{name: "釜山", cid: 211},
+				{name: "悉尼", cid: 684},
+				{name: "洛杉矶", cid: 434},
+				{name: "旧金山", cid: 232},
+				{name: "芝加哥", cid: 757},
+				{name: "纽约", cid: 521},
+				{name: "法兰克福", cid: 196},
+				{name: "慕尼黑", cid: 498},
+				{name: "西雅图", cid: 687},
+				{name: "巴黎", cid: 64},
+				{name: "温哥华", cid: 663}
+			]];
+
+			function search() {
+				var text = $("#search").val();
+				if (text != "") {
+					$(".letter").hide();
+					$(".regions").each(function() {
+						$(this).show();
+						if ($(this).html().indexOf(text) < 0) $(this).hide();
+					});
+				} else {
+					$(".letter").show();
+					$(".regions").show();
+				}
+
+			}
+
+			function hotCities(i) {
+				html = "";
+				var hotCitiesData = hotCitiesDataS[i];
+				for (var i = 0;i < hotCitiesData.length;i++) {
+					html += "<span onclick=\"select(this)\" class=\"hotCity\" cid=\"" + hotCitiesData[i].cid + "\">" + hotCitiesData[i].name + "</span>"
+				}
+				$("#hot").html(html);
+			}
+			loadCities(0);
+
+			hotCities(0);
+		</script>
 	</body>
 
 </html>

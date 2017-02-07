@@ -1,6 +1,7 @@
 /**
  * Created by InsZVA on 2016/7/14.
  */
+
 function loadHotHotels() {
     CallAPI({requestMethod: "listHotels", offset: 0, num: 4, orderBy: "price", order: "asc"}, function(data) {
         if (data.code == -2) {
@@ -35,13 +36,13 @@ function loadNSHotel(cityId, order) {
         }
         if (data.code == -1) {
             $("#list").html(html);
-            alert("未找到相关酒店，已为您推荐相关活动！");
-            location.replace('activityList.html');
+            //alert("未找到相关酒店，已为您推荐相关活动！");
+            //location.replace('activityList.html');
             return;
         }
         for (var i = 0;i < data.length;i++) {
             data[i].images = JSON.parse(data[i].images);
-            html += '<div class="hotelTuwen" onclick="goHotel('+ data[i].hotel_id +')" style="background-image: url('+ data[i].images[0] +')"><div class="caption">' + data[i].name + '</div><div class="region">' + data[i].star + '星级 </div>'+
+            html += '<div class="hotelTuwen" onclick="goHotel('+ data[i].hotel_id +')" style="background-image: url('+ data[i].images[0] +');"><div class="caption">' + data[i].name + '</div><div class="region">' + data[i].star + '星级 </div>'+
                 '<div class="price">￥'+ data[i].price +'起</div></div>';
         }
         $("#list").html(html);
@@ -73,7 +74,7 @@ function loadHotelData(id) {
         CallAPI({requestMethod: "getRooms", hotelId: id}, function(data) {
             var html = "";
             for (var i = 0;i < data.length;i++) {
-                html += '<div class="randomH"><div id="leftDiv"></div><div id="midDiv">'+
+                html += '<div class="randomH"><div id="leftDiv"><img src="'+ data[i].image +'" style="width:100%"></div><div id="midDiv">'+
                     data[i].name + '(' + data[i].description + ')' +
             '</div><div id="rightDiv"><div id="price2">¥ ' + data[i].price + '</div>' +
                 '<div id="confirmBtn" class="selectRoom" onclick="selectRoom(this)" rid="'+ data[i].room_id +'" price="'+ data[i].price+'"> 选择此房</div> </div></div>';
@@ -92,24 +93,28 @@ function submitPaymentH() {
     var contact = $("#contact").val();
     var phone = $("#phone").val();
     var regex = /[0-9]+/;
-    var startDate = (localStorage.getItem("start_date"));
-    var endDate = (localStorage.getItem("end_date"));
-    if (name == "" || contact == "" || !regex.test(phone) || !regex.test(idCode) || startDate == "" || endDate == "") {
+    var startDate = localStorage.getItem("start_date");
+    var endDate = localStorage.getItem("end_date");
+    if (name == "" || contact == "" || !regex.test(phone) || !regex.test(idCode) || startDate == undefined || endDate == undefined) {
         alert("填写信息不完整或非法，请更正后再次提交！");
         return;
     }
-    startDate.replace(/-/g, "/");
+    startDate = (startDate + " 12:00:00").toString();
+    startDate = startDate.replace(/-/g, "/");
     startDate = new Date(startDate);
     startDate = startDate.getTime() / 1000;
-    endDate.replace(/-/g, "/");
+
+    endDate = (endDate + " 12:00:00").toString();
+    endDate = endDate.replace(/-/g, "/");
     endDate = new Date(endDate);
     endDate = endDate.getTime() / 1000;
     var roomId = parseInt(localStorage.getItem("roomId"));
 
     var id = parseInt(getJsUrl()['id']);
     var d = {requestMethod: "createPayment", data: {userId: getUserID(), standard:1, type:1, idCode: idCode, sex: parseInt(sex),
-        contact: contact, phone: phone, name: name, hotelId: id, idType: idType, roomId: id, startDate: startDate, endDate: endDate}};
-    CallAPI(d, function(data) {
+        contact: contact, phone: phone, name: name, hotelId: id, idType: idType, roomId: roomId, startDate: startDate, endDate: endDate}};
+
+        CallAPI(d, function(data) {
         if (data.code == -2) {
             alert("请先登录！");
             window.location.replace("landing.html");
@@ -122,7 +127,7 @@ function submitPaymentH() {
         }
         alert("您的订单已经发送至后台进行处理，我们会在20分钟内对该订单进行确认，之后会以微信推送的形式告知您，请您注意查收！");
         //TODO: 跳转详情页
-        window.location.replace("index.html");
+        window.location.replace("/myOrders.html");
         return;
     });
 }

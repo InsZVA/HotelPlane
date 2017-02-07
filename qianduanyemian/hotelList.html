@@ -74,6 +74,7 @@
 				width: 375px;
 				height: 150px;
 				position: relative;
+				background-size: cover;
 				background-image: url(https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1467684389&di=c67792c4cd69e320f2daec61be78315b&src=http://image41.360doc.com/DownloadImg/2011/11/0706/19073054_28.jpg);
 			}
 			
@@ -187,26 +188,7 @@
 				</div>
 			</div>
 			<div id="list">
-				<div class="hotelTuwen">
-					<div class="caption">杭州温德至尊豪廷大酒店</div>
-					<div class="region"> 下城区 五星级 </div>
-					<div class="price">￥707 </div>
-				</div>
-				<div class="hotelTuwen">
-					<div class="caption">杭州温德至尊豪廷大酒店</div>
-					<div class="region"> 下城区 五星级 </div>
-					<div class="price">￥707 </div>
-				</div>
-				<div class="hotelTuwen">
-					<div class="caption">杭州温德至尊豪廷大酒店</div>
-					<div class="region"> 下城区 五星级 </div>
-					<div class="price">￥707 </div>
-				</div>
-				<div class="hotelTuwen">
-					<div class="caption">杭州温德至尊豪廷大酒店</div>
-					<div class="region"> 下城区 五星级 </div>
-					<div class="price">￥707 </div>
-				</div>
+
 			</div>
 
 		</div>
@@ -217,11 +199,11 @@
 		</div>
 		<div class="fixedBottom">
 			<div class="bottomContainer">
-				<a href="index.html"><img class="pic" src="./img/indexBlue.png" style="margin-left: 22px;" /></a>
+				<a href="index.html"><img class="pic" src="./img/index.png" style="margin-left: 22px;" /></a>
 				<a href="orderFlight.html"><img class="pic" src="./img/plane.png" /></a>
 				<!--此处更换VIP管家标识-->
 				<a href="chat.html"><img class="pic" src="./img/manager.png" /></a>
-				<a href="#"><img class="pic" src="./img/hotel.png" /></a>
+				<a href="#"><img class="pic" src="./img/hotel@1x.png" /></a>
 				<a href="memberInfo.html"><img class="pic" src="./img/me.png" /></a>
 				<div id="info">
 					<div class="info" style="margin-left: 24px;">首页</div>
@@ -233,10 +215,29 @@
 				</div>
 			</div>
 		</div>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=5911e633451599c4fc6a63d9fdfbdf08"></script>
 	<script>
+		function getLocation(){
+			var geolocation = new BMap.Geolocation();
+			geolocation.getCurrentPosition(function(r){
+				if(this.getStatus() == BMAP_STATUS_SUCCESS){
+					currPoint = r.point;//当前点的坐标
+					var addr = r.address;
+					//$.cookie("city", addr.city,{expires:999,path:'/'});
+					//alert(addr.city);
+					var shiPos = addr.city.indexOf("市");
+					var city = addr.city.substr(0, shiPos);
+					var id = getCityId(city);
+					if (id == undefined) alert("您的城市暂时没有机场，已经为您切换到杭州");
+					else localStorage.setItem("cityId", id);
+				}
+			});
+		}
+		getLocation();
+
 		var cityId = localStorage.getItem("cityId");
 		var order = localStorage.getItem("order");
-		if (cityId == undefined || cityId == "") cityId = 1;
+		if (cityId == undefined || cityId == "") cityId = 260;
 		if (order == undefined || order == "") order = "asc";
 
 		$("#cityName").html(getCityName(cityId));

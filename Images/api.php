@@ -21,7 +21,7 @@ switch($postData->requestMethod) {
             $f = fopen($path . $filename, "w");
             fwrite($f, $data);
             fclose($f);
-            echo json_encode(['image_path' => "121.41.61.101/Images/upload/" . $filename]);
+            echo json_encode(['image_path' => "http://api.xszlv.com/Images/upload/" . $filename]);
             exit(0);
         } else {
             echo json_encode(['code' => '-1', 'msg' => 'fail']);

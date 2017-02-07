@@ -9,6 +9,7 @@
 		<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
 		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 		<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+		<script src="./js/common.js"></script>
 		<style type="text/css">
 			body {
 				background: #efeff4;
@@ -78,7 +79,6 @@
 				font-size: 17px;
 				color: #009ce5;
 				letter-spacing: -0.41px;
-				width: 50px;
 				height: 19px;
 				float: left;
 				margin-left: 15px;
@@ -182,13 +182,54 @@
 				border-right:solid 1px #C8C7CC ;
 				border-top: solid 1px #C8C7CC;
 				font-family:PingFangSC-Regular;
-font-size:17px;
-color:#0076ff;
-letter-spacing:-0.41px;
-text-align:center;
-line-height: 44px;
+				font-size:17px;
+				color:#0076ff;
+				letter-spacing:-0.41px;
+				text-align:center;
+				line-height: 44px;
 			}
-			
+			#voucher {
+				background: #ffffff;
+				border: 1px solid rgba(171, 179, 189, 0.60);
+				width: 375px;
+				height: 42px;
+				margin-top: 9px;
+			}
+
+			.project {
+				font-family: PingFangSC-Regular;
+				font-size: 17px;
+				color: #000000;
+				letter-spacing: -0.28px;
+				line-height: 44px;
+				text-align: left;
+				width: 84px;
+				height: 42px;
+				float: left;
+				margin-left: 11px;
+			}
+
+			.voucherPri {
+				font-family: PingFangSC-Regular;
+				font-size: 14px;
+				color: #d0021b;
+				letter-spacing: -0.23px;
+				line-height: 42px;
+				text-align: left;
+				width: 52px;
+				height: 42px;
+				float: left;
+				margin-left: 52px;
+			}
+
+			.arrow {
+				width: 8px;
+				height: 13px;
+				float: right;
+				margin-top: 15px;
+				margin-right: 16px;
+				background-image: url(./img/Disclosure.png);
+			}
 		</style>
 	</head>
 
@@ -198,19 +239,24 @@ line-height: 44px;
 			<div id="icon">
 				<img src="./img/dollarBag.png" />
 			</div>
-			<div id="balance">充值</div>
+			<div id="balance">订单支付</div>
 			<div id="number">¥ 999999.99</div>
 			<div class="paymentMethod">
-				<div id="alipay">支付宝</div>
+				<div id="alipay">微信支付</div>
 				<div id="selected"><img src="./img/selectedBlue.png" /></div>
 			</div>
-			<div class="paymentMethod">
+			<!--<div class="paymentMethod">
 				<div id="moreMethods">查看更多支付方式</div>
 				<div id="arrowDown">
 					<img src="img/arrosDown.png" />
 				</div>
+			</div>-->
+			<div id="voucher" onclick="selectCoupon()">
+				<div class="project">使用代金券</div>
+				<div class="voucherPri">¥&nbsp;0 </div>
+				<div class="arrow"></div>
 			</div>
-			<div id="Rectangle" class="btn">
+			<div id="Rectangle" class="btn" onclick="pay()">
 				确认支付
 			</div>
 			<!--充值失败弹窗-->
@@ -231,6 +277,34 @@ line-height: 44px;
 				</div>
 			</div>
 		</div>
+	<script>
+		if (localStorage.getItem("discount") != undefined) {
+			$(".voucherPri").html("￥ " + localStorage.getItem("discount"));
+		}
+		$("#alert").hide();
+		var paymentId = getJsUrl()['id'];
+		var price = CallAPINotAsync({requestMethod: "getPaymentPrice", paymentId: paymentId}).price;
+		localStorage.setItem("price", price);
+		localStorage.setItem("paymentId", paymentId);
+		$("#number").html("￥ " + price);
+
+		function selectCoupon() {
+			window.location.replace('voucher.html?callback=' + encodeURIComponent(location.href));
+		}
+
+		function pay() {
+			var userCouponId = 0;
+			if (localStorage.getItem('coupon') != undefined) {
+				userCouponId = localStorage.getItem('coupon');
+			}
+			localStorage.removeItem('coupon');
+			localStorage.removeItem('price');
+			var paymentId = getJsUrl()['id'];
+			localStorage.removeItem('paymentId');
+			localStorage.removeItem('discount');
+			window.location.replace('pay/example/jsapi.php?pid=' + paymentId + '&ucid=' + userCouponId);
+		}
+	</script>
 	</body>
 
 </html>

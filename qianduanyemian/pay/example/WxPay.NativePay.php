@@ -19,7 +19,7 @@ class NativePay
 		$biz = new WxPayBizPayUrl();
 		$biz->SetProduct_id($productId);
 		$values = WxpayApi::bizpayurl($biz);
-		$url = "weixin://wxpay/bizpayurl?" . $this->ToUrlParams($values);
+		$url = "weixin://pay/bizpayurl?" . $this->ToUrlParams($values);
 		return $url;
 	}
 	
